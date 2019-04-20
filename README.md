@@ -16,7 +16,9 @@ In scraping the data, a few anomalies have been observed with the original sourc
 
 ---
 # Script
-The data is generated using a PowerShell script which outputs the two CSVs.
+The data is generated using a PowerShell script which outputs the data for the three CSVs. 
+The script simply restructures data that is returned by  existing PowerShell cmdlets
+(Get-AzureRmProviderOperation and Get-AzureRmProviderFeature).
 The code isn't fancy but it is functional. Enhancement suggestions are welcomed!
 
 ### Script Parameters
