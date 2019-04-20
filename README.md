@@ -33,7 +33,8 @@ The code isn't fancy but it is functional. Enhancement suggestions are welcomed!
 	If indicated, then a note row is added to the structure as the first item (useful if piping to a CSV).
 
 ### Next Steps
-The next step is to put some automation around my script so that this repository is automatically
+The progress bar in the script is not fully functional yet. Beyond that, the next step is to put some
+automation around my script so that this repository is automatically
 updated regularly or when any changes are detected. I also plan to start tracking additions & deletions
 to the actions and mark them accordingly (handy to see what's new and what has been depricated).
 
