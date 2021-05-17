@@ -2,15 +2,19 @@
 <#
 .SYNOPSIS
 	Returns Azure services and actions as a structure.
+	
 .DESCRIPTION
 	Return a structure containing an entry for each service and action.
 
 .PARAMETER ServicesOnly
 	If indicated, then only the services are returned along with a (guessed) documentation URL.
+	
 .PARAMETER FeaturesOnly
 	If indicated, then service provider features are returned.
+	
 .PARAMETER ScanDocumentation
 	If indicated, then the documentation page is scanned for actions [NOT IMPLEMENTED].
+	
 .PARAMETER AddNote
 	If indicated, then a note row is added to the structure as the first item (useful if piping to a CSV).
 
@@ -19,21 +23,35 @@
 		.\Get-AzureServices.ps1 | Out-GridView
 	
 	TO GET A CSV:
-		.\Get-AzureServices.ps1 -AddNote | Export-Csv -Path 'AzureActions.csv' -force
+		.\Get-AzureServices.ps1 -AddNote | Export-Csv -Path 'AzureServiceActions.csv' -encoding utf8 -force
 
-	TO SEE A LIST OF SERVICES:
-		.\Get-AzureServices.ps1 -ServicesOnly
+	TO GET A LIST OF SERVICES:
+		.\Get-AzureServices.ps1 -ServicesOnly | Export-Csv -Path 'AzureServices.csv' -Encoding utf8 -force
+		
+	TO GET A LIST OF FEATURES:
+		.\Get-AzureServices.ps1 -FeaturesOnly | Export-Csv -Path 'AzureServiceFeatures.csv' -Encoding utf8 -force
+		
+	TO CONVERT AzureServiceActions.CSV TO FORMATTED TEXT:
+		"{0,-60} {1,-100} {2,-100} {3}" -f 'ProviderNamespace','Operation','OperationName','IsDataAction' | out-file -FilePath 'AzureServiceActions.txt' -Encoding utf8 -force -width 275 ;
+		Import-Csv -Path 'AzureServiceActions.csv' | foreach { ("{0,-60} {1,-100} {2,-100} {3}" -f $_.ProviderNamespace, $_.Operation, $_.OperationName, $_.IsDataAction) } | out-file -FilePath 'AzureServiceActions.txt' -width 210 -Encoding utf8 -Append
+	
+	TO CONVERT AzureServices.CSV TO FORMATTED TEXT:                                                                                                                                      
+		"{0,-56} {1,-40} {2}" -f 'ProviderNamespace','ProviderName','Description' | out-file -FilePath 'AzureServices.txt' -Encoding utf8 -force -width 210 ;
+		Import-Csv -Path 'AzureServices.csv' | foreach { ("{0,-56} {1,-25} {2}" -f $_.ProviderNamespace, $_.ProviderName, $_.Description) } | out-file -FilePath 'AzureServices.txt' -width 210 -Encoding utf8 -Append
+
+	TO CONVERT AzureServiceFeatures.CSV TO FORMATTED TEXT:                                                                                                                                      
+		"{0,-75} {1,-65} {2}" -f 'ProviderNamespace','ProviderName','FeatureName' | out-file -FilePath 'AzureServices.txt' -Encoding utf8 -force -width 210 ;
+		Import-Csv -Path 'AzureServiceFeatures.csv' | foreach { ("{0,-75} {1,-65} {2}" -f $_.ProviderNamespace, $_.ProviderName, $_.FeatureName) } | out-file -FilePath 'AzureServiceFeatures.txt' -width 210 -Encoding utf8 -Append
+
 
 .NOTES
 	Author: Lester W.
-	Version: v0.01
-	Date: 20-Apr-19
+	Version: v0.10
+	Date: 17-May-21
 	Repository: https://github.com/lesterw1/AzureServices
 	License: MIT License
 	
 .LINK
-	https://docs.microsoft.com/en-us/powershell/module/azurerm.resources/get-azurermprovideroperation?view=azurermps-6.13.0
-	https://docs.microsoft.com/en-us/powershell/module/azurerm.resources/get-azurermproviderfeature?view=azurermps-6.13.0
 
 #>
 
@@ -85,8 +103,9 @@ class AzureOperations
 
 
 # +=================================================================================================+
-# |  CONSTANTS																						|
+# |  MODULES																						|
 # +=================================================================================================+
+Import-Module Az.Resources
 
 
 # +=================================================================================================+
@@ -100,8 +119,10 @@ $browser.Proxy.Credentials =[System.Net.CredentialCache]::DefaultNetworkCredenti
 # +=================================================================================================+
 # |  MAIN Body																						|
 # +=================================================================================================+
-$Results = @()
-$Today = (Get-Date).ToString("dd-MMM-yyyy")
+$Results	= @()
+$Services	= @()
+$Features	= @()
+$Today		= (Get-Date).ToString("dd-MMM-yyyy")
 $Activity	= "Retrieving Azure Providers and Actions..."
 Write-Progress -Activity $Activity -PercentComplete 5 -ID 1 -Status "Get Provider Operations"
 
@@ -119,40 +140,39 @@ if ($AddNote)
 # +-----------------------------------------+
 # |  Get Service Providers and Operations	|
 # +-----------------------------------------+
-$ProviderOperations = Get-AzureRMProviderOperation
+$ProviderOperations = Get-AzProviderOperation
 
 # Extract SERVICES and FEATURES List
-$Services = @()
-$Features = @()
 $ServiceList = ($ProviderOperations | Select-Object -Property ProviderNameSpace -Unique | Sort-Object -Property ProviderNameSpace).ProviderNamespace
-foreach ($service in $ServiceList)
+foreach ($serviceName in $ServiceList)
 {
 	# For each service, grab one entry so we can extract the provider name
-	$ProviderOp		= ($ProviderOperations | Where-Object {$_.ProviderNamespace -like $service } | Select-Object -First 1).Operation
+	$ProviderEntry	= ($ProviderOperations | Where-Object {$_.ProviderNamespace -like $serviceName } | Select-Object -First 1)
+	$ProviderOp		= $ProviderEntry.Operation
 	$ProviderName	= $ProviderOp.SubString(0,$ProviderOp.IndexOf('/'))
 	
 	$Entry = New-Object AzureService
-	$Entry.ProviderNamespace	= $service			# Friendly Name
-	$Entry.ProviderName			= $ProviderName 	# Microsoft.Compute
-	$Entry.Description			= ""				# TBD
+	$Entry.ProviderNamespace	= $serviceName					# Service Name
+	$Entry.ProviderName			= $ProviderName 				# Microsoft.Compute
+	$Entry.Description			= ""							# No Service Descriptions available yet...
 	$Services += $Entry
 	
-	# Get the Provider features
+	# Get the Provider features by Service
 	if ($FeaturesOnly)
 	{
-		Write-Progress -Activity $Activity -PercentComplete 25 -ID 1 -Status "Get Provider Features"		# TO DO - Fix Progress Bar percentage
-		$ProviderFeatures = Get-AzureRMProviderFeature -ProviderNamespace $ProviderName -ListAvailable 
+		Write-Progress -Activity $Activity -PercentComplete 25 -ID 1 -Status "Get $serviceName Provider Features"		# TO DO - Fix Progress Bar percentage
+		$ProviderFeatures = Get-AzProviderFeature -ProviderNamespace $ProviderName -ListAvailable 
 
 		foreach ($feature in $ProviderFeatures)
 		{
-			Write-Progress -Activity $Activity -PercentComplete 30 -ID 1 -Status $ProviderName
+			Write-Progress -Activity $Activity -PercentComplete 30 -ID 1 -Status "Get $serviceName Provider Features for $ProviderName"
 
 			$Entry = New-Object AzureServiceFeature
-			$Entry.ProviderNamespace	= $service			# Friendly Name
-			$Entry.ProviderName			= $ProviderName 	# Microsoft.Compute
+			$Entry.ProviderNamespace	= $serviceName					# Service Name
+			$Entry.ProviderName			= $ProviderName 				# Microsoft.Compute
 			$Entry.FeatureName			= $feature.featureName
 			$Entry.RegistrationState	= $feature.RegistrationState
-			$Entry.Description			= ""				# TBD
+			$Entry.Description			= $feature.Description			# Feature Description
 			$Features += $Entry
 		}
 	}
@@ -170,7 +190,6 @@ elseif ($FeaturesOnly)
 # +-----------------------------------------+
 # |  Get Service Provider Operations		|
 # +-----------------------------------------+
-$ServiceActions = @()
 $Activity = "Organizing provider operations"
 Write-Progress -Activity $Activity -PercentComplete 5 -ID 1
 foreach ($operation in $ProviderOperations)
@@ -184,10 +203,10 @@ foreach ($operation in $ProviderOperations)
 	$Entry.IsDataAction			= $operation.IsDataAction
 	$Entry.Description			= $operation.Description
 	# [string] $DocLink
-	$ServiceActions += $Entry
+	$Results += $Entry
 }
 
 
 write-Progress -Activity $Activity -PercentComplete 100 -Completed -ID 1
-return $ServiceActions
+return $Results
 	
