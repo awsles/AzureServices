@@ -46,8 +46,8 @@
 
 .NOTES
 	Author: Lester W.
-	Version: v0.10
-	Date: 17-May-21
+	Version: v0.11
+	Date: 26-Dec-21
 	Repository: https://github.com/lesterw1/AzureServices
 	License: MIT License
 	
@@ -124,7 +124,7 @@ $Services	= @()
 $Features	= @()
 $Today		= (Get-Date).ToString("dd-MMM-yyyy")
 $Activity	= "Retrieving Azure Providers and Actions..."
-Write-Progress -Activity $Activity -PercentComplete 5 -ID 1 -Status "Get Provider Operations"
+Write-Progress -Activity $Activity -PercentComplete 1 -ID 1 -Status "Get Provider Operations"
 
 if ($AddNote)
 {
@@ -146,6 +146,10 @@ $ProviderOperations = Get-AzProviderOperation
 $ServiceList = ($ProviderOperations | Select-Object -Property ProviderNameSpace -Unique | Sort-Object -Property ProviderNameSpace).ProviderNamespace
 foreach ($serviceName in $ServiceList)
 {
+	write-verbose "Service: $service"
+	$pctComplete = [string] ([math]::Truncate((++$ctr / $ServiceList.Count)*100))
+	Write-Progress -Activity $Activity -PercentComplete $pctComplete  -Status "$ServiceName - $pctComplete% Complete  ($ctr of $($ServiceList.Count))" -ID 1
+
 	# For each service, grab one entry so we can extract the provider name
 	$ProviderEntry	= ($ProviderOperations | Where-Object {$_.ProviderNamespace -like $serviceName } | Select-Object -First 1)
 	$ProviderOp		= $ProviderEntry.Operation
@@ -160,12 +164,12 @@ foreach ($serviceName in $ServiceList)
 	# Get the Provider features by Service
 	if ($FeaturesOnly)
 	{
-		Write-Progress -Activity $Activity -PercentComplete 25 -ID 1 -Status "Get $serviceName Provider Features"		# TO DO - Fix Progress Bar percentage
+		Write-Progress -Activity $Activity -PercentComplete $pctComplete -ID 1 -Status "Get $serviceName Provider Features"
 		$ProviderFeatures = Get-AzProviderFeature -ProviderNamespace $ProviderName -ListAvailable 
 
 		foreach ($feature in $ProviderFeatures)
 		{
-			Write-Progress -Activity $Activity -PercentComplete 30 -ID 1 -Status "Get $serviceName Provider Features for $ProviderName"
+			Write-Progress -Activity $Activity -PercentComplete $pctComplete -ID 1 -Status "Get $serviceName Provider Features for $ProviderName"
 
 			$Entry = New-Object AzureServiceFeature
 			$Entry.ProviderNamespace	= $serviceName					# Service Name
@@ -178,7 +182,7 @@ foreach ($serviceName in $ServiceList)
 	}
 }
 
-Write-Progress -Activity $Activity -PercentComplete 100 -Completed -ID 1
+Write-Progress -Activity $Activity -PercentComplete 100 -ID 1 -Completed
 
 # If we're done, then exit...
 if ($ServicesOnly)
