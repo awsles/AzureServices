@@ -2,6 +2,8 @@
 <#
 .SYNOPSIS
 	Returns Azure services and actions as a structure.
+	This SHOULD match the documented list of resource provider operations at:
+	https://docs.microsoft.com/en-us/azure/role-based-access-control/resource-provider-operations
 	
 .DESCRIPTION
 	Return a structure containing an entry for each service and action.
