@@ -19,6 +19,7 @@
 	
 .PARAMETER AddNote
 	If indicated, then a note row is added to the structure as the first item (useful if piping to a CSV).
+	TO BE DEPRECATED
 
 .EXAMPLE	
 	TO SEE A QUICK VIEW:
@@ -88,12 +89,29 @@ class AzureOperation
 	# [int] $CRC32					# hash(Description); used to detect changes 
 }
 
+# WORK IN PROGRESS
+class AzureOperationDB
+{
+	[string] $ProviderNamespace 	# Friendly Name
+	[string] $ProviderName			# Microsoft.Compute
+	[string] $Operation				# RBAC Permission
+	[string] $OperationName			# Friendly name for operation
+	[string] $ResourceName 			# Associated resource friendly name
+	[string] $Description			# Detailed Description
+	[switch] $IsDataAction			
+	# [string] $DocLink
+	[datetime] $LastChange			# Timestamp when data was gathered
+	[dateTime] $FirstSeen
+	[dateTime] $LastSeen
+	[system.array] $History			# history { date, descrioption}
+	[int] $CRC32					# hash(Description); used to detect changes 
+}
+
 
 # +=================================================================================================+
 # |  MODULES																						|
 # +=================================================================================================+
 Import-Module Az.Resources
-
 
 
 # +=================================================================================================+
@@ -118,6 +136,7 @@ $Operations	= @()
 $Today		= (Get-Date).ToString("dd-MMM-yyyy")
 $Activity	= "Retrieving Azure Providers and Actions..."
 
+# TO BE DEPRECATED!
 if ($AddNote)
 {
 	# 1st entry with notes
