@@ -55,6 +55,8 @@
 	Repository: https://github.com/leswaters/AzureServices
 	License: MIT License
 	
+	This script is for illustrative purposes only.
+	
 .LINK
 
 #>
