@@ -12,7 +12,7 @@ when the data was scraped along with the row count may be found at the bottom of
 ## Anomalies
 In scraping the data, a few anomalies have been observed with the original source data and/or documentation:
 
-* You will only see services which have been feature-enabled within the current Azure subscription.
+* You will only see permissions and services which have been feature-enabled within the current Azure subscription.
 * In the past, several Azure service providers have not correctly reported their available operations.
 
 ---
