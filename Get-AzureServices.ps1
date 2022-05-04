@@ -35,14 +35,23 @@
 		"{0,-60} {1,-100} {2,-100} {3}" -f 'ProviderNamespace','Operation','OperationName','IsDataAction' | out-file -FilePath 'AzureServiceActions.txt' -Encoding utf8 -force -width 275 ;
 		Import-Csv -Path 'AzureServiceActions.csv' | foreach { ("{0,-60} {1,-100} {2,-100} {3}" -f $_.ProviderNamespace, $_.Operation, $_.OperationName, $_.IsDataAction) } | out-file -FilePath 'AzureServiceActions.txt' -width 210 -Encoding utf8 -Append
 	
-	TO CONVERT AzureServices.CSV TO FORMATTED TEXT:                                                                                                                                      
+	TO CONVERT AzureServices.CSV TO FORMATTED TEXT: 
 		"{0,-56} {1,-40} {2}" -f 'ProviderNamespace','ProviderName','Description' | out-file -FilePath 'AzureServices.txt' -Encoding utf8 -force -width 210 ;
-		Import-Csv -Path 'AzureServices.csv' | foreach { ("{0,-56} {1,-25} {2}" -f $_.ProviderNamespace, $_.ProviderName, $_.Description) } | out-file -FilePath 'AzureServices.txt' -width 210 -Encoding utf8 -Append
+		"{0,-56} {1,-40} {2}" -f '=================','============','===========' | out-file -FilePath 'AzureServiceFeatures.txt' -Encoding utf8 -force -width 210 -Append;
+		Import-Csv -Path 'AzureServices.csv' | foreach { ("{0,-56} {1,-40} {2}" -f $_.ProviderNamespace, $_.ProviderName, $_.Description) } | out-file -FilePath 'AzureServices.txt' -width 210 -Encoding utf8 -Append
+
+	TO GET A LIST OF FEATURES ONLY AS A CSV:
+		.\Get-AzureServices.ps1 -FeaturesOnly | Export-Csv -Path 'AzureServiceFeatures.csv' -Encoding utf8 -force
+			
+	TO CONVERT AzureServiceFeatures.CSV TO FORMATTED TEXT: 
+		"{0,-56} {1,-40} {2}" -f 'ProviderNamespace','ProviderName','FeatureName' | out-file -FilePath 'AzureServiceFeatures.txt' -Encoding utf8 -force -width 210 ;
+		"{0,-56} {1,-40} {2}" -f '=================','============','===========' | out-file -FilePath 'AzureServiceFeatures.txt' -Encoding utf8 -force -width 210 -Append;
+		Import-Csv -Path 'AzureServiceFeatures.csv' | foreach { ("{0,-56} {1,-40} {2}" -f $_.ProviderNamespace, $_.ProviderName, $_.FeatureName) } | out-file -FilePath 'AzureServiceFeatures.txt' -width 210 -Encoding utf8 -Append
 
 .NOTES
 	Author: Les Waters
-	Version: v0.12
-	Date: 15-Jan-22
+	Version: v0.14
+	Date: 04-May-22
 	Repository: https://github.com/leswaters/AzureServices
 	License: MIT License
 	
@@ -58,6 +67,7 @@
 Param
 (
 	[switch] $ServicesOnly		= $false,		# If true, then the services are returned as a structure
+	[switch] $FeaturesOnly		= $false,		# If true, then the a list of provider features are returned as a structure
 	[switch] $ScanDocumentation	= $false,		# If true, then scan documentation pages
 	[switch] $AddNote			= $false		# If true, add a note description as the 1st item
 )
@@ -155,7 +165,7 @@ Write-Progress -Activity $Activity -PercentComplete 1 -ID 1 -Status "Retrieving 
 $ProviderOperations = Get-AzProviderOperation
 
 # Get provider feature list
-# This has undocumented and provide providers within it.
+# This also returns undocumented providers within it.
 Write-Progress -Activity $Activity -PercentComplete 1 -ID 1 -Status "Retrieving Service Provider Feature List"
 $ProviderFeatures = Get-AzProviderFeature -ListAvailable 
 $ProviderNamesFromFeatures = ($ProviderFeatures | Select-Object -Property ProviderName -Unique | Sort-Object -Property ProviderName).ProviderName
@@ -260,5 +270,21 @@ $CountNoOps = ($Operations | Where-Object {$_.Operation -eq ""}).Count
 $CountOps	= $Operations.Count - $CountNoOps
 write-host -ForegroundColor Yellow "$CountOps operations discovered across $($Services.Count) Azure service providers ($CountNoOps of which have no operations defined)"
 write-Progress -Activity $Activity -PercentComplete 100 -Completed -ID 1
+
+if ($FeaturesOnly)
+{
+	$Activity = "Extracting Provider Friendly Names for Features"
+	write-Progress -Activity $Activity -PercentComplete 10 -ID 1
+	$op1 = $Operations | Select-Object -Property ProviderName,ProviderNameSpace -Unique
+	write-Progress -Activity $Activity -PercentComplete 40 -ID 1
+	foreach ($pf in $ProviderFeatures)
+	{	# Add in the more friendly ProviderNameSpace
+		$x = ($op1 | Where-Object {$_.ProviderName -eq $pf.ProviderName} | Select-Object -First 1).ProviderNameSpace
+		$pf | Add-Member -NotePropertyName 'ProviderNameSpace' -NotePropertyValue $x -Force
+	}
+	write-Progress -Activity $Activity -PercentComplete 100 -Completed -ID 1
+	return ($ProviderFeatures | Select-Object -Property ProviderNameSpace, ProviderName, FeatureName, RegistrationState)
+}
+
 return $Operations
 
