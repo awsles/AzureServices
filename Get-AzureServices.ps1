@@ -12,11 +12,14 @@
 	If indicated, then only the services are returned along with a (guessed) documentation URL.
 	
 .PARAMETER FeaturesOnly
-	If indicated, then service provider features are returned.
+	If indicated, then service provider features are returned. [TO BE IMPLEMENTED]
 	
 .PARAMETER ScanDocumentation
 	If indicated, then the documentation page is scanned for actions [NOT IMPLEMENTED].
 	
+.PARAMETER NoHistory
+	Do not update the History.txt log in the current directory with the findings.
+
 .PARAMETER AddNote
 	If indicated, then a note row is added to the structure as the first item (useful if piping to a CSV).
 	TO BE DEPRECATED
@@ -50,7 +53,7 @@
 
 .NOTES
 	Author: Les Waters
-	Version: v0.14
+	Version: v0.14a
 	Date: 04-May-22
 	Repository: https://github.com/leswaters/AzureServices
 	License: MIT License
@@ -68,6 +71,7 @@ Param
 (
 	[switch] $ServicesOnly		= $false,		# If true, then the services are returned as a structure
 	[switch] $FeaturesOnly		= $false,		# If true, then the a list of provider features are returned as a structure
+	[switch] $NoHistory			= $false,		# If true, then do not update history.txt in current directory
 	[switch] $ScanDocumentation	= $false,		# If true, then scan documentation pages
 	[switch] $AddNote			= $false		# If true, add a note description as the 1st item
 )
