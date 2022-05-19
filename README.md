@@ -12,17 +12,17 @@ Comment lines in the CSV (including the header at the top) start with a hastag (
 when the data was scraped along with the row count may be found at the bottom of each CSV.
 
 ## Anomalies
-In scraping the data, a few anomalies have been observed with the original source data and/or documentation:
+In retrieving the data, a few anomalies have been observed with the original source data and/or documentation:
 
 * You will only see permissions and services which have been feature-enabled (registered) within the current Azure subscription.
-* In the past, several Azure service providers have not correctly reported their available operations.
+* Some Azure service providers do not correctly report their available operations (i.e., valid permissions may not be listed).
 
 ---
 # Script
 The data is generated using a PowerShell script which outputs the data for the three CSVs. 
 The script simply restructures data that is returned by  existing PowerShell cmdlets
 (Get-AzureRmProviderOperation and Get-AzureRmProviderFeature).
-The code isn't fancy but it is functional. Enhancement suggestions are welcomed!
+The code isn't fancy but it is functional.
 
 ### Script Parameters
 
