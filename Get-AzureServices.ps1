@@ -58,7 +58,10 @@
 	This script is for illustrative purposes only.
 	
 .LINK
-
+	https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/azure-services-resource-providers
+	https://docs.microsoft.com/en-us/azure/role-based-access-control/resource-provider-operations
+	https://docs.microsoft.com/en-us/azure/role-based-access-control/built-in-roles
+	
 #>
 
 
