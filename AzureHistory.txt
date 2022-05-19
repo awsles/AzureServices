@@ -1,0 +1,149 @@
+﻿========================= AzureHistory.txt =========================
+This file contains the observed history of Azure Services and Actions.
+Where previous results are provided, a comparison is displayed with observed changes.
+
+
+====================================================================================================
+19-May-2022 : There are 0 actions across  Azure services.
+              128 changes have been detected: 124 new; 4 deprecated.
+
+DEPRECATED:
+  Provider Operation (Action)                                                      IsDataAction   Description
+  ---------------------------                                                      ------------   -----------
+  Dynatrace.Observability/monitors/listVMHosts/action                              False          List all vms that are sending compute logs for a monitor
+  Dynatrace.Observability/monitors/vmHostPayload/action                            False          The payload to be sent for installing Dynatrace agent on VM
+  Dynatrace.Observability/monitors/vmHostUpdate/action                             False          Update the collection for storing list of VM hosts
+  Microsoft.NetworkCloud/clusters/applyRackManifests/action                        False          Apply rack manifests to a cluster. This would update the existing cluster by applying rack manifests that have no rack associated yet.
+The API returns 202 Accepted as the operation is performed asynchronously.
+
+NEW ACTIONS:
+  Provider Operation (Action)                                                      IsDataAction   Description
+  ---------------------------                                                      ------------   -----------
+  Dynatrace.Observability/monitors/getVMHostPayload/action                         False          The payload to be sent for installing Dynatrace agent on VM
+  microsoft.app/containerapps/authconfigs/delete                                   False          Delete auth config of a container app
+  microsoft.app/containerapps/authconfigs/read                                     False          Get auth config of a container app
+  microsoft.app/containerapps/authconfigs/write                                    False          Create or update auth config of a container app
+  microsoft.app/containerapps/authtoken/action                                     False          Get Auth Token for Container App Dev APIs to get log stream, exec or port forward from a container
+  microsoft.app/containerapps/delete                                               False          Delete a Container App
+  microsoft.app/containerapps/detectors/read                                       False          Get detector of a container app
+  microsoft.app/containerapps/listcustomhostnameanalysis/action                    False          List custom host name analysis result
+  microsoft.app/containerapps/listsecrets/action                                   False          List secrets of a container app
+  microsoft.app/containerapps/read                                                 False          Get a Container App
+  microsoft.app/containerapps/revisions/activate/action                            False          Activate a container app revision
+  microsoft.app/containerapps/revisions/deactivate/action                          False          Deactivate a container app revision
+  microsoft.app/containerapps/revisions/read                                       False          Get revision of a container app
+  microsoft.app/containerapps/revisions/replicas/read                              False          Get replica of a container app revision
+  microsoft.app/containerapps/revisions/restart/action                             False          Restart a container app revision
+  microsoft.app/containerapps/sourcecontrols/delete                                False          Delete Container App Source Control Configuration
+  microsoft.app/containerapps/sourcecontrols/operationresults/read                 False          Get Container App Source Control Long Running Operation Result
+  microsoft.app/containerapps/sourcecontrols/read                                  False          Get Container App Source Control Configuration
+  microsoft.app/containerapps/sourcecontrols/write                                 False          Create or Update Container App Source Control Configuration
+  microsoft.app/containerapps/write                                                False          Create or update a Container App
+  microsoft.app/locations/containerappoperationresults/read                        False          Get a Container App Long Running Operation Result
+  microsoft.app/locations/containerappoperationstatuses/read                       False          Get a Container App Long Running Operation Status
+  microsoft.app/locations/managedenvironmentoperationresults/read                  False          Get a Managed Environment Long Running Operation Result
+  microsoft.app/locations/managedenvironmentoperationstatuses/read                 False          Get a Managed Environment Long Running Operation Status
+  microsoft.app/managedenvironments/certificates/delete                            False          Delete a Managed Environment's Certificate
+  microsoft.app/managedenvironments/certificates/read                              False          Get a Managed Environment's Certificate
+  microsoft.app/managedenvironments/certificates/write                             False          Create or update a Managed Environment Certificate
+  microsoft.app/managedenvironments/checknameavailability/action                   False          Check reource name availability for a Managed Environment
+  microsoft.app/managedenvironments/daprcomponents/delete                          False          Delete Managed Environment Dapr Component
+  microsoft.app/managedenvironments/daprcomponents/read                            False          Read Managed Environment Dapr Component
+  microsoft.app/managedenvironments/daprcomponents/write                           False          Create or Update Managed Environment Dapr Component
+  microsoft.app/managedenvironments/delete                                         False          Delete a Managed Environment
+  microsoft.app/managedenvironments/detectors/read                                 False          Get detector of a managed environment
+  microsoft.app/managedenvironments/read                                           False          Get a Managed Environment
+  microsoft.app/managedenvironments/storages/delete                                False          Delete a storage of Managed Environment.
+  microsoft.app/managedenvironments/storages/read                                  False          Get storage for a Managed Environment.
+  microsoft.app/managedenvironments/storages/write                                 False          Create or Update a storage of Managed Environment.
+  microsoft.app/managedenvironments/write                                          False          Create or update a Managed Environment
+  microsoft.app/operations/read                                                    False          Get a list of supported container app operations
+  microsoft.app/register/action                                                    False          Register microsoft.app resource provider for the subscription
+  microsoft.app/unregister/action                                                  False          Unregister microsoft.app resource provider for the subscription
+  Microsoft.CloudTest/images/cancel/action                                         False          Cancels 1ES images
+  Microsoft.CognitiveServices/accounts/Language/analyze-conversations/jobs/action  True           Submit a long conversation for analysis. Specify one or more unique tasks to be executed as a long-running operation.
+  Microsoft.CognitiveServices/accounts/Language/analyze-conversations/jobs/read    True           Get the status of an analysis job.  A job may consist of one or more tasks.  Once all tasks are succeeded, the job will transition to the suceeded state and results will be available for each task.
+  Microsoft.CognitiveServices/accounts/Language/analyze-conversations/jobscancel/action True           Cancel a long-running analysis job on conversation.
+  Microsoft.ContainerInstance/containerGroupProfiles/delete                        False          Delete the specific container group profile.
+  Microsoft.ContainerInstance/containerGroupProfiles/read                          False          Get all container goup profiles.
+  Microsoft.ContainerInstance/containerGroupProfiles/write                         False          Create or update a specific container group profile.
+  Microsoft.Dashboard/grafana/privateEndpointConnectionProxies/delete              False          Delete PrivateEndpointConnectionProxy
+  Microsoft.Dashboard/grafana/privateEndpointConnectionProxies/read                False          Get PrivateEndpointConnectionProxy
+  Microsoft.Dashboard/grafana/privateEndpointConnectionProxies/validate/action     False          Validate PrivateEndpointConnectionProxy
+  Microsoft.Dashboard/grafana/privateEndpointConnectionProxies/write               False          Create/Update PrivateEndpointConnectionProxy
+  Microsoft.Dashboard/grafana/privateEndpointConnections/delete                    False          Delete PrivateEndpointConnection
+  Microsoft.Dashboard/grafana/privateEndpointConnections/read                      False          Get PrivateEndpointConnection
+  Microsoft.Dashboard/grafana/privateEndpointConnections/write                     False          Update PrivateEndpointConnection
+  Microsoft.Dashboard/grafana/PrivateEndpointConnectionsApproval/action            False          Approve PrivateEndpointConnection
+  Microsoft.Dashboard/grafana/privateLinkResources/read                            False          Get PrivateLinkResources
+  Microsoft.DBforMySQL/flexibleServers/backups/write                               False          
+  Microsoft.DBforMySQL/flexibleServers/logFiles/read                               False          Return a list of server log files for a server with file download links
+  Microsoft.ElasticSan/elasticSans/delete                                          False          
+  Microsoft.ElasticSan/elasticSans/read                                            False          
+  Microsoft.ElasticSan/elasticSans/volumeGroups/delete                             False          Delete Volume Group
+  Microsoft.ElasticSan/elasticSans/volumeGroups/read                               False          Get Volume Group
+  Microsoft.ElasticSan/elasticSans/volumeGroups/volumes/delete                     False          Delete Volume
+  Microsoft.ElasticSan/elasticSans/volumeGroups/volumes/read                       False          Get Volume
+  Microsoft.ElasticSan/elasticSans/volumeGroups/volumes/snapshots/delete           False          Delete Volume Snapshot
+  Microsoft.ElasticSan/elasticSans/volumeGroups/volumes/snapshots/read             False          Get Volume Snapshot
+  Microsoft.ElasticSan/elasticSans/volumeGroups/volumes/snapshots/write            False          Create/Update Volume Snapshot
+  Microsoft.ElasticSan/elasticSans/volumeGroups/volumes/write                      False          Create/Update Volume
+  Microsoft.ElasticSan/elasticSans/volumeGroups/write                              False          Create/Update Volume Group
+  Microsoft.ElasticSan/elasticSans/write                                           False          Create/Update Elastic San
+  Microsoft.ElasticSan/operations/read                                             False          Polls the status of an asynchronous operation.
+  Microsoft.ElasticSan/register/action                                             False          Registers the subscription for the ElasticSan resource provider and enables the creation of san accounts.
+  Microsoft.ElasticSan/skus/read                                                   False          
+  Microsoft.EventHub/namespaces/networkSecurityPerimeterAssociationProxies/delete  False          Delete NetworkSecurityPerimeterAssociationProxies
+  Microsoft.EventHub/namespaces/networkSecurityPerimeterAssociationProxies/read    False          Get NetworkSecurityPerimeterAssociationProxies
+  Microsoft.EventHub/namespaces/networkSecurityPerimeterAssociationProxies/reconcile/action False          Reconcile NetworkSecurityPerimeterAssociationProxies
+  Microsoft.EventHub/namespaces/networkSecurityPerimeterAssociationProxies/write   False          Create NetworkSecurityPerimeterAssociationProxies
+  Microsoft.EventHub/namespaces/networkSecurityPerimeterConfigurations/read        False          Get Network Security Perimeter Configurations
+  Microsoft.EventHub/namespaces/networkSecurityPerimeterConfigurations/reconcile/action False          Reconcile Network Security Perimeter Configurations
+  Microsoft.HealthcareApis/validateMedtechMappings/read                            False          Handles requests related to editing IotConnector mapping files
+  Microsoft.Insights/CreateNotifications/Write                                     False          Send test notifications to the provided receiver list
+  Microsoft.Insights/NotificationStatus/Read                                       False          Get the test notification status/detail
+  Microsoft.Marketplace/privateStores/anyExistingOffersInTheStore/action           False          Return true if there is an existing offer for at least one enabled collection
+  Microsoft.Marketplace/privateStores/collections/approveAllItems/action           False          Delete all specific approved items and set collection to allItemsApproved
+  Microsoft.Marketplace/privateStores/collections/disableApproveAllItems/action    False          Set approve all items property to false for the collection
+  Microsoft.Marketplace/privateStores/queryUserOffers/action                       False          Fetch the approved offers from the offers ids and the user subscriptions in the payload
+  Microsoft.NetworkCloud/bareMetalMachines/runCommand/action                       False          Run the command or the script on the provided bare metal machine. The API returns 202 Accepted as the operation is performed asynchronously. The URL to storage account with the command execution results and the command exit code can be retrieved from the operation status API once available.
+  Microsoft.NetworkCloud/bareMetalMachines/runTcpdump/action                       False          Run the parameterized tcpdump command against the provided bare metal machine. The API returns 202 Accepted as the operation is performed asynchronously. The URL to storage account with the command execution results and the command exit code can be retrieved from the operation status API once available.
+  Microsoft.NetworkCloud/hybridAksClusters/delete                                  False          Delete the additional details related to the provided Hybrid AKS provisioned cluster. The API returns 200 OK when the deletion is successful. 202 Accepted is returned when the operation is performed asynchronously.
+  Microsoft.NetworkCloud/hybridAksClusters/read                                    False          Get a list of additional details related to Hybrid AKS provisioned clusters in the provided subscription. The API returns 200 OK when the operation is successful.
+  Microsoft.NetworkCloud/hybridAksClusters/read                                    False          Get the additional details related to the provided Hybrid AKS provisioned cluster. The API returns 200 OK when the operation is successful.
+  Microsoft.NetworkCloud/hybridAksClusters/read                                    False          Get a list of additional details for Hybrid AKS provisioned clusters in the provided resource group. The API returns 200 OK when the operation is successful.
+  Microsoft.NetworkCloud/hybridAksClusters/write                                   False          Create new additional details related to the Hybrid AKS provisioned cluster or update the existing one. The API returns 200 OK in case of the successful creation or update. 201 Created is returned when the operation is performed asynchronously.
+All customer initiated requests will be rejected as the life cycle of this resource is managed by the system.
+  Microsoft.NetworkCloud/hybridAksClusters/write                                   False          Update tags associated with the additional details related to the Hybrid AKS provisioned cluster. The API returns 200 OK when the operation is successful.
+  Microsoft.NetworkCloud/hybridAksManagementDomains/delete                         False          Delete the provided Hybrid AKS management domain. The API returns 200 OK when the deletion is successful. 202 Accepted is returned when the operation is performed asynchronously.
+  Microsoft.NetworkCloud/hybridAksManagementDomains/read                           False          Get properties of the provided Hybrid AKS management domain. The API returns 200 OK when the operation is successful.
+  Microsoft.NetworkCloud/hybridAksManagementDomains/read                           False          Get a list of Hybrid AKS management domains in the provided resource group. The API returns 200 OK when the operation is successful.
+  Microsoft.NetworkCloud/hybridAksManagementDomains/read                           False          Get a list of Hybrid AKS management domains in the provided subscription. The API returns 200 OK when the operation is successful.
+  Microsoft.NetworkCloud/hybridAksManagementDomains/write                          False          Create a new Hybrid AKS management domain or update properties of the existing Hybrid AKS management domain. The API returns 200 OK in case of the successful creation or update. 201 Created is returned when the operation is performed asynchronously.
+  Microsoft.NetworkCloud/hybridAksManagementDomains/write                          False          Update tags associated with the provided Hybrid AKS management domain. The API returns 200 OK when the operation is successful.
+  Microsoft.NetworkCloud/hybridAksVirtualMachines/delete                           False          Delete the provided Hybrid AKS virtual machine. The API returns 200 OK when the deletion is successful. 202 Accepted is returned when the operation is performed asynchronously.
+  Microsoft.NetworkCloud/hybridAksVirtualMachines/powerOff/action                  False          Power off the provided Hybrid AKS virtual machine. The API returns 202 Accepted as the operation is performed asynchronously.
+  Microsoft.NetworkCloud/hybridAksVirtualMachines/read                             False          Get properties of the provided Hybrid AKS virtual machine. The API returns 200 OK when the operation is successful.
+  Microsoft.NetworkCloud/hybridAksVirtualMachines/read                             False          Get a list of Hybrid AKS virtual machines in the provided subscription. The API returns 200 OK when the operation is successful.
+  Microsoft.NetworkCloud/hybridAksVirtualMachines/read                             False          Get a list of Hybrid AKS virtual machines in the provided resource group. The API returns 200 OK when the operation is successful.
+  Microsoft.NetworkCloud/hybridAksVirtualMachines/restart/action                   False          Restart the provided Hybrid AKS virtual machine. The API returns 202 Accepted as the operation is performed asynchronously.
+  Microsoft.NetworkCloud/hybridAksVirtualMachines/start/action                     False          Start the provided Hybrid AKS virtual machine. The API returns 202 Accepted as the operation is performed asynchronously.
+  Microsoft.NetworkCloud/hybridAksVirtualMachines/write                            False          Create a new Hybrid AKS virtual machine or update the existing one. The API returns 200 OK in case of the successful creation or update. 201 Created is returned when the operation is performed asynchronously.
+All customer initiated requests will be rejected as the life cycle of this resource is managed by the system.
+  Microsoft.NetworkCloud/hybridAksVirtualMachines/write                            False          Update tags associated with the Hybrid AKS virtual machine. The API returns 200 OK when the operation is successful.
+  Microsoft.NetworkCloud/rackSkus/read                                             False          Get a list of rack SKUs in the provided subscription. The API returns 200 OK when the API is successful.
+  Microsoft.NetworkCloud/rackSkus/read                                             False          Get the properties of the provided rack SKU. The API returns 200 OK when the operation is successful.
+  Microsoft.Orbital/moveResources/action                                           False          Moves Terminal to the given resourceGroup or/and subscription.
+  Microsoft.Orbital/terminals/read                                                 False          Read any Terminal
+  Microsoft.Orbital/validateMoveResources/action                                   False          Determine whether a Terminal can be moved to the given resourceGroup or/and subscription.
+  Microsoft.PlayFab/titles/titledataset/delete                                     False          Deletes an existing PlayFab TitleDataSet resource.
+  Microsoft.PlayFab/titles/titledataset/read                                       False          Gets or Lists an existing PlayFab TitleDataSet resource.
+  Microsoft.PlayFab/titles/titledataset/write                                      False          Creates or Updates an existing PlayFab TitleDataSet resource.
+  Microsoft.PlayFab/titles/titleinternaldataset/delete                             False          Deletes an existing PlayFab TitleInternalDataSet resource.
+  Microsoft.PlayFab/titles/titleinternaldataset/read                               False          Gets or Lists an existing PlayFab TitleInternalDataSet resource.
+  Microsoft.PlayFab/titles/titleinternaldataset/write                              False          Creates or Updates an existing PlayFab TitleInternalDataSet resource.
+  Microsoft.Search/searchServices/aliases/delete                                   False          Delete an alias.
+  Microsoft.Search/searchServices/aliases/read                                     False          Return an alias or a list of aliases.
+  Microsoft.Search/searchServices/aliases/write                                    False          Create an alias or modify its properties.
+
+
