@@ -15,14 +15,14 @@ when the data was scraped along with the row count may be found at the bottom of
 ``
 	TO SEE A QUICK VIEW:
 		.\Get-AzureServices.ps1 | Out-GridView
-	
+
 	TO GET JUST A LIST OF SERVICES:
 		.\Get-AzureServices.ps1 -ServicesOnly | Export-Csv -Path 'AzureServices.csv' -Encoding utf8 -force
 	TO CONVERT AzureServices.CSV TO FORMATTED TEXT: 
 		"{0,-56} {1,-40} {2}" -f 'ProviderNamespace','ProviderName','Description' | out-file -FilePath 'AzureServices.txt' -Encoding utf8 -force -width 210 ;
 		"{0,-56} {1,-40} {2}" -f '=================','============','===========' | out-file -FilePath 'AzureServiceFeatures.txt' -Encoding utf8 -force -width 210 -Append;
 		Import-Csv -Path 'AzureServices.csv' | foreach { ("{0,-56} {1,-40} {2}" -f $_.ProviderNamespace, $_.ProviderName, $_.Description) } | out-file -FilePath 'AzureServices.txt' -width 210 -Encoding utf8 -Append
-		
+
 	TO GET A CSV OF ALL RBAC ACTIONS:
 		.\Get-AzureServices.ps1 -AddNote | Export-Csv -Path 'AzureServiceActions.csv' -Encoding utf8 -force
 	TO CONVERT AzureServiceActions.CSV TO FORMATTED TEXT:
