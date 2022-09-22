@@ -11,6 +11,32 @@ to be able to see all actions in one place.
 Comment lines in the CSV (including the header at the top) start with a hastag (#).  The date
 when the data was scraped along with the row count may be found at the bottom of each CSV.
 
+## Usage
+``
+	TO SEE A QUICK VIEW:
+		.\Get-AzureServices.ps1 | Out-GridView
+	
+	TO GET JUST A LIST OF SERVICES:
+		.\Get-AzureServices.ps1 -ServicesOnly | Export-Csv -Path 'AzureServices.csv' -Encoding utf8 -force
+	TO CONVERT AzureServices.CSV TO FORMATTED TEXT: 
+		"{0,-56} {1,-40} {2}" -f 'ProviderNamespace','ProviderName','Description' | out-file -FilePath 'AzureServices.txt' -Encoding utf8 -force -width 210 ;
+		"{0,-56} {1,-40} {2}" -f '=================','============','===========' | out-file -FilePath 'AzureServiceFeatures.txt' -Encoding utf8 -force -width 210 -Append;
+		Import-Csv -Path 'AzureServices.csv' | foreach { ("{0,-56} {1,-40} {2}" -f $_.ProviderNamespace, $_.ProviderName, $_.Description) } | out-file -FilePath 'AzureServices.txt' -width 210 -Encoding utf8 -Append
+		
+	TO GET A CSV OF ALL RBAC ACTIONS:
+		.\Get-AzureServices.ps1 -AddNote | Export-Csv -Path 'AzureServiceActions.csv' -Encoding utf8 -force
+	TO CONVERT AzureServiceActions.CSV TO FORMATTED TEXT:
+		"{0,-60} {1,-100} {2,-100} {3}" -f 'ProviderNamespace','Operation','OperationName','IsDataAction' | out-file -FilePath 'AzureServiceActions.txt' -Encoding utf8 -force -width 275 ;
+		Import-Csv -Path 'AzureServiceActions.csv' | foreach { ("{0,-60} {1,-100} {2,-100} {3}" -f $_.ProviderNamespace, $_.Operation, $_.OperationName, $_.IsDataAction) } | out-file -FilePath 'AzureServiceActions.txt' -width 210 -Encoding utf8 -Append
+	
+	TO GET A LIST OF FEATURES ONLY AS A CSV:
+		.\Get-AzureServices.ps1 -FeaturesOnly | Export-Csv -Path 'AzureServiceFeatures.csv' -Encoding utf8 -force		
+	TO CONVERT AzureServiceFeatures.CSV TO FORMATTED TEXT: 
+		"{0,-56} {1,-40} {2}" -f 'ProviderNamespace','ProviderName','FeatureName' | out-file -FilePath 'AzureServiceFeatures.txt' -Encoding utf8 -force -width 210 ;
+		"{0,-56} {1,-40} {2}" -f '=================','============','===========' | out-file -FilePath 'AzureServiceFeatures.txt' -Encoding utf8 -force -width 210 -Append;
+		Import-Csv -Path 'AzureServiceFeatures.csv' | foreach { ("{0,-56} {1,-40} {2}" -f $_.ProviderNamespace, $_.ProviderName, $_.FeatureName) } | out-file -FilePath 'AzureServiceFeatures.txt' -width 210 -Encoding utf8 -Append
+``
+
 ## Anomalies
 In retrieving the data, a few anomalies have been observed with the original source data and/or documentation:
 
