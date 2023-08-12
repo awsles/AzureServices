@@ -14,6 +14,7 @@ Microsoft DB for MySQL                                   Microsoft.DBForMySQL   
 Microsoft.Cdn                                            Microsoft.Cdn                            BypassAuthoritativeDnsQueryForCNameCheck
 Microsoft.RecoveryServices                               Microsoft.RecoveryServices               MultipleBackupsPerDay
 Microsoft.RecoveryServices                               Microsoft.RecoveryServices               TrustedVMBackup
+-                                                        Microsoft.Graph                          PrivatePreviewAccess
 Microsoft DB for MariaDB                                 Microsoft.DBForMariaDB                   orcasconfignopdl
 Microsoft DB for MySQL                                   Microsoft.DBForMySQL                     storageAutoGrowth
 Microsoft DB for MySQL                                   Microsoft.DBForMySQL                     stopStateMaximumExtend
@@ -52,7 +53,6 @@ Microsoft Cognitive Services                             Microsoft.CognitiveServ
 Microsoft Cognitive Services                             Microsoft.CognitiveServices              CommitmentTier4-TA
 Microsoft Cognitive Services                             Microsoft.CognitiveServices              CommitmentTier4-Translator
 Microsoft Storage                                        Microsoft.Storage                        CustomerInitiatedMigration
-Microsoft.AVS                                            Microsoft.AVS                            AHBSQL
 Microsoft.NetApp Resource Provider                       Microsoft.NetApp                         ANFCrossZoneReplication
 Microsoft.HybridNetwork                                  Microsoft.HybridNetwork                  Routing-SecondaryCanaryCentralEUAP
 Microsoft.HybridNetwork                                  Microsoft.HybridNetwork                  Routing-SecondaryCanaryEastUS2EUAP
@@ -62,7 +62,6 @@ Microsoft DB for MySQL                                   Microsoft.DBForMySQL   
 Microsoft DB for PostgreSQL                              Microsoft.DBForPostgreSQL                flexibleServerDeleteBlade
 Microsoft Azure Stream Analytics                         Microsoft.StreamAnalytics                PreferEventHubMultiSender
 Microsoft Container Service                              microsoft.ContainerService               EnableNamespaceResourcesPreview
-Microsoft Container Service                              microsoft.ContainerService               EnableOIDCIssuerPreview
 Microsoft Storage                                        Microsoft.Storage                        DataMoverPreviewAccess
 Microsoft Network                                        Microsoft.Network                        AllowRsVmssMigration
 Microsoft.OpenEnergyPlatform                             Microsoft.OpenEnergyPlatform             OEPPrivatePreviewAccess
@@ -87,16 +86,14 @@ Microsoft Compute                                        Microsoft.Compute      
 Microsoft Network                                        Microsoft.Network                        AuxiliaryAttachedModeEnabled
 Microsoft Compute                                        Microsoft.Compute                        G8LMLIDedicatedHost
 Microsoft Kubernetes Configuration                       Microsoft.KubernetesConfiguration        Namespaces
-Microsoft.AlertsManagement                               Microsoft.AlertsManagement               prometheusRuleGroupPreview
 Microsoft Security                                       Microsoft.Security                       Governance
 Microsoft.Dashboard                                      Microsoft.Dashboard                      InternalRegions
 Microsoft Network                                        Microsoft.Network                        vWANNFVRPMigrationSEC
 Microsoft Network                                        Microsoft.Network                        vWANNFVRPMigrationSES
 Microsoft Network                                        Microsoft.Network                        AllowPrivateEndpointCustomNicName
 Microsoft Network                                        Microsoft.Network                        VNetEncryptionCustomerManagedCert
-Microsoft Network                                        Microsoft.Network                        AllowVipSwapWithSlotSupport
 Microsoft Portal                                         Microsoft.Portal                         extensionspreview
-Microsoft.EdgeZones                                      Microsoft.EdgeZones                      canary
+-                                                        Microsoft.EdgeZones                      canary
 Microsoft Domains                                        Microsoft.DomainRegistration             RegionalizeRp
 Microsoft Certificates                                   Microsoft.CertificateRegistration        RegionalizeResourceProvider
 Microsoft Domains                                        Microsoft.DomainRegistration             RegionalizeResourceProvider
@@ -142,7 +139,7 @@ Microsoft Storage                                        Microsoft.Storage      
 Microsoft Storage                                        Microsoft.Storage                        ArchivePolicyPropertiesCompanyMetUK
 Microsoft Storage                                        Microsoft.Storage                        ArchivePolicyPropertiesTapeZonality
 Microsoft.TestBase                                       microsoft.testbase                       API20211201
-Microsoft StorSimple Device Manager                      Microsoft.StorSimple                     ShowBannerForDeviceUpdate52
+-                                                        Microsoft.StorSimple                     ShowBannerForDeviceUpdate52
 Microsoft.IoTFirmwareDefense                             Microsoft.IoTFirmwareDefense             AccessControl
 Microsoft Azure Monitor                                  Microsoft.Insights                       GraphDeprecation
 Microsoft Kubernetes Configuration                       Microsoft.KubernetesConfiguration        ExtensionTypes
@@ -191,14 +188,12 @@ Microsoft Container Service                              microsoft.ContainerServ
 Microsoft.AzureArcData                                   Microsoft.AzureArcData                   ArcDataActiveDirectory
 Microsoft Managed Identity                               Microsoft.ManagedIdentity                FederatedIdentityCredentials
 Microsoft Storage                                        Microsoft.Storage                        PremiumFilesFirstTierWithBurstSettings
-Microsoft Container Service                              microsoft.ContainerService               AzureKeyVaultKmsPreview
 Microsoft Event Grid                                     Microsoft.eventgrid                      BypassPartnerAuthorizationFeature
 Microsoft DB for PostgreSQL                              Microsoft.DBForPostgreSQL                enableMoveLinks
 Microsoft DB for MySQL                                   Microsoft.DBForMySQL                     enableMoveLinks
 Microsoft DB for PostgreSQL                              Microsoft.DBForPostgreSQL                enableMarlinLogs
 Microsoft DB for PostgreSQL                              Microsoft.DBForPostgreSQL                offlineMigrations
 Microsoft.AVS                                            Microsoft.AVS                            smartSwitchConfigExperience
-Microsoft DocumentDB                                     Microsoft.DocumentDb                     Mongo16MB
 Microsoft Databricks                                     Microsoft.Databricks                     EnableAccessConnectorPreview
 Microsoft DB for MySQL                                   Microsoft.DBForMySQL                     enableSameZoneHA
 Microsoft IoT Security                                   Microsoft.IotSecurity                    PrivatePreviewParticipation
@@ -216,7 +211,6 @@ Microsoft Event Grid                                     Microsoft.eventgrid    
 -                                                        Microsoft.DataReplication                PPEAccess
 Microsoft DB for MySQL                                   Microsoft.DBForMySQL                     geoRestoreForNonZRServer
 Microsoft Logic                                          Microsoft.Logic                          ISVSubscription
-Microsoft Container Service                              microsoft.ContainerService               FleetResourcePreview
 Microsoft Container Service                              microsoft.ContainerService               AKSInfinibandSupport
 Microsoft Container Service                              microsoft.ContainerService               EnableAPIServerVnetIntegrationPreview
 Microsoft DB for MySQL                                   Microsoft.DBForMySQL                     enableBackupAndRestoreBlade
@@ -253,6 +247,7 @@ Microsoft.ApiSecurity                                    Microsoft.ApiSecurity  
 Microsoft DB for PostgreSQL                              Microsoft.DBForPostgreSQL                enableHideCitusConInformationBanner
 Azure Log Analytics                                      Microsoft.OperationalInsights            NewRegionsTest
 Microsoft.ApiSecurity                                    Microsoft.ApiSecurity                    PP2CanaryCentralUSAccessDEV
+Microsoft Container Service                              microsoft.ContainerService               EnableWorkloadIdentityPreview
 Microsoft Event Grid                                     Microsoft.EventGrid                      qac-9abfce26-7dfa-49fe-9a8d-a3d6cb13afd6
 Microsoft Cognitive Services                             Microsoft.CognitiveServices              FormRecognizer.Neural100
 Microsoft.NetApp Resource Provider                       Microsoft.NetApp                         ANFSMBNonBrowsable
@@ -260,7 +255,6 @@ Microsoft.NetApp Resource Provider                       Microsoft.NetApp       
 Microsoft Cache                                          Microsoft.Cache                          qac-59fe8ab9-6707-4b3c-afb0-f5ed4214b531
 Microsoft DB for PostgreSQL                              Microsoft.DBForPostgreSQL                enableHideFreeAccountMessages
 Microsoft DB for MySQL                                   Microsoft.DBForMySQL                     enableHideFreeAccountMessages
-Microsoft.DeviceUpdate                                   Microsoft.DeviceUpdate                   PreviewRegion
 Microsoft Guest Configuration                            Microsoft.GuestConfiguration             TestParticipation
 Microsoft.Kusto                                          microsoft.kusto                          qac-e02603c6-3469-498a-994c-b0df4ceae1d0
 Microsoft API Management                                 Microsoft.ApiManagement                  qac-6ba70dfa-ead9-4cc1-b894-049f8a17c22b
@@ -276,14 +270,13 @@ Microsoft.RecoveryServices                               Microsoft.RecoveryServi
 MicrosoftElasticSan                                      Microsoft.ElasticSan                     AllowValidationRegions
 Microsoft ContainerRegistry                              Microsoft.ContainerRegistry              qac-3c737fd7-1389-4626-868f-c18df5790cb6
 Microsoft Network                                        Microsoft.Network                        AllowAppGwWafCustomBlockResponse
-Microsoft Azure Active Directory                         Microsoft.AzureActiveDirectory           CIAMApiBeta
 Microsoft Guest Configuration                            Microsoft.GuestConfiguration             TestParticipation2
 Microsoft Guest Configuration                            Microsoft.GuestConfiguration             TestParticipation3
 Microsoft Guest Configuration                            Microsoft.GuestConfiguration             TestParticipation4
 Microsoft Guest Configuration                            Microsoft.GuestConfiguration             TestParticipation5
 Microsoft Devices                                        Microsoft.Devices                        BlockedRegion
 Microsoft Azure Monitor                                  microsoft.insights                       actiongroupswedenc
--                                                        PaloAltoNetworks.Cloudngfw               PAN-Firewall
+PaloAltoNetworks.Cloudngfw                               PaloAltoNetworks.Cloudngfw               PAN-Firewall
 Microsoft.PlayFab                                        Microsoft.PlayFab                        pfci
 Microsoft Azure Monitor                                  microsoft.insights                       qac-53601923-fb1a-4937-bcf2-ae71190acf34
 Microsoft Logic                                          Microsoft.Logic                          IseCreationInRestrictedRegionAllowed
@@ -294,6 +287,7 @@ Microsoft.BackupSolutions                                Microsoft.BackupSolutio
 Microsoft Network                                        Microsoft.Network                        AllowThrottleByOperationCounter
 Microsoft Cognitive Services                             Microsoft.CognitiveServices              FormRecognizer.Neural5
 Microsoft Network                                        Microsoft.Network                        AllowIpv6ApplicationGateway
+Microsoft Container Service                              microsoft.ContainerService               TrustedAccessPreview
 Microsoft Container Instance                             Microsoft.ContainerInstance              snpEnabledContainerGroup
 Microsoft.ApiSecurity                                    Microsoft.ApiSecurity                    PP2PPE
 Microsoft Network                                        Microsoft.Network                        EnableDefaultLoadBalancerForFastPathVirtualNetworks
@@ -313,7 +307,6 @@ Microsoft Network                                        Microsoft.Network      
 Microsoft.PlayFab                                        Microsoft.PlayFab                        segments
 Microsoft DocumentDB                                     Microsoft.DocumentDB                     ThroughputRedistributionAcrossPartitions
 Microsoft DocumentDB                                     Microsoft.DocumentDB                     Serverless1TBContainer
-Microsoft DocumentDB                                     Microsoft.DocumentDB                     PartitionMerge
 Microsoft.Easm                                           Microsoft.Easm                           EasmAccess
 Microsoft Resources                                      Microsoft.Resources                      ItalyCentral
 Microsoft Resources                                      Microsoft.Resources                      TagNamespace
@@ -328,6 +321,7 @@ Microsoft.Kusto                                          Microsoft.Kusto        
 Microsoft Cognitive Services                             Microsoft.CognitiveServices              FormRecognizer.PodMode.msform
 Microsoft Web Apps                                       Microsoft.Web                            qac-df36aee8-c644-400b-a0ab-fd0f1191211d
 Machine Learning Services Resource Provider              Microsoft.MachineLearningServices        registriesprivatepreview
+Microsoft Compute                                        Microsoft.Compute                        ServiceGroupARCOPreview
 Microsoft Network                                        Microsoft.Network                        EnableIPV6CAAllocationByNRP
 Microsoft.RecoveryServices                               Microsoft.RecoveryServices               EdgeZoneVMBackupPreview
 Microsoft Network                                        Microsoft.Network                        EnableNameReservation
@@ -370,8 +364,8 @@ Microsoft Devices                                        Microsoft.Devices      
 Microsoft Azure Monitor                                  microsoft.insights                       actiongroupgermanywc
 Microsoft DB for PostgreSQL                              Microsoft.DBforPostgreSQL                showCDBPostgreSQL
 Microsoft DB for PostgreSQL                              Microsoft.DBForPostgreSQL                testAFECCreation
-Microsoft.AzureSphereGen2                                Microsoft.AzureSphereGen2                preview
-Microsoft.AzureSphereGen2                                Microsoft.AzureSphereGen2                int
+-                                                        Microsoft.AzureSphereGen2                preview
+-                                                        Microsoft.AzureSphereGen2                int
 Microsoft.AzurePercept                                   Microsoft.AzurePercept                   IntegrationTest
 Microsoft Network                                        Microsoft.Network                        EnableAppgwCsesDeployments
 Microsoft DB for PostgreSQL                              Microsoft.DBforPostgreSQL                enableDataEncryption
@@ -389,7 +383,6 @@ Microsoft DB for PostgreSQL                              Microsoft.DBForPostgreS
 Microsoft.PlayFab                                        Microsoft.PlayFab                        shoeboxTesting
 Microsoft Batch                                          Microsoft.Batch                          qac-58aa8ff2-5d53-444a-8026-1610fb23c30f
 Microsoft.HybridNetwork                                  Microsoft.HybridNetwork                  AllowPreReleaseFeatures
-Microsoft DB for PostgreSQL                              Microsoft.DBForPostgreSQL                enableMajorVersionUpgrade
 Microsoft Network                                        Microsoft.Network                        AllowZonalBasicSku
 Microsoft DB for PostgreSQL                              Microsoft.DBForPostgreSQL                enableCitusStandardComputeVcores_canadacentral
 Microsoft DB for PostgreSQL                              Microsoft.DBForPostgreSQL                enableCitusStandardComputeVcores_centralus
@@ -397,13 +390,14 @@ Microsoft DB for PostgreSQL                              Microsoft.DBForPostgreS
 Microsoft DB for PostgreSQL                              Microsoft.DBForPostgreSQL                enableCitusStandardComputeVcores_germanywestcentral
 Microsoft.FluidRelay                                     Microsoft.FluidRelay                     NewRegionOfferingsApprovalAccess
 Microsoft DB for PostgreSQL                              Microsoft.DBforPostgreSQL                enableAADProvisioning
--                                                        Microsoft.AzurePlaywrightService         playwrightServiceBetaAccess
+Microsoft.AzurePlaywrightService                         Microsoft.AzurePlaywrightService         playwrightServiceBetaAccess
 Microsoft DB for PostgreSQL                              Microsoft.DBForPostgreSQL                enablePrivateAccessPG14
 Microsoft Compute                                        Microsoft.Compute                        PerformancePlus
 Microsoft.SecurityDevOps                                 Microsoft.SecurityDevOps                 DfdAzDevOpsConnector
 Microsoft.RecoveryServices                               Microsoft.RecoveryServices               ConfidentialVMBackup
 Microsoft Policy Insights                                Microsoft.PolicyInsights                 componentPolicyStates
 Microsoft Network                                        Microsoft.Network                        AllowDisableTcpStateTracking
+Microsoft Container Service                              microsoft.ContainerService               KubeProxyConfigurationPreview
 Microsoft Container Service                              microsoft.ContainerService               AKS-AzurePolicyExternalData
 Microsoft.ServiceLinker                                  microsoft.servicelinker                  PrivatePreviewEnabled
 Microsoft.MobileNetwork                                  Microsoft.MobileNetwork                  UseAlternateNFLocation
@@ -430,14 +424,12 @@ Microsoft DB for PostgreSQL                              Microsoft.DBForPostgreS
 Microsoft DB for PostgreSQL                              Microsoft.DBForPostgreSQL                enablePostgreSqlMigration_uaenorth
 Microsoft DB for PostgreSQL                              Microsoft.DBForPostgreSQL                enablePostgreSqlMigration_ukwest
 Microsoft DB for PostgreSQL                              Microsoft.DBForPostgreSQL                enablePostgreSqlMigration_canadaeast
+Azure Red Hat OpenShift                                  Microsoft.RedHatOpenShift                UserDefinedRouting
 Microsoft Storage                                        Microsoft.Storage                        CustomerInitiatedCrossRegionMigration
-Microsoft Network                                        Microsoft.Network                        AllowCloudServiceWithStandardSku
 Microsoft.TestBase                                       Microsoft.TestBase                       PrivatePreview
 Microsoft DocumentDB                                     Microsoft.DocumentDB                     FranceSouth
 Microsoft.AzureScan                                      Microsoft.AzureScan                      ScanAccountAccess
 Microsoft Data Factory                                   microsoft.datafactory                    qac-f76de4a1-629f-4651-9d76-1d7b56544f3c
-Microsoft DocumentDB                                     Microsoft.DocumentDB                     MaterializedViewsForCassandraApi
-Microsoft DocumentDB                                     Microsoft.DocumentDB                     MaterializedViewsForSQLApi
 Microsoft Azure Lab Services                             Microsoft.LabServices                    AllowLargeDisks
 Microsoft Compute                                        Microsoft.Compute                        VmssMultiZonePreProvisioning
 Microsoft Search                                         Microsoft.Search                         qac-28d32201-d1ad-47ab-9a4a-3de2dcb6ea2a
@@ -450,7 +442,7 @@ Microsoft Network                                        Microsoft.Network      
 Microsoft Storage                                        Microsoft.Storage                        AllowDataSharingInHeroRegion
 Microsoft Compute                                        Microsoft.Compute                        AutoOSUpgradeTargetedSdpForRedisService
 MicrosoftElasticSan                                      Microsoft.ElasticSan                     ElasticSanPreviewAccess
--                                                        PaloAltoNetworks.Cloudngfw               betaAccess
+PaloAltoNetworks.Cloudngfw                               PaloAltoNetworks.Cloudngfw               betaAccess
 Microsoft Azure Monitor                                  Microsoft.Insights                       actiongroupglobal
 Microsoft Compute                                        Microsoft.Compute                        Fabric.IsTenantAllowedOnFaultPointHardware
 Microsoft DB for PostgreSQL                              Microsoft.DBForPostgreSQL                TryCosmosDBForPostgreSQL
@@ -481,13 +473,17 @@ Microsoft.BackupSolutions                                Microsoft.BackupSolutio
 Microsoft Cognitive Services                             Microsoft.CognitiveServices              OpenAI.RAIPolicy.nil
 Microsoft Container Service                              microsoft.ContainerService               EnableImageCleanerPreview
 Microsoft Container Service                              microsoft.ContainerService               AKS-VPAPreview
--                                                        Microsoft.Pki                            preview
+Microsoft.Pki                                            Microsoft.Pki                            preview
 Microsoft.UsageBilling                                   Microsoft.UsageBilling                   PrivatePreviewParticipation
+Microsoft Container Service                              microsoft.ContainerService               AKS-OutBoundTypeMigrationPreview
 Microsoft Container Service                              microsoft.ContainerService               PodHostPortAutoAssignPreview
 Microsoft.IoTFirmwareDefense                             Microsoft.IoTFirmwareDefense             Canary
 Microsoft Cognitive Services                             Microsoft.CognitiveServices              Cloud.TA.LanguageReleaseEarlyAccess
 Microsoft DB for PostgreSQL                              Microsoft.DBForPostgreSQL                enableBackupAndRestoreBlade
 Microsoft Network                                        Microsoft.Network                        ThrottleCheckDnsCalls
+Microsoft Container Service                              microsoft.ContainerService               NodePublicIPTagsPreview
+Microsoft Container Service                              microsoft.ContainerService               IPBasedLoadBalancerPreview
+Virtual Machine Image Builder                            Microsoft.VirtualMachineImages           Triggers
 Microsoft DB for MySQL                                   Microsoft.DBForMySQL                     enableDataEncryption
 Microsoft.Cdn                                            Microsoft.Cdn                            DisableAFDPortalARG
 Microsoft Cognitive Services                             Microsoft.CognitiveServices              Container.TA.ConversationSentiment
@@ -495,17 +491,635 @@ Microsoft DB for PostgreSQL                              Microsoft.DBforPostgreS
 Microsoft Network                                        Microsoft.Network                        AllowDeletionOfIpPrefixFromSubnet
 Virtual Machine Image Builder                            Microsoft.VirtualMachineImages           qac-4b8d3bdc-e2d1-4b44-ba4f-b0fbcb18960f
 Microsoft Databricks                                     Microsoft.Databricks                     DatabricksTestEnvSlot2
-Microsoft.NetworkAnalytics                               Microsoft.NetworkAnalytics               NetworkAnalyticsEnablement
 Microsoft DB for PostgreSQL                              Microsoft.DBforPostgreSQL                enableswedencentral
+Microsoft Container Service                              microsoft.ContainerService               NodePublicIPNSGControlPreview
 Microsoft DB for MySQL                                   Microsoft.DBForMySQL                     enableActiveDirectoryAdmins
 Microsoft Cognitive Services                             Microsoft.CognitiveServices              Cloud.TA.ConversationSentiment
 Microsoft.NetworkAnalytics                               Microsoft.NetworkAnalytics               Routing-SecondaryCanaryEastUS2EUAP
 Microsoft.NetworkAnalytics                               Microsoft.NetworkAnalytics               Routing-SecondaryCanaryCentralEUAP
-Microsoft.AlertsManagement                               Microsoft.AlertsManagement               prometheusRulesPreview
-Qumulo.QaaS                                              Qumulo.QaaS                              Storage
-Qumulo.QaaS                                              Qumulo.QaaS                              betaQumuloStorage
+Microsoft DB for MySQL                                   Microsoft.DBForMySQL                     enableMySqlHaWithReadReplica
+Microsoft Service Networking                             Microsoft.ServiceNetworking              AllowTrafficController
+Microsoft DB for PostgreSQL                              Microsoft.DBForPostgreSQL                flexibleServerDatabases
+Microsoft.AVS                                            Microsoft.AVS                            vTPMEnablement
+Microsoft Compute                                        Microsoft.Compute                        UseLongerHealthExtensionStaleTime
+Microsoft DB for PostgreSQL                              Microsoft.DBforPostgreSQL                enableMajorVersionUpgrade
+Microsoft Container Instance                             Microsoft.ContainerInstance              EastUSSTG-7189fb51-dab4-404e-a38a-ba138ac9ce42
+Microsoft Container Instance                             Microsoft.ContainerInstance              SouthCentralUSSTG-7189fb51-dab4-404e-a38a-ba138ac9ce42
+Microsoft Azure Monitor                                  microsoft.insights                       actiongroupusnorth
+Microsoft Azure Monitor                                  microsoft.insights                       actiongroupussouth
+Microsoft Cognitive Services                             Microsoft.CognitiveServices              LimitedAccess.IsvHighRisk
+Microsoft Cognitive Services                             Microsoft.CognitiveServices              Face.IsvVerification
+Microsoft Cognitive Services                             Microsoft.CognitiveServices              Face.IsvIdentification
+Machine Learning Services Resource Provider              Microsoft.MachineLearningServices        WSSoftDeleteEnabled
+Microsoft Service Networking                             Microsoft.ServiceNetworking              AllowRedirectToTestRP
+Microsoft.Confluent                                      Microsoft.Confluent                      validationEndpoint
+Microsoft Cognitive Services                             Microsoft.CognitiveServices              Cloud.TA.ZeroShotClassification
+Microsoft Batch                                          Microsoft.Batch                          cpt-58aa8ff2-5d53-444a-8026-1610fb23c30f
+Microsoft Network                                        Microsoft.Network                        EnablePlsOnIpBasedLoadBalancer
+Microsoft Compute                                        Microsoft.Compute                        MaxSurgeRollingUpgrade
+Microsoft Event Grid                                     Microsoft.eventgrid                      FontanaFeatures2022
+Microsoft Container Service                              microsoft.ContainerService               KataVMIsolationPreview
+Microsoft DB for PostgreSQL                              Microsoft.DBForPostgreSQL                enableCitusStandardComputeVcores_australiaeast
+Microsoft DB for PostgreSQL                              Microsoft.DBForPostgreSQL                enableCitusStandardComputeVcores_brazilsouth
+Microsoft DB for PostgreSQL                              Microsoft.DBForPostgreSQL                enableCitusStandardComputeVcores_japaneast
+Microsoft DB for PostgreSQL                              Microsoft.DBForPostgreSQL                enableCitusStandardComputeVcores_koreacentral
+Microsoft Network                                        Microsoft.Network                        BypassPreflightValidationAfd
+Microsoft Network                                        Microsoft.Network                        SupportIPv6PrivateEndpoint
+Microsoft.Mission                                        Microsoft.Mission                        MissionBetaAccess
+Microsoft.IoTFirmwareDefense                             Microsoft.IoTFirmwareDefense             PrivatePreviewWEU
+Microsoft Network                                        Microsoft.Network                        EnableGatewayUtilisationMetric
+Microsoft Network                                        Microsoft.Network                        AllowNsgFlushConnection
+Microsoft DocumentDB                                     Microsoft.DocumentDB                     mongoVersion5
+Microsoft Network                                        Microsoft.Network                        RollbackOptimizedVnetsGlobally
+Microsoft Compute                                        Microsoft.Compute                        OSImageScheduledEvent
+Microsoft ServiceFabricMesh                              Microsoft.ServiceFabricMesh              EastUSSTG-7189fb51-dab4-404e-a38a-ba138ac9ce42
+Microsoft ServiceFabricMesh                              Microsoft.ServiceFabricMesh              SouthCentralUSSTG-7189fb51-dab4-404e-a38a-ba138ac9ce42
+Microsoft Apps                                           Microsoft.App                            ServerlessCompute
+Microsoft Apps                                           Microsoft.App                            PrereleaseApiVersionAllowed
+Microsoft Key Vault                                      Microsoft.KeyVault                       MHSMGovernance
+Microsoft.Cdn                                            Microsoft.Cdn                            Bypass1PMigrationAuthCheck
+Microsoft.Cdn                                            Microsoft.Cdn                            Enable1PProfileBilling
+Microsoft Network                                        Microsoft.Network                        AllowUpdateOfIpPrefixFromSubnet
+Microsoft DB for PostgreSQL                              Microsoft.DBForPostgreSQL                enableSeverParametersUpdate
+Microsoft.HybridNetwork                                  Microsoft.HybridNetwork                  Routing-CanaryDev2EastUS2EUAP
+Microsoft Cognitive Services                             Microsoft.CognitiveServices              openAIModels.dv3
+Microsoft.HybridNetwork                                  Microsoft.HybridNetwork                  Routing-CanaryDev3EastUS2EUAP
+Microsoft Container Service                              microsoft.ContainerService               DisableWindowsOutboundNATPreview
+Microsoft ServiceFabricMesh                              Microsoft.ServiceFabricMesh              EastUSSTG-1a113496-2837-4f5c-bf90-133dd0b626db
+Microsoft ServiceFabricMesh                              Microsoft.ServiceFabricMesh              SouthCentralUSSTG-1a113496-2837-4f5c-bf90-133dd0b626db
+Microsoft Container Service                              microsoft.ContainerService               CiliumDataplanePreview
+Microsoft.MobileNetwork                                  Microsoft.MobileNetwork                  Allow-WestEurope
+Microsoft.HybridNetwork                                  Microsoft.HybridNetwork                  Routing-CanaryCentralUSEastUS2EUAP
+Microsoft.HybridNetwork                                  Microsoft.HybridNetwork                  Routing-CanaryWestUS2EastUS2EUAP
+Microsoft.Impact                                         Microsoft.Impact                         TestInPPE
+Microsoft DB for PostgreSQL                              Microsoft.DBForPostgreSQL                enablePG15
+Microsoft.Impact                                         Microsoft.Impact                         AllowImpactReporting
+Microsoft.Impact                                         Microsoft.Impact                         DevTest
+Microsoft Storage                                        Microsoft.Storage                        PremiumFilesPreferredAccountAllocation
+Microsoft.GraphServices                                  Microsoft.GraphServices                  PrivatePreviewAccess
+Microsoft.HybridNetwork                                  Microsoft.HybridNetwork                  AllowNewRegionAccess
+Microsoft Network                                        Microsoft.Network                        EnableFixAsgReferences
+Microsoft Event Grid                                     Microsoft.eventgrid                      PartnerEventsLifeCycleFeature
+Microsoft.Mission                                        Microsoft.Mission                        MissionPreviewTestEnvironment
+Microsoft.Mission                                        Microsoft.Mission                        MissionPreviewPPEEnvironment
+Microsoft.Mission                                        Microsoft.Mission                        MissionPreviewPRODEnvironment
+Microsoft DB for MySQL                                   Microsoft.DBForMySQL                     enableMySqlAutoScaleIops
+Microsoft DB for PostgreSQL                              Microsoft.DBForPostgreSQL                enableReadReplicaPublicPreview
+Microsoft.TestBase                                       Microsoft.TestBase                       RelaxRateLimitRunTest
+Microsoft.NetApp Resource Provider                       Microsoft.NetApp                         ANFMultipleActiveDirectory
+Microsoft.MobileNetwork                                  Microsoft.MobileNetwork                  AllowPreReleaseApi
+Microsoft Logic                                          Microsoft.Logic                          AllowNewIseCreations
+Microsoft.HybridNetwork                                  Microsoft.HybridNetwork                  Routing-CanaryEastUS2EastUS2EUAP
+Microsoft.HybridNetwork                                  Microsoft.HybridNetwork                  Routing-CanaryNorthEuropeEastUS2EUAP
+Microsoft Container Instance                             Microsoft.ContainerInstance              cbr-7189fb51-dab4-404e-a38a-ba138ac9ce42
+Microsoft.Mission                                        Microsoft.Mission                        MissionPreviewDevEnvironment
+Microsoft Resources                                      Microsoft.Resources                      BootstrapperAccess
+Virtual Machine Image Builder                            Microsoft.VirtualMachineImages           ImageOptimizationPreview
+Microsoft.HealthcareApis                                 Microsoft.Healthcareapis                 AnalyticsConnectorPreview
+Microsoft Network                                        Microsoft.Network                        AzureFirewallParallelIPGroupUpdate
+Microsoft SQL Database                                   Microsoft.Sql                            AzureSQLDatabaseBlockGeoRedundantBackupStorage
+Microsoft Azure Monitor                                  Microsoft.Insights                       skipDataPullerWorkspaceValidation
+-                                                        Microsoft.DataAccelerator                privatepreview
+Microsoft Network                                        Microsoft.Network                        DisableApplicationGatewaySubnetPermissionCheck
+Microsoft.Mission                                        Microsoft.Mission                        MissionCommunityBeta
+-                                                        Microsoft.M365                           mainv1
+Microsoft DB for MySQL                                   Microsoft.DBForMySQL                     enableGeoDataEncryption
+-                                                        Microsoft.WindowsPushNotificationServices CanaryAccess
+-                                                        Microsoft.WindowsPushNotificationServices ProductionAccess
+Microsoft Event Grid                                     Microsoft.EventGrid                      plc-9abfce26-7dfa-49fe-9a8d-a3d6cb13afd6
+Microsoft Container Service                              microsoft.ContainerService               WindowsCustomKubeletConfigPreview
+Microsoft Container Instance                             Microsoft.ContainerInstance              WestIndia-7189fb51-dab4-404e-a38a-ba138ac9ce42
+Microsoft DevTest Labs                                   microsoft.devtestlab                     RegionalRP
+Microsoft Compute                                        Microsoft.Compute                        SIGEdgeZonePreview
+Microsoft Compute                                        Microsoft.Compute                        SIGEdgeZone_attatlanta1
+Microsoft Compute                                        Microsoft.Compute                        SIGEdgeZone_attdallas1
+Microsoft Compute                                        Microsoft.Compute                        SIGEdgeZone_eastus2euapmockedge
+Microsoft Compute                                        Microsoft.Compute                        SIGEdgeZone_ezecustomerlabboston1
+Microsoft Compute                                        Microsoft.Compute                        SIGEdgeZone_ezecustomerlabhouston1
+Microsoft Compute                                        Microsoft.Compute                        SIGEdgeZone_microsoftb25lab1
+Microsoft Compute                                        Microsoft.Compute                        SIGEdgeZone_microsoftdclabs1
+Microsoft Compute                                        Microsoft.Compute                        SIGEdgeZone_microsoftlasvegas1
+Microsoft Compute                                        Microsoft.Compute                        SIGEdgeZone_microsoftlosangeles1
+Microsoft Compute                                        Microsoft.Compute                        SIGEdgeZone_microsoftmiami1
+Microsoft Compute                                        Microsoft.Compute                        SIGEdgeZone_microsoftnewyork1
+Microsoft Compute                                        Microsoft.Compute                        SIGEdgeZone_microsoftperth1
+Microsoft Compute                                        Microsoft.Compute                        SIGEdgeZone_microsoftrrdclab1
+Microsoft Compute                                        Microsoft.Compute                        SIGEdgeZone_microsoftrrdclab2
+Microsoft Compute                                        Microsoft.Compute                        SIGEdgeZone_microsoftrrdclab3
+Microsoft Compute                                        Microsoft.Compute                        SIGEdgeZone_microsoftrrdclab4
+Microsoft Compute                                        Microsoft.Compute                        SIGEdgeZone_microsoftrrdclab5
+Microsoft Compute                                        Microsoft.Compute                        SIGEdgeZone_microsoftrrdclab6
+Microsoft Compute                                        Microsoft.Compute                        SIGEdgeZone_microsoftrrdclab7
+Microsoft Compute                                        Microsoft.Compute                        SIGEdgeZone_microsoftrrdclab8
+Microsoft Compute                                        Microsoft.Compute                        SIGEdgeZone_microsoftrrdclab9
+Microsoft Compute                                        Microsoft.Compute                        SIGEdgeZone_microsoftrrdclab10
+Microsoft Compute                                        Microsoft.Compute                        SIGEdgeZone_microsoftvancouver1
+Microsoft Compute                                        Microsoft.Compute                        SIGEdgeZone_onefleetedge1mockedge
+Microsoft Compute                                        Microsoft.Compute                        SIGEdgeZone_southcentralusstgmockedge
+Microsoft Compute                                        Microsoft.Compute                        SIGEdgeZone_vzwindsor1
+Microsoft DevTest Labs                                   Microsoft.DevTestlab                     RegionalRP-CY
+Microsoft DevTest Labs                                   Microsoft.DevTestLab                     RegionalRP-SN
+Microsoft DevTest Labs                                   Microsoft.DevTestLab                     RegionalRP-DM
+Microsoft DevTest Labs                                   Microsoft.DevTestLab                     RegionalRP-ML
+Microsoft DevTest Labs                                   Microsoft.DevTestLab                     RegionalRP-PN
+Microsoft DevTest Labs                                   Microsoft.DevTestLab                     RegionalRP-CW
+Microsoft DevTest Labs                                   Microsoft.DevTestLab                     RegionalRP-SE
+Microsoft DevTest Labs                                   Microsoft.DevTestLab                     RegionalRP-HK
+Microsoft DevTest Labs                                   Microsoft.DevTestLab                     RegionalRP-DXB
+Microsoft DevTest Labs                                   Microsoft.DevTestLab                     RegionalRP-CHN
+Microsoft DevTest Labs                                   Microsoft.DevTestLab                     RegionalRP-YT
+Microsoft DevTest Labs                                   Microsoft.DevTestLab                     RegionalRP-TY
+Microsoft DevTest Labs                                   Microsoft.DevTestLab                     RegionalRP-BL
+Microsoft DevTest Labs                                   Microsoft.DevTestLab                     RegionalRP-DB
+Microsoft DevTest Labs                                   Microsoft.DevTestLab                     RegionalRP-JINW
+Microsoft DevTest Labs                                   Microsoft.DevTestLab                     RegionalRP-MA
+Microsoft DevTest Labs                                   Microsoft.DevTestLab                     RegionalRP-YQ
+Microsoft DevTest Labs                                   Microsoft.DevTestLab                     RegionalRP-OS
+Microsoft DevTest Labs                                   Microsoft.DevTestLab                     RegionalRP-CQ
+Microsoft DevTest Labs                                   Microsoft.DevTestLab                     RegionalRP-NOE
+Microsoft DevTest Labs                                   Microsoft.DevTestLab                     RegionalRP-DEWC
+Microsoft DevTest Labs                                   Microsoft.DevTestLab                     RegionalRP-CH
+Microsoft DevTest Labs                                   Microsoft.DevTestLab                     RegionalRP-SY
+Microsoft DevTest Labs                                   Microsoft.DevTestLab                     RegionalRP-SG
+Microsoft DevTest Labs                                   Microsoft.DevTestLab                     RegionalRP-BY
+Microsoft DevTest Labs                                   Microsoft.DevTestLab                     RegionalRP-USW3
+Microsoft DevTest Labs                                   Microsoft.DevTestLab                     RegionalRP-AM
+Microsoft DevTest Labs                                   Microsoft.DevTestLab                     RegionalRP-LN
+Microsoft DevTest Labs                                   Microsoft.DevTestLab                     RegionalRP-MWH
+Microsoft DevTest Labs                                   Microsoft.DevTestLab                     RegionalRP-BN
+Microsoft DevTest Labs                                   Microsoft.DevTestLab                     RegionalRP-QAC
+Microsoft DevTest Labs                                   Microsoft.DevTestLab                     RegionalRP-PAR
+Microsoft DevTest Labs                                   Microsoft.DevTestLab                     RegionalRP-CBR
+Microsoft DevTest Labs                                   Microsoft.DevTestLab                     RegionalRP-SEC
+Microsoft DevTest Labs                                   Microsoft.DevTestLab                     RegionalRP-EastUS2EUAP
+-                                                        Microsoft.Windows365                     Windows365Int
+-                                                        Microsoft.Windows365                     Windows365Sh
+Microsoft Container Instance                             Microsoft.ContainerInstance              KoreaSouth-7189fb51-dab4-404e-a38a-ba138ac9ce42
+-                                                        Microsoft.Windows365                     Windows365PPE
+-                                                        Microsoft.Windows365                     Windows365PROD
+Microsoft Container Instance                             Microsoft.ContainerInstance              auh-7189fb51-dab4-404e-a38a-ba138ac9ce42
+Microsoft Container Instance                             Microsoft.ContainerInstance              den-7189fb51-dab4-404e-a38a-ba138ac9ce42
+Microsoft Container Instance                             Microsoft.ContainerInstance              cbr2-7189fb51-dab4-404e-a38a-ba138ac9ce42
+Microsoft Container Instance                             Microsoft.ContainerInstance              mrs-7189fb51-dab4-404e-a38a-ba138ac9ce42
+Microsoft Container Instance                             Microsoft.ContainerInstance              jinc-7189fb51-dab4-404e-a38a-ba138ac9ce42
+Microsoft Container Instance                             Microsoft.ContainerInstance              ps-7189fb51-dab4-404e-a38a-ba138ac9ce42
+Microsoft Container Instance                             Microsoft.ContainerInstance              cpt-7189fb51-dab4-404e-a38a-ba138ac9ce42
+MicrosoftElasticSan                                      Microsoft.ElasticSan                     AllowTargetStampSpecification
+Microsoft.RecoveryServices                               Microsoft.RecoveryServices               EnableAzureSiteRecoveryAlertsToAzureMonitor
+Microsoft.HybridNetwork                                  Microsoft.HybridNetwork                  Routing-CanarySwedenCentral
+Microsoft.HybridNetwork                                  Microsoft.HybridNetwork                  Routing-CanaryWestUS3
+Microsoft Search                                         Microsoft.Search                         ng-28d32201-d1ad-47ab-9a4a-3de2dcb6ea2a
+Microsoft Key Vault                                      Microsoft.KeyVault                       MHSM_IncreasedQuota
+Microsoft Compute                                        Microsoft.Compute                        DenyComputeGallerySharing
+Microsoft.NetApp Resource Provider                       Microsoft.NetApp                         ANFLargeVolumesCRR
+Microsoft.NetApp Resource Provider                       Microsoft.NetApp                         ANFOnPremMigrationViaReplication
+Microsoft.AVS                                            Microsoft.AVS                            AzureServicesVm
+Microsoft.HybridConnectivity                             Microsoft.HybridConnectivity             publicCloudPreviewAccess
+Microsoft DB for PostgreSQL                              Microsoft.DBForPostgreSQL                enableMigrationsv2
+Microsoft.NetApp Resource Provider                       Microsoft.NetApp                         ANFAntiRansomware
+Microsoft Databricks                                     Microsoft.Databricks                     DatabricksTestEnvSlot3
+Microsoft Event Grid                                     Microsoft.EventGrid                      StorageNotificationContractV2
+Microsoft.ModSimWorkbench                                Microsoft.ModSimWorkbench                PrivatePreview_03012021
+Microsoft.NetApp Resource Provider                       Microsoft.NetApp                         ANFNFSV4IDDomain
+Microsoft Compute                                        Microsoft.Compute                        SIGEdgeZone_cvxhou1
+Microsoft Compute                                        Microsoft.Compute                        SIGEdgeZone_attlosangeles1
+Microsoft Compute                                        Microsoft.Compute                        SIGEdgeZone_sgxsingapore1
+Microsoft Compute                                        Microsoft.Compute                        SIGEdgeZone_attdetroit1
+Microsoft Compute                                        Microsoft.Compute                        SIGEdgeZone_attnewyork1
+Microsoft Container Service                              microsoft.ContainerService               AzureServiceMeshPreview
+Microsoft Operations Management                          Microsoft.OperationsManagement           cpt-fe63f845-4aee-4313-9b2e-3a8a2fe61897
+Azure Log Analytics                                      Microsoft.OperationalInsights            cpt-fe63f845-4aee-4313-9b2e-3a8a2fe61897
+Microsoft Azure Monitor                                  Microsoft.Insights                       cpt-fe63f845-4aee-4313-9b2e-3a8a2fe61897
+Microsoft Azure Monitor                                  Microsoft.Insights                       den-fe63f845-4aee-4313-9b2e-3a8a2fe61897
+Azure Log Analytics                                      Microsoft.OperationalInsights            den-fe63f845-4aee-4313-9b2e-3a8a2fe61897
+Microsoft Operations Management                          Microsoft.OperationsManagement           den-fe63f845-4aee-4313-9b2e-3a8a2fe61897
+Microsoft Operations Management                          Microsoft.OperationsManagement           cdm-fe63f845-4aee-4313-9b2e-3a8a2fe61897
+Azure Log Analytics                                      Microsoft.OperationalInsights            cdm-fe63f845-4aee-4313-9b2e-3a8a2fe61897
+Microsoft Azure Monitor                                  Microsoft.Insights                       cdm-fe63f845-4aee-4313-9b2e-3a8a2fe61897
+Microsoft.AVS                                            Microsoft.AVS                            ArcAutomatedOnboarding
+Microsoft Cache                                          Microsoft.Cache                          plc-59fe8ab9-6707-4b3c-afb0-f5ed4214b531
+Microsoft.NetApp Resource Provider                       Microsoft.NetApp                         ANFOracleVolumeGroup
+Microsoft.NetApp Resource Provider                       Microsoft.NetApp                         ANFLargeVolumesMaxSize
+Microsoft.HDInsight                                      Microsoft.HDInsight                      HiloPrivateRPaaS
+Microsoft.HDInsight                                      Microsoft.HDInsight                      HiloLoadTesting
+Microsoft Container Instance                             Microsoft.ContainerInstance              plc-7189fb51-dab4-404e-a38a-ba138ac9ce42
+                                                         Private.ModsimWorkbench                  hiddenRp
+Microsoft.DataBoxEdge                                    Microsoft.DataBoxEdge                    AseVmMarketplaceAllowed
+Microsoft Container Instance                             Microsoft.ContainerInstance              bm-7189fb51-dab4-404e-a38a-ba138ac9ce42
+Microsoft.AVS                                            Microsoft.AVS                            ConveyorCoreLibOrchestration
+Microsoft Network                                        Microsoft.Network                        AllowApplicationGatewayBasicSku
+Microsoft.AVS                                            Microsoft.AVS                            customName
+Microsoft.MobileNetwork                                  Microsoft.MobileNetwork                  Routing-TestInProduction-EastUS-1
+Microsoft.MobileNetwork                                  Microsoft.MobileNetwork                  Routing-TestInProduction-EastUS-2
+Microsoft.MobileNetwork                                  Microsoft.MobileNetwork                  Routing-TestInProduction-EastUS-3
+Microsoft Network                                        Microsoft.Network                        EnableCloudServiceExtensionNetworkingResources
+Microsoft Network                                        Microsoft.Network                        AllowApplicationGatewayManagedHSM
+-                                                        Microsoft.EnergyDataPlatform             MEDSV2PrivatePreview
+Microsoft.RecoveryServices                               Microsoft.RecoveryServices               GranularBillingInfo
+Microsoft Network                                        Microsoft.Network                        EnableRnmAllocationsApi
+Microsoft Devices                                        Microsoft.Devices                        AzureIotInternalSubscriptions
+Microsoft DB for MySQL                                   Microsoft.DBforMySQL                     enableMySqlLearningCenter
+Microsoft Cognitive Services                             Microsoft.CognitiveServices              Face.Snapshot
+Microsoft Compute                                        Microsoft.Compute                        ResourceBasedThrottling
+Microsoft.Easm                                           Microsoft.Easm                           DataConnectionAccess
+Microsoft.MobileNetwork                                  Microsoft.MobileNetwork                  AllowAzureStackHci
+Microsoft Azure Monitor                                  Microsoft.insights                       TenantActionGroup
+Microsoft Network                                        Microsoft.Network                        EnableSubnetCapacityPrevalidation
+Microsoft Cognitive Services                             Microsoft.CognitiveServices              Srmr
+Microsoft Web Apps                                       Microsoft.Web                            SouthAfricaNorthRegionEnabled
+Microsoft Azure Monitor                                  microsoft.insights                       ActivityLogLAQSCanary
+Microsoft Azure Monitor                                  microsoft.insights                       ActivityLogLAQS
+Microsoft App Configuration                              Microsoft.Appconfiguration               plc-45a7d954-eede-467d-b4f9-1f77feeec23c
+Microsoft Portal                                         Microsoft.Portal                         DashboardsV2
+Microsoft ServiceFabricMesh                              Microsoft.ServiceFabricMesh              jinc-1a113496-2837-4f5c-bf90-133dd0b626db
+Microsoft ServiceFabricMesh                              Microsoft.ServiceFabricMesh              cpt-1a113496-2837-4f5c-bf90-133dd0b626db
+Microsoft ServiceFabricMesh                              Microsoft.ServiceFabricMesh              cbr-1a113496-2837-4f5c-bf90-133dd0b626db
+Microsoft ServiceFabricMesh                              Microsoft.ServiceFabricMesh              cbr2-1a113496-2837-4f5c-bf90-133dd0b626db
+Microsoft ServiceFabricMesh                              Microsoft.ServiceFabricMesh              ps-1a113496-2837-4f5c-bf90-133dd0b626db
+Microsoft ServiceFabricMesh                              Microsoft.ServiceFabricMesh              mrs-1a113496-2837-4f5c-bf90-133dd0b626db
+Microsoft ServiceFabricMesh                              Microsoft.ServiceFabricMesh              den-1a113496-2837-4f5c-bf90-133dd0b626db
+Microsoft ServiceFabricMesh                              Microsoft.ServiceFabricMesh              auh-1a113496-2837-4f5c-bf90-133dd0b626db
+Microsoft DB for PostgreSQL                              Microsoft.DBForPostgreSQL                enableMajorVersionUpgrade_eastus
+Microsoft DB for PostgreSQL                              Microsoft.DBForPostgreSQL                enableMajorVersionUpgrade_australiaeast
+Microsoft DB for PostgreSQL                              Microsoft.DBForPostgreSQL                enableMajorVersionUpgrade_francesouth
+Microsoft DB for PostgreSQL                              Microsoft.DBForPostgreSQL                enableMajorVersionUpgrade_centralindia
+Microsoft DB for PostgreSQL                              Microsoft.DBForPostgreSQL                enableMajorVersionUpgrade_southindia
+Microsoft DB for PostgreSQL                              Microsoft.DBForPostgreSQL                enableMajorVersionUpgrade_japaneast
+Microsoft DB for PostgreSQL                              Microsoft.DBForPostgreSQL                enableMajorVersionUpgrade_jioindiawest
+Microsoft DB for PostgreSQL                              Microsoft.DBForPostgreSQL                enableMajorVersionUpgrade_koreacentral
+Microsoft DB for PostgreSQL                              Microsoft.DBForPostgreSQL                enableMajorVersionUpgrade_northeurope
+Microsoft DB for PostgreSQL                              Microsoft.DBForPostgreSQL                enableMajorVersionUpgrade_norwayeast
+Microsoft DB for PostgreSQL                              Microsoft.DBForPostgreSQL                enableMajorVersionUpgrade_southcentralus
+Microsoft DB for PostgreSQL                              Microsoft.DBForPostgreSQL                enableMajorVersionUpgrade_swedencentral
+Microsoft DB for PostgreSQL                              Microsoft.DBForPostgreSQL                enableMajorVersionUpgrade_switzerlandnorth
+Microsoft DB for PostgreSQL                              Microsoft.DBForPostgreSQL                enableMajorVersionUpgrade_switzerlandwest
+Microsoft DB for PostgreSQL                              Microsoft.DBForPostgreSQL                enableMajorVersionUpgrade_uaenorth
+Microsoft DB for PostgreSQL                              Microsoft.DBForPostgreSQL                enableMajorVersionUpgrade_westcentralus
+Microsoft DB for PostgreSQL                              Microsoft.DBForPostgreSQL                enableMajorVersionUpgrade_westus
+Microsoft DB for PostgreSQL                              Microsoft.DBForPostgreSQL                enableMajorVersionUpgrade_westus3
+Microsoft DB for PostgreSQL                              Microsoft.DBForPostgreSQL                enableMajorVersionUpgrade_qatarcentral
+Microsoft Compute                                        Microsoft.Compute                        Gen2ToTLMigrationPreview
+Microsoft ServiceFabricMesh                              Microsoft.ServiceFabricMesh              uste-1a113496-2837-4f5c-bf90-133dd0b626db
+Azure Log Analytics                                      Microsoft.OperationalInsights            plc-fe63f845-4aee-4313-9b2e-3a8a2fe61897
+Microsoft Azure Monitor                                  Microsoft.Insights                       plc-fe63f845-4aee-4313-9b2e-3a8a2fe61897
+Microsoft Operations Management                          Microsoft.OperationsManagement           plc-fe63f845-4aee-4313-9b2e-3a8a2fe61897
+Microsoft DocumentDB                                     Microsoft.DocumentDB                     AllVersionsAndDeletesChangeFeed
+-                                                        Microsoft.DatabaseInsights               DatabaseWatcherPreviewAccess
+Microsoft Cache                                          Microsoft.Cache                          TiP
+Microsoft Network                                        Microsoft.Network                        EnableIPv6VpnGateway
+Microsoft Apps                                           Microsoft.App                            WorkloadProfiles
+Microsoft Azure Monitor                                  microsoft.insights                       OTLPIngestion
+Microsoft Compute                                        Microsoft.Compute                        InGuestPatchImageCheckBypassPartnerTeamInternalUseOnly
+Microsoft Batch                                          Microsoft.Batch                          plc-58aa8ff2-5d53-444a-8026-1610fb23c30f
+Microsoft DB for MySQL                                   Microsoft.DBForMySQL                     upgrade
+Microsoft Container Service                              microsoft.ContainerService               AKS-AzurePolicyMutation
+Microsoft.MobileNetwork                                  Microsoft.MobileNetwork                  AllowRanPreview
+Microsoft DB for PostgreSQL                              Microsoft.DBForPostgreSQL                enableMigrationsv2_eastus
+Microsoft Container Service                              microsoft.ContainerService               AKSWindows2022Gen2Preview
+Microsoft Network                                        Microsoft.Network                        AllowApplicationGatewayHttp3Listener
+Azure Log Analytics                                      microsoft.operationalInsights            BcdrEnabled
+Microsoft DB for MySQL                                   Microsoft.DBForMySQL                     allowMySqlChangesDuringRestore
+Microsoft Cognitive Services                             Microsoft.CognitiveServices              OpenAI.RAIPolicyTest
+Azure Digital Twins                                      Microsoft.DigitalTwins                   NspEarlyAccess
+Microsoft Network                                        Microsoft.Network                        AllowNetworkVerifier
+Microsoft API Management                                 Microsoft.ApiManagement                  plc-6ba70dfa-ead9-4cc1-b894-049f8a17c22b
+Microsoft Container Instance                             Microsoft.ContainerInstance              brse-7189fb51-dab4-404e-a38a-ba138ac9ce42
+Microsoft DB for PostgreSQL                              Microsoft.DBForPostgreSQL                enableMigrationsv2_westus
+Microsoft DB for PostgreSQL                              Microsoft.DBForPostgreSQL                enableMigrationsv2_eastus2
+Microsoft DB for PostgreSQL                              Microsoft.DBForPostgreSQL                enableMigrationsv2_centralus
+Microsoft DB for PostgreSQL                              Microsoft.DBForPostgreSQL                enableMigrationsv2_southcentralus
+Microsoft DB for PostgreSQL                              Microsoft.DBForPostgreSQL                enableMigrationsv2_westus2
+Microsoft DB for PostgreSQL                              Microsoft.DBForPostgreSQL                enableMigrationsv2_westus3
+Microsoft DB for PostgreSQL                              Microsoft.DBForPostgreSQL                enableMigrationsv2_northcentralus
+Microsoft.Syntex                                         Microsoft.Syntex                         AccountsPrivatePreview
+Microsoft DevTest Labs                                   Microsoft.DevTestLab                     RegionalTest
+Microsoft Container Service                              microsoft.ContainerService               NodeOsUpgradeChannelPreview
+Microsoft Apps                                           Microsoft.App                            SpringboardApps
+Microsoft Compute                                        Microsoft.Compute                        ConfidentialVMTdxStatelessPreview
+Microsoft DB for PostgreSQL                              Microsoft.DBForPostgreSQL                enableGeoDataEncryption
+Microsoft.NetApp Resource Provider                       Microsoft.NetApp                         ANFShortTermClone
+Microsoft ServiceFabricMesh                              Microsoft.ServicefabricMesh              brse-1a113496-2837-4f5c-bf90-133dd0b626db
+Microsoft ServiceFabricMesh                              Microsoft.ServicefabricMesh              plc-1a113496-2837-4f5c-bf90-133dd0b626db
+Microsoft Storage                                        Microsoft.Storage                        OnlyNspPreview
+Microsoft.NetworkCloud                                   Microsoft.NetworkCloud                   EnableOperatorNexus
+Microsoft Automanage                                     Microsoft.Automanage                     AuditOnlyAssignments
+Microsoft.StorageMover                                   Microsoft.StorageMover                   PrivatePreview
+Microsoft DocumentDB                                     Microsoft.DocumentDB                     EnableCrossRegionRestorePortalUX
+Microsoft Event Grid                                     Microsoft.eventgrid                      RpAdminInteractionFeature
+Microsoft Search                                         Microsoft.Search                         plc-28d32201-d1ad-47ab-9a4a-3de2dcb6ea2a
+Microsoft.Cdn                                            Microsoft.Cdn                            EnableSharedCustomDomain
+Microsoft DB for MySQL                                   Microsoft.DBforMySQL                     enableMajorVersionUpgrade
+-                                                        Microsoft.DataReplication                HVMTAZStackHCIWAM
+Microsoft.DeviceUpdate                                   Microsoft.DeviceUpdate                   AzureDeviceUpdateCMK
+Microsoft.RecoveryServices                               Microsoft.RecoveryServices               PrivateStampAccessA
+Microsoft Azure Stream Analytics                         Microsoft.StreamAnalytics                ASAOneLakeFqdnMSIT
+Microsoft Azure Stream Analytics                         Microsoft.StreamAnalytics                ASAOneLakeFqdnDXT
+Microsoft Azure Stream Analytics                         Microsoft.StreamAnalytics                ASAOneLakeFqdnDaily
+Microsoft Compute                                        Microsoft.Compute                        UsePrivelegedMR
+Microsoft.AVS                                            Microsoft.AVS                            Autoscale
+Microsoft DB for PostgreSQL                              Microsoft.DBForPostgreSQL                enableWorkbooks
+Microsoft Azure Lab Services                             Microsoft.LabServices                    AllowV2Bastion
+Microsoft DB for PostgreSQL                              Microsoft.DBForPostgreSQL                enableOnlineMigrationsv2
+Microsoft.OperatorVoicemail                              Microsoft.OperatorVoicemail              OperatorVoicemailInternalTest
+Microsoft DB for MySQL                                   Microsoft.DBForMySQL                     enablePowerBI
+Microsoft Network                                        Microsoft.Network                        AllowUpdateBgpCommunityInPeeredVnets
+Microsoft.DatabaseWatcher                                Microsoft.DatabaseWatcher                DatabaseWatcherPreviewAccess
+Microsoft.HybridNetwork                                  Microsoft.HybridNetwork                  Allow-2023-04-01-preview
+Microsoft Container Service                              Microsoft.ContainerService               mys-f1d1800e-d38e-41f2-b63c-72d59ecaf9c0
+Microsoft.UsageBilling                                   Microsoft.UsageBilling                   PrivatePreviewStageParticipation
+Microsoft.MobileNetwork                                  Microsoft.MobileNetwork                  AllowBaseVM
+Microsoft Cognitive Services                             Microsoft.CognitiveServices              openAIModels.dv-ppo
+Microsoft.Cdn                                            Microsoft.Cdn                            EnableNegativeCaching
+Microsoft DB for PostgreSQL                              Microsoft.DBForPostgreSQL                enableMajorVersionUpgrade_uksouth
+Dynatrace.Observability                                  Dynatrace.Observability                  MPSaaSCanary
+Microsoft Container Instance                             Microsoft.ContainerInstance              enableKernelBootOptions
+Microsoft Apps                                           Microsoft.App                            Jobs
+Microsoft.IoTFirmwareDefense                             Microsoft.IoTFirmwareDefense             StagingWEU
+Microsoft Azure Monitor                                  Microsoft.Insights                       enabledcrdiagnostics
+Microsoft Storage                                        Microsoft.Storage                        disableAnonymousAccessForNewStorageAccounts
+Microsoft Storage                                        Microsoft.Storage                        EnableAnonymousAccessForNewStorageAccounts
+Microsoft Maintenance Service                            Microsoft.Maintenance                    InGuestPatchDynamicScope
+Microsoft.AzurePlaywrightService                         Microsoft.AzurePlaywrightService         PlaywrightServicePublicPreviewRegions
+Microsoft Azure Lab Services                             Microsoft.LabServices                    AllowStandard_NV4as_v4
+Microsoft.MobileNetwork                                  Microsoft.MobileNetwork                  AllowAzureEdgeNetworkFabricCustomer
+Microsoft Compute                                        Microsoft.Compute                        VmssAllowRegionalToZonalMigration
+Microsoft Compute                                        Microsoft.Compute                        VmssAllowExpansionOfAvailabilityZones
+Microsoft Compute                                        Microsoft.Compute                        VmssFlexAllowExpansionOfAvailabilityZones
+Microsoft Compute                                        Microsoft.Compute                        VmssFlexAllowRegionalToZonalMigration
+Microsoft Container Service                              microsoft.ContainerService               NRGLockdownPreview
+Microsoft Container Service                              microsoft.ContainerService               NetworkObservabilityPreview
+Microsoft Event Grid                                     Microsoft.EventGrid                      AzureMonitorAlertAsDestination
+Microsoft.Cdn                                            Microsoft.Cdn                            EnableCapacityBasedLoadBalancingForPrivatePreview
+Microsoft Event Grid                                     Microsoft.EventGrid                      DummyFeatures
+Microsoft Cognitive Services                             Microsoft.CognitiveServices              OpenAIFinetune.WestEurope
+Microsoft.Quota                                          Microsoft.Quota                          AlternativeRecommendations
+Microsoft Automanage                                     Microsoft.Automanage                     AutomanageConformanceRollup
+Microsoft DB for PostgreSQL                              Microsoft.DBforPostgreSQL                enableMajorVersionUpgrade_australiacentral
+Microsoft DB for PostgreSQL                              Microsoft.DBforPostgreSQL                enableMajorVersionUpgrade_australiacentral2
+Microsoft DB for PostgreSQL                              Microsoft.DBforPostgreSQL                enableMajorVersionUpgrade_brazilsoutheast
+Microsoft DB for PostgreSQL                              Microsoft.DBforPostgreSQL                enableMajorVersionUpgrade_germanynorth
+Microsoft DB for PostgreSQL                              Microsoft.DBforPostgreSQL                enableMajorVersionUpgrade_norwaywest
+Microsoft DB for PostgreSQL                              Microsoft.DBforPostgreSQL                enableMajorVersionUpgrade_polandcentral
+Microsoft DB for PostgreSQL                              Microsoft.DBforPostgreSQL                enableMajorVersionUpgrade_southafricawest
+Microsoft DB for PostgreSQL                              Microsoft.DBforPostgreSQL                enableMajorVersionUpgrade_swedensouth
+Microsoft.MobileNetwork                                  Microsoft.MobileNetwork                  AllowG3G4BillingSKU
+Microsoft Event Grid                                     Microsoft.EventGrid                      June2023Features
+Microsoft.NetApp Resource Provider                       Microsoft.NetApp                         ANFMigratePmkToCmk
+Microsoft.NetApp Resource Provider                       Microsoft.NetApp                         ANF1TiBPoolSize
+Microsoft Cache                                          Microsoft.Cache                          mys-59fe8ab9-6707-4b3c-afb0-f5ed4214b531
+Microsoft.Workloads                                      Microsoft.Workloads                      temp_TestAutoApproveFeature
+Microsoft Compute                                        Microsoft.Compute                        MREnabledForTenantDeletion
+Microsoft DB for PostgreSQL                              Microsoft.DBforPostgreSQL                enableMajorVersionUpgrade_eastus2euap
+Microsoft.MobileNetwork                                  Microsoft.MobileNetwork                  AllowOnlyG3BillingSKU
+Microsoft.MobileNetwork                                  Microsoft.MobileNetwork                  AllowOnlyG4BillingSKU
+Microsoft DB for PostgreSQL                              Microsoft.DBForPostgreSQL                enableIntelligentPerformance
+Virtual Machine Image Builder                            Microsoft.VirtualMachineImages           plc-4b8d3bdc-e2d1-4b44-ba4f-b0fbcb18960f
+Microsoft Network                                        Microsoft.Network                        NMRoutingPreview
+Azure Log Analytics                                      Microsoft.OperationalInsights            BronzeLogs
+Microsoft.Workloads                                      Microsoft.Workloads                      ACSSBackupIntegration
+Microsoft Event Grid                                     Microsoft.EventGrid                      mys-9abfce26-7dfa-49fe-9a8d-a3d6cb13afd6
+Microsoft Event Grid                                     Microsoft.EventGrid                      itn-9abfce26-7dfa-49fe-9a8d-a3d6cb13afd6
+-                                                        Microsoft.MobilePacketCore               AllowWestCentralUS
+Microsoft DB for PostgreSQL                              Microsoft.DBForPostgreSQL                hidePostgreSql10Version
+Microsoft.MobileNetwork                                  Microsoft.MobileNetwork                  AllowOnlyM1BillingSKU
+Microsoft Container Service                              microsoft.ContainerService               GuardrailsPreview
+Microsoft Key Vault                                      Microsoft.KeyVault                       AllowNonCanonicalKey
+Microsoft.RecoveryServices                               Microsoft.RecoveryServices               ConfidentialVMCustomerManagedKeyBackup
+Microsoft.Kusto                                          Microsoft.Kusto                          EnableStorageCmkFollowing
+Microsoft ContainerRegistry                              Microsoft.ContainerRegistry              itn-3c737fd7-1389-4626-868f-c18df5790cb6
+Microsoft.NetworkCloud                                   Microsoft.NetworkCloud                   EnableKubernetesClusterPreview
+Microsoft.HybridNetwork                                  Microsoft.HybridNetwork                  MsiForResourceEnabled
+Virtual Machine Image Builder                            Microsoft.VirtualMachineImages           sec-4b8d3bdc-e2d1-4b44-ba4f-b0fbcb18960f
+Microsoft Cognitive Services                             Microsoft.CognitiveServices              Face.SensitiveAttributes
+Microsoft Cognitive Services                             Microsoft.CognitiveServices              Face.LimitedAccessRestrictionAcknowledged
+Microsoft.ModSimWorkbench                                Microsoft.ModSimworkbench                mswbcanary
+Microsoft.AlertsManagement                               Microsoft.AlertsManagement               ProcessingRulesCorrelation
+Microsoft Data Factory                                   Microsoft.DataFactory                    plc-f76de4a1-629f-4651-9d76-1d7b56544f3c
+Microsoft Azure Monitor                                  Microsoft.Insights                       Amcs20230311
+Microsoft.MobileNetwork                                  Microsoft.MobileNetwork                  AllowAKS
+Microsoft DB for PostgreSQL                              Microsoft.DBForPostgreSQL                enableNewMySqlMigrationApiVersion
+Microsoft DB for MySQL                                   Microsoft.DBForMySQL                     enableMySqlAutoMigration
+Microsoft DB for MySQL                                   Microsoft.DBForMySQL                     enableNewMySqlMigrationApiVersion
+Microsoft Network                                        Microsoft.Network                        vWANNFVRPMigrationPLC
+Microsoft Network                                        Microsoft.Network                        AllowDisableSnatOnPL
+Microsoft.NetApp Resource Provider                       Microsoft.NetApp                         ANFEnablePPG
+Microsoft Network                                        Microsoft.Network                        twn-7ecdbd40-fe6a-4d66-bb95-dab4ee9c8fce
+Microsoft Network                                        Microsoft.Network                        twnw-7ecdbd40-fe6a-4d66-bb95-dab4ee9c8fce
+Microsoft Network                                        Microsoft.Network                        mxc-7ecdbd40-fe6a-4d66-bb95-dab4ee9c8fce
+Microsoft Network                                        Microsoft.Network                        esc-7ecdbd40-fe6a-4d66-bb95-dab4ee9c8fce
+Microsoft Network                                        Microsoft.Network                        clc-7ecdbd40-fe6a-4d66-bb95-dab4ee9c8fce
+Microsoft Network                                        Microsoft.Network                        ilnw-7ecdbd40-fe6a-4d66-bb95-dab4ee9c8fce
+Microsoft DB for PostgreSQL                              Microsoft.DBForPostgreSQL                enableHidingPostgreSqlCitusConBanner
+Microsoft DB for PostgreSQL                              Microsoft.DBForPostgreSQL                enablePowerBI
+Microsoft Event Grid                                     Microsoft.EventGrid                      NamespaceLockedRegionFeature
+Microsoft.Kusto                                          Microsoft.Kusto                          mys-e02603c6-3469-498a-994c-b0df4ceae1d0
+-                                                        Microsoft.ProviderHub                    UnmanagedHybrid
+Microsoft Cognitive Services                             Microsoft.CognitiveServices              BypassBilling.AOAI-BYO-GPUs
+Microsoft.Kusto                                          Microsoft.Kusto                          den-e02603c6-3469-498a-994c-b0df4ceae1d0
+Microsoft Compute                                        Microsoft.Compute                        SecurityPosturePublisher
+Microsoft Key Vault                                      Microsoft.KeyVault                       OptOutTLSEnforcement
+Microsoft.Quantum                                        Microsoft.Quantum                        cmsBeta
+Microsoft Compute                                        Microsoft.Compute                        IsPV2ColocationAllowed
+Microsoft Chaos                                          Microsoft.Chaos                          ChaosApplicationsAccess
+Microsoft.OpenEnergyPlatform                             Microsoft.OpenEnergyPlatform             sku
+Microsoft.HealthModel                                    Microsoft.HealthModel                    EUAPParticipation
+Microsoft DB for MySQL                                   Microsoft.DBForMySQL                     enableMySqlCrossRegionReadReplica
+Microsoft Container Service                              microsoft.ContainerService               KataCcIsolationPreview
+Microsoft.Cdn                                            Microsoft.Cdn                            Enable1PPartnerExtendedInformation
+Microsoft Container Service                              microsoft.ContainerService               EnableBYOKOnEphemeralOSDiskPreview
+Microsoft Network                                        Microsoft.Network                        AllowNewAppgwV1WithSubnetNameAsGatewaySubnet
+Microsoft.NetApp Resource Provider                       Microsoft.NetApp                         ANFFilePathUniquenessInAZ
+Machine Learning Services Resource Provider              Microsoft.MachineLearningServices        AMLManagedNetworkEnabled
+-                                                        Microsoft.StandbyPool                    StandbyVMPoolPreview
+Microsoft Container Instance                             Microsoft.ContainerInstance              aciOnBareMetal
+Microsoft Network                                        Microsoft.Network                        AllowSetNicEncryptionFlagBasedOnAccelNetwork
+Microsoft Network                                        Microsoft.Network                        AllowEncryptionOnFSv2ForBLK
+Microsoft Search                                         Microsoft.Search                         itn-28d32201-d1ad-47ab-9a4a-3de2dcb6ea2a
+Microsoft Compute                                        Microsoft.Compute                        PatchSettingsForAllVMs
+Microsoft Network                                        Microsoft.Network                        BlockAppGwV1SkuCreation
+Microsoft Container Service                              Microsoft.ContainerService               ilc-f1d1800e-d38e-41f2-b63c-72d59ecaf9c0
+Microsoft Container Service                              Microsoft.ContainerService               mxc-f1d1800e-d38e-41f2-b63c-72d59ecaf9c0
+Microsoft Container Service                              Microsoft.ContainerService               clc-f1d1800e-d38e-41f2-b63c-72d59ecaf9c0
+Microsoft Container Service                              Microsoft.ContainerService               ilnw-f1d1800e-d38e-41f2-b63c-72d59ecaf9c0
+Microsoft Container Service                              Microsoft.ContainerService               esc-f1d1800e-d38e-41f2-b63c-72d59ecaf9c0
+Microsoft Container Service                              Microsoft.ContainerService               twn-f1d1800e-d38e-41f2-b63c-72d59ecaf9c0
+Microsoft Container Service                              Microsoft.ContainerService               twnw-f1d1800e-d38e-41f2-b63c-72d59ecaf9c0
+Microsoft Compute                                        Microsoft.Compute                        CCOSupport
+Microsoft Cognitive Services                             Microsoft.CognitiveServices              OpenAI.ContentFilters
+Microsoft Container Service                              Microsoft.ContainerService               itn-f1d1800e-d38e-41f2-b63c-72d59ecaf9c0
+Microsoft Container Service                              Microsoft.ContainerService               myw-f1d1800e-d38e-41f2-b63c-72d59ecaf9c0
+Microsoft Container Service                              Microsoft.ContainerService               nzn-f1d1800e-d38e-41f2-b63c-72d59ecaf9c0
+Microsoft Storage                                        Microsoft.Storage                        StoragePlatformPreview
+Microsoft.Easm                                           Microsoft.Easm                           BetaAccess
+Microsoft.Easm                                           Microsoft.Easm                           ObservationAccess
+Microsoft Compute                                        Microsoft.Compute                        InGuestPatchVmssUniformPreview
+Microsoft.StorageMover                                   Microsoft.StorageMover                   Allowsoutheastasia
+Microsoft.StorageMover                                   Microsoft.StorageMover                   Allownortheurope
+Microsoft Compute                                        Microsoft.Compute                        DisableSuspensionOfAutomaticRepairs
+Microsoft Network                                        Microsoft.Network                        AllowAppGwV1SkuCreation
+Microsoft Kubernetes Configuration                       Microsoft.KubernetesConfiguration        AllowTestRouting
+Microsoft DocumentDB                                     Microsoft.DocumentDB                     MaterializedViewsForNoSQL
+Microsoft DocumentDB                                     Microsoft.DocumentDB                     DataTransferIntraAccountContainerCopyMongoDB
+Microsoft Azure Lab Services                             Microsoft.LabServices                    AllowLargeDSv4
+Microsoft Cognitive Services                             Microsoft.CognitiveServices              allowProvisionedWithoutCommitment
+Microsoft Batch                                          Microsoft.Batch                          itn-58aa8ff2-5d53-444a-8026-1610fb23c30f
+Microsoft Storage                                        Microsoft.Storage                        DeleteMarkerRetention
+Microsoft App Configuration                              Microsoft.AppConfiguration               itn-45a7d954-eede-467d-b4f9-1f77feeec23c
+MicrosoftNetworkFunction                                 Microsoft.NetworkFunction                AllowNaasVpnAccess
+Microsoft DB for PostgreSQL                              Microsoft.DBForPostgreSQL                enableStorageDropDown_public
+Microsoft DB for PostgreSQL                              Microsoft.DBForPostgreSQL                enable32TBStorage
+Microsoft.AlertsManagement                               Microsoft.AlertsManagement               InvestigationsPrivatePreview
+Microsoft.AlertsManagement                               Microsoft.AlertsManagement               InvestigationsTestInProduction
+Microsoft Cache                                          Microsoft.Cache                          itn-59fe8ab9-6707-4b3c-afb0-f5ed4214b531
+Microsoft.StorageMover                                   Microsoft.StorageMover                   db-c88bf702-9a3e-4962-a15d-dbc3c3a8f42f
+Microsoft.Kusto                                          microsoft.kusto                          itn-e02603c6-3469-498a-994c-b0df4ceae1d0
+Microsoft.MobileNetwork                                  Microsoft.MobileNetwork                  AllowEventHubPreview
+Azure Red Hat OpenShift                                  Microsoft.RedHatOpenShift                PreconfiguredNSG
+-                                                        Microsoft.ProviderHub                    RPaaSRunner
+Microsoft ContainerRegistry                              Microsoft.ContainerRegistry              ArchiveBeta
+Microsoft Cognitive Services                             Microsoft.CognitiveServices              OpenAI.Inference.GPT4.UKSouth
+Microsoft.RecoveryServices                               Microsoft.RecoveryServices               MultiDiskCrashConsistent
+Microsoft Network                                        Microsoft.Network                        EnableOptimizedNetworkSecurityGroups
+Microsoft.DatabaseWatcher                                Microsoft.DatabaseWatcher                DatabaseWatcherCanaryAccess
+Microsoft Network                                        Microsoft.Network                        UseAnmForPublish
+Microsoft HybridCompute                                  Microsoft.HybridCompute                  HybridComputePreview
+Microsoft Compute                                        Microsoft.Compute                        VmssFlexScaleInPolicyPreview
+Microsoft Azure Lab Services                             Microsoft.LabServices                    AllowLegacySkus
+Microsoft Azure Lab Services                             Microsoft.LabServices                    AllowAlternativeSkus
+Microsoft Event Grid                                     Microsoft.EventGrid                      ilc-9abfce26-7dfa-49fe-9a8d-a3d6cb13afd6
+Microsoft Cognitive Services                             Microsoft.CognitiveServices              OpenAIModels.text-embedding-ada-002.WestEurope
+Microsoft Network                                        Microsoft.Network                        AllowDropUnecryptedVnet
+Microsoft.Maps                                           Microsoft.Maps                           addfeaturesnoexpansion
+Microsoft Compute                                        Microsoft.Compute                        BakedInExtensionsPublishing
+Microsoft Azure Monitor                                  microsoft.insights                       SqrMigration
+Microsoft DocumentDB                                     Microsoft.DocumentDB                     mongoMultipleUsers
+Microsoft DocumentDB                                     Microsoft.DocumentDB                     mongoUsersLimit10
+Microsoft DocumentDB                                     Microsoft.DocumentDB                     mongoUsersLimit50
+-                                                        Microsoft.BakeryUnmanaged                RPaaSRunner
+-                                                        Microsoft.BakeryHybrid                   RPaaSRunner
+Microsoft.NetApp Resource Provider                       Microsoft.NetApp                         ANFLargeVolumesMinSize
+Microsoft.NetApp Resource Provider                       Microsoft.NetApp                         ANFStdToBasicNetworkFeaturesRevert
+Microsoft Container Instance                             Microsoft.ContainerInstance              itn-7189fb51-dab4-404e-a38a-ba138ac9ce42
+Microsoft Storage                                        Microsoft.Storage                        Enable8TBForFiles
+Microsoft Compute                                        Microsoft.Compute                        ForceSubscriptionBasedThrottling
+Microsoft.Kusto                                          Microsoft.Kusto                          EnableDatabasesCmk
+Microsoft Cognitive Services                             Microsoft.CognitiveServices              Face.ExtendedLegacy
+Microsoft.Maps                                           Microsoft.Maps                           testhooks
+Microsoft Automanage                                     Microsoft.Automanage                     AutomanageProfileStacking
+Microsoft Event Grid                                     Microsoft.EventGrid                      December2023Features
+Microsoft.Kusto                                          Microsoft.Kusto                          ZonalMigrationOnboarding
+Microsoft Automanage                                     Microsoft.Automanage                     PrivatePreviewUpdateManagementV2
+Microsoft DB for MySQL                                   Microsoft.DBforMySQL                     enablePrivateEndpointPublicPreview
+Microsoft DB for PostgreSQL                              Microsoft.DBForPostgreSQL                enableConnect
+Microsoft.MobileNetwork                                  Microsoft.MobileNetwork                  AllowNexus
+-                                                        Microsoft.EdgeMarketPlace                intAccess
+-                                                        Microsoft.EdgeMarketPlace                dogfoodAccess
+Microsoft.Easm                                           Microsoft.Easm                           DeltaAccess
+Microsoft Container Service                              microsoft.ContainerService               ClusterCostAnalysis
+-                                                        Microsoft.ProviderHub                    UnmanagedAndHybridRegistrationSupport
+Microsoft.Quantum                                        Microsoft.Quantum                        QuantumGermany
+Microsoft Network                                        Microsoft.Network                        DisableYieldingCSESLBIPConfigs
+Microsoft Network                                        Microsoft.Network                        NMNetworkGroupIpAggregator
+Microsoft Apps                                           Microsoft.App                            DedicatedGPUPreview
+-                                                        Microsoft.MobilePacketCore               AllowMobilePacketCoreBasicCustomer
+Microsoft.MobileNetwork                                  Microsoft.MobileNetwork                  AllowNasReroute
+Microsoft DB for PostgreSQL                              Microsoft.DBForPostgreSQL                enableMigrationAADAuth_private
+Microsoft Automanage                                     Microsoft.Automanage                     AutomanageAlertsEnabled
+Microsoft Container Instance                             Microsoft.ContainerInstance              NoPreprovisionedContainers
+Microsoft Compute                                        Microsoft.Compute                        RestorePointNodeBasedSchedule
+Microsoft.Scom                                           Microsoft.SCOM                           TestingEnvironment
+Microsoft Batch                                          Microsoft.Batch                          ilc-58aa8ff2-5d53-444a-8026-1610fb23c30f
+Microsoft.AwsConnector                                   Microsoft.AwsConnector                   publicCloudPreviewAccess
+Microsoft Cognitive Services                             Microsoft.CognitiveServices              OpenAI.Inference.GPT-Turbo.CentralUS
+Microsoft Compute                                        Microsoft.Compute                        PreprovisionedVMEscrow.SkipForceRunningVMsForHibernationEnabled
+Microsoft Network                                        Microsoft.Network                        ARMThrottle2x
+Microsoft Network                                        Microsoft.Network                        ARMThrottle3x
+Microsoft Network                                        Microsoft.Network                        AvnmIpAggregator
+Microsoft Container Instance                             Microsoft.ContainerInstance              GetsPreprovisionedContainers
+Microsoft Cache                                          Microsoft.Cache                          ilc-59fe8ab9-6707-4b3c-afb0-f5ed4214b531
+Microsoft Compute                                        Microsoft.Compute                        BestEffortBuildoutReplication
+Microsoft Compute                                        Microsoft.Compute                        GalleryPublishingPatchingInformation
+Microsoft Compute                                        Microsoft.Compute                        DistributingCopyV2Load
+Microsoft Search                                         Microsoft.Search                         ilc-28d32201-d1ad-47ab-9a4a-3de2dcb6ea2a
+Microsoft DB for PostgreSQL                              Microsoft.DBForPostgreSQL                enableHidingPostgreSqlVersion15Preview
+Microsoft Storage                                        Microsoft.Storage                        HnsDirectorySnapshot
+Microsoft Container Instance                             Microsoft.ContainerInstance              ilc-7189fb51-dab4-404e-a38a-ba138ac9ce42
+Microsoft.NetApp Resource Provider                       Microsoft.NetApp                         ANFFetchQuotaReport
+Microsoft.MobileNetwork                                  Microsoft.MobileNetwork                  AllowSessionHighAvailability
+Microsoft.MobileNetwork                                  Microsoft.MobileNetwork                  AllowEdgeLogBackhaul
+Microsoft Network                                        Microsoft.Network                        CloudServiceIdILPIPEnabled
+Microsoft Network                                        Microsoft.Network                        DisableUpdateOfCloudServiceILPIPId
+Microsoft DB for PostgreSQL                              Microsoft.DBForPostgreSQL                enableReplicaResourceGroup
+Microsoft Azure Lab Services                             Microsoft.LabServices                    AllowV2MigrationTool
+Microsoft Cognitive Services                             Microsoft.CognitiveServices              OpenAI.Inference.GPT4.CentralUS
+Microsoft Network                                        Microsoft.Network                        AllowAppGwWafHttpDdosRuleSet
+Microsoft Key Vault                                      Microsoft.KeyVault                       PreferHsmPlatformTwo
+Microsoft Key Vault                                      Microsoft.KeyVault                       PreferHsmPlatformOne
+-                                                        Microsoft.Edge                           PreviewAccess
+Microsoft Compute                                        Microsoft.Compute                        OSUpgradeWithDirectSharedGalleryImage
+Microsoft Storage                                        Microsoft.Storage                        HNSChangeFeed
+Microsoft.RecoveryServices                               Microsoft.RecoveryServices               AzureBackupForSQLOnArc
+Microsoft Cache                                          Microsoft.Cache                          bras-09976aa4-e123-47e9-a515-51cac2ffc3af
+Microsoft Compute                                        Microsoft.Compute                        SupportHybridStorageAccountType
+Microsoft Azure Stream Analytics                         Microsoft.StreamAnalytics                JobAvailabilityPreview
+Microsoft Network                                        Microsoft.Network                        AllowAppGwWafJSChallengeAction
+Microsoft Compute                                        Microsoft.Compute                        PV2AsOSDiskPOC
+Microsoft Network                                        Microsoft.Network                        AllowHyperNetLite
+Microsoft DB for PostgreSQL                              Microsoft.DBforPostgreSQL                enablePrivateEndpoint
+Microsoft Compute                                        Microsoft.Compute                        PV2ZonalVMDiskColocation
+Microsoft.DataProtection                                 Microsoft.DataProtection                 InternalBlobADLSBackup
+Microsoft.AVS                                            Microsoft.AVS                            ConveyorEscRswUpgrade
+Microsoft Cognitive Services                             Microsoft.CognitiveServices              OpenAIModels.dv3.SwedenCentral
+Microsoft Network                                        Microsoft.Network                        AllowNspLink
+Microsoft Network                                        Microsoft.Network                        DisableNspPushNotifications
+Microsoft Cognitive Services                             Microsoft.CognitiveServices              OpenAI.Inference.GPT-Turbo-0301.CentralUS
+Microsoft Network                                        Microsoft.Network                        AllowVnetEncryptionUseForMerlinSub
+Microsoft.Kusto                                          Microsoft.Kusto                          VnetMigrationOnboarding
+Microsoft Network                                        Microsoft.Network                        UseForAnmBootstrapTesting
+Microsoft Compute                                        Microsoft.Compute                        IncludeSubscriptionBasedPoliciesInRateLimitHeader
+Microsoft App Configuration                              Microsoft.AppConfiguration               ilc-45a7d954-eede-467d-b4f9-1f77feeec23c
+Microsoft Cognitive Services                             Microsoft.CognitiveServices              OpenAI.Inference.GPT4.Regions.2308
+-                                                        Microsoft.KX                             PrivatePreview
+Microsoft Network                                        Microsoft.Network                        vWANNFVRPMigrationILC
+Microsoft Compute                                        Microsoft.Compute                        SBTPoliciesInRBTRateLimitHeader
+-                                                        Microsoft.ConnectedCredentials           PreviewAccess
+Microsoft Network                                        Microsoft.Network                        vWANNFVRPMigrationESC
+Microsoft Network                                        Microsoft.Network                        vWANNFVRPMigrationMXC
+Microsoft Network                                        Microsoft.Network                        vWANNFVRPMigrationTWN
+Microsoft Network                                        Microsoft.Network                        vWANNFVRPMigrationTWNW
+Microsoft Storage                                        Microsoft.Storage                        Nfsv3WritesOnRestCreatedBlobs
+Microsoft Apps                                           Microsoft.App                            SessionsPreview
+Microsoft.ModSimWorkbench                                Microsoft.ModSimWorkbench                TestInProduction
+Microsoft Container Instance                             Microsoft.ContainerInstance              ContainerPreProvisioningServiceSubscription
+Microsoft.Cdn                                            Microsoft.Cdn                            EnableRpConfigDelivery
+Microsoft.Cdn                                            Microsoft.Cdn                            EnableRpConfigDeliveryForPartnerBundle
+Microsoft.Cdn                                            Microsoft.Cdn                            EnableRpConfigDeliveryForTenantBundle
+Microsoft.Cdn                                            Microsoft.Cdn                            EnableRpConfigDeliveryForAdminBundle
+Microsoft.Cdn                                            Microsoft.Cdn                            EnableRpConfigDeliveryForCachePurgeBundle
+Microsoft.Cdn                                            Microsoft.Cdn                            EnableRpConfigDeliveryForCertificateBindingBundle
+Microsoft Storage                                        Microsoft.Storage                        AllowPublishingIPv6Endpoints
+Virtual Machine Image Builder                            Microsoft.VirtualMachineImages           itn-4b8d3bdc-e2d1-4b44-ba4f-b0fbcb18960f
+Microsoft.AzureImageTestingForLinux                      Microsoft.AzureImageTestingForLinux      JobAndJobTemplateCrud
+Microsoft.Cdn                                            Microsoft.Cdn                            EnableTenantShardingPreview
+Microsoft Network                                        Microsoft.Network                        esc-dc78f5b1-c8bc-4ae1-82c4-c297e2dc2832
+Microsoft Network                                        Microsoft.Network                        mxc-dc78f5b1-c8bc-4ae1-82c4-c297e2dc2832
+Microsoft Network                                        Microsoft.Network                        twn-dc78f5b1-c8bc-4ae1-82c4-c297e2dc2832
+Microsoft Network                                        Microsoft.Network                        twnw-dc78f5b1-c8bc-4ae1-82c4-c297e2dc2832
+Microsoft Data Factory                                   Microsoft.DataFactory                    itn-f76de4a1-629f-4651-9d76-1d7b56544f3c
+Microsoft.HybridNetwork                                  Microsoft.HybridNetwork                  Allow-2023-09-01
+Microsoft.NetApp Resource Provider                       Microsoft.NetApp                         ANFQuotaLimit
+Microsoft.NetApp Resource Provider                       Microsoft.NetApp                         ANFHANAVolumeGroupExtension1
+-                                                        Qumulo.QaaS                              Storage
+-                                                        Qumulo.QaaS                              betaQumuloStorage
+Microsoft Cognitive Services                             Microsoft.CognitiveServices              FormRecognizer.Neural500
+Microsoft Cognitive Services                             Microsoft.CognitiveServices              FormRecognizer.Neural1000
+Microsoft.AVS                                            Microsoft.AVS                            FleetBrownfield
+Microsoft.AVS                                            Microsoft.AVS                            vTPMFeature
 Microsoft.HDInsight                                      Microsoft.HDInsight                      TIP2
 Microsoft.HybridNetwork                                  Microsoft.HybridNetwork                  MecRoleEnabled
+Microsoft.SaaSHub                                        Microsoft.SaaSHub                        MainV1
+Microsoft SecurityDetonationChamber                      Microsoft.SecurityDetonation             itn-bde1265d-400f-4935-960c-46545c578f2d
+Microsoft SecurityDetonationChamber                      Microsoft.SecurityDetonation             ilc-bde1265d-400f-4935-960c-46545c578f2d
 Azure Red Hat OpenShift                                  Microsoft.RedHatOpenShift                preview
 -                                                        CloudSimple.PrivateCloudIaaS             cloudSimpleRp1
 -                                                        CloudSimple.PrivateCloudIAAS             cloudSimpleRp10
@@ -698,7 +1312,6 @@ Microsoft Container Service                              Microsoft.ContainerServ
 Microsoft Container Service                              Microsoft.ContainerService               AKS-EnableAzureDataPlanePolicy
 Microsoft Container Service                              Microsoft.ContainerService               AKS-RegionEarlyAccess
 Microsoft Container Service                              Microsoft.ContainerService               AKS-UKWest
-Microsoft Container Service                              Microsoft.ContainerService               AKSAuditLog
 Microsoft Container Service                              Microsoft.ContainerService               AKS-WestUS2
 Microsoft Container Service                              Microsoft.ContainerService               AksBypassRegionWritesDisabled
 Microsoft Container Service                              Microsoft.ContainerService               AKSAzureStandardLoadBalancer
@@ -844,10 +1457,9 @@ Microsoft Hardware Security Modules                      Microsoft.HardwareSecur
 Microsoft Hardware Security Modules                      Microsoft.HardwareSecurityModules        drillVerification
 Microsoft Hardware Security Modules                      Microsoft.HardwareSecurityModules        UseDogfoodHSM
 Microsoft Hardware Security Modules                      Microsoft.HardwareSecurityModules        UseDogfoodHsmAdminPlane
-Microsoft HybridCompute                                  Microsoft.HybridCompute                  HybridComputePreview
 Microsoft HybridCompute                                  microsoft.hybridcompute                  HybridComputeExtensionPreview
 Microsoft HybridCompute                                  Microsoft.HybridCompute                  HybridRPCanary
-Microsoft.HybridData                                     Microsoft.HybridData                     PreviewAccess
+-                                                        Microsoft.HybridData                     PreviewAccess
 Microsoft Azure Monitor                                  microsoft.insights                       AIMONEnvironment
 Microsoft Azure Monitor                                  microsoft.insights                       actiongrouptestinproduction
 Microsoft Azure Monitor                                  microsoft.insights                       azurehealthlimitedpreview
@@ -1157,15 +1769,15 @@ Microsoft ServiceFabric                                  Microsoft.ServiceFabric
 Microsoft ServiceFabric                                  Microsoft.ServiceFabric                  seabreezePrivatePreview
 Microsoft ServiceFabric                                  Microsoft.ServiceFabric                  serviceFabricEngineering
 Microsoft ServiceFabric                                  Microsoft.ServiceFabric                  serviceFabricStageAccess
--                                                        Microsoft.ServiceFabricMesh              seabreezePrivatePreview
--                                                        Microsoft.ServiceFabricMesh              serviceFabricEngineering
+Microsoft ServiceFabricMesh                              Microsoft.ServiceFabricMesh              seabreezePrivatePreview
+Microsoft ServiceFabricMesh                              Microsoft.ServiceFabricMesh              serviceFabricEngineering
 -                                                        Microsoft.Services                       RPSaaSPreview
 -                                                        Microsoft.SignalR                        betaaccess
 Microsoft.SignalRService                                 Microsoft.SignalRService                 betaaccess
-Microsoft Solutions                                      Microsoft.Solutions                      ApplianceEastUS2EUAP
-Microsoft Solutions                                      Microsoft.Solutions                      ApplianceMultiRegion
-Microsoft Solutions                                      Microsoft.Solutions                      AppliancePreview
-Microsoft Solutions                                      Microsoft.Solutions                      ApplicationGA
+Microsoft.Solutions                                      Microsoft.Solutions                      ApplianceEastUS2EUAP
+Microsoft.Solutions                                      Microsoft.Solutions                      ApplianceMultiRegion
+Microsoft.Solutions                                      Microsoft.Solutions                      AppliancePreview
+Microsoft.Solutions                                      Microsoft.Solutions                      ApplicationGA
 Microsoft SQL Database                                   Microsoft.Sql                            4tbpool
 Microsoft SQL Database                                   Microsoft.Sql                            4TBOption
 Microsoft SQL Database                                   Microsoft.Sql                            dataSync
@@ -1232,11 +1844,11 @@ Microsoft Storage                                        Microsoft.Storage      
 Microsoft Storage                                        Microsoft.Storage                        XArchive
 Microsoft Azure HPC Cache                                Microsoft.StorageCache                   generalAccess
 -                                                        microsoft.storagereplication             SOS
-Microsoft StorSimple Device Manager                      Microsoft.StorSimple                     betaAccess
-Microsoft StorSimple Device Manager                      Microsoft.StorSimple                     betaAcess
-Microsoft StorSimple Device Manager                      Microsoft.StorSimple                     EnableUnsupportedGeo
-Microsoft StorSimple Device Manager                      Microsoft.StorSimple                     StorSimpleGardaIbizaInGA
-Microsoft StorSimple Device Manager                      Microsoft.StorSimple                     StorSimpleGardaIbizaMigrated
+-                                                        Microsoft.StorSimple                     betaAccess
+-                                                        Microsoft.StorSimple                     betaAcess
+-                                                        Microsoft.StorSimple                     EnableUnsupportedGeo
+-                                                        Microsoft.StorSimple                     StorSimpleGardaIbizaInGA
+-                                                        Microsoft.StorSimple                     StorSimpleGardaIbizaMigrated
 Microsoft Azure Stream Analytics                         Microsoft.StreamAnalytics                ASA_NewRegion
 Microsoft Azure Stream Analytics                         Microsoft.StreamAnalytics                ProdWestUSX
 Microsoft Time Series Insights                           Microsoft.TimeSeriesInsights             extendedCapacityAndRetention
@@ -1246,114 +1858,114 @@ Microsoft Time Series Insights                           Microsoft.TimeSeriesIns
 Virtual Machine Image Builder                            Microsoft.VirtualMachineImages           CanaryAccess
 Virtual Machine Image Builder                            Microsoft.VirtualMachineImages           VirtualMachineTemplatePreview
 Visual Studio                                            Microsoft.VisualStudio                   ExtensionResource
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              CloudSimpleRP1
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              cloudSimpleRp11
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              cloudSimpleRp12
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              CloudSimpleRP16
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              cloudSimpleRp17
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              cloudSimpleRp18
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              cloudSimpleRp2
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              cloudSimpleRp3
-VMware Solution by CloudSimple                           microsoft.vmwarecloudsimple              eastus-devtest-bl31
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              env-azure-eastus-devtest-01
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              env-azure-eastus-devtest-02
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              env-azure-eastus-devtest-03
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              env-azure-eastus-devtest-04
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              env-azure-eastus-devtest-05
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              env-azure-eastus-devtest-06
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              env-azure-eastus-devtest-07
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              env-azure-eastus-devtest-08
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              env-cs-devtest-virt-01
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              env-cs-devtest-virt-02
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              env-cs-westus-devtest-01
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              env-cs-westus-devtest-02
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              env-cs-westus-devtest-03
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              env-cs-westus-devtest-04
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              env-cs-westus-devtest-05
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              env-cs-westus-devtest-06
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              env-cs-westus-devtest-07
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              env-cs-westus-devtest-08
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              env-cs-westus-devtest-09
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              env-cs-westus-devtest-10
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              env-cs-westus-devtest-11
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              env-cs-westus-devtest-12
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              env-cs-westus-devtest-13
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              env-cs-westus-devtest-14
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              env-cs-westus-devtest-15
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              env-cs-westus-devtest-16
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              env-cs-westus-devtest-17
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              env-cs-westus-devtest-18
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              env-cs-westus-devtest-19
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              env-cs-westus-devtest-20
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              env-cs-westus-devtest-23
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              env-cs-westus-devtest-24
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              env-cs-westus-devtest-25
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              env-cs-westus-devtest-26
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              env-cs-westus-devtest-27
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              env-cs-westus-devtest-28
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              env-cs-westus-devtest-30
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              env-cs-westus-devtest-31
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              env-cs-westus-devtest-32
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              env-cs-westus-devtest-33
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              env-cs-westus-devtest-34
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              env-cs-westus-devtest-37
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              env-cs-westus-devtest-38
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              env-cs-westus-devtest-39
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              env-cs-westus-devtest-40
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              env-cs-westus-devtest-41
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              env-cs-westus-devtest-42
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              env-cs-westus-devtest-43
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              env-cs-westus-devtest-44
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              env-cs-westus-devtest-45
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              env-cs-westus-devtest-46
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              env-cs-westus-devtest-47
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              env-cs-westus-devtest-48
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              env-cs-westus-devtest-49
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              env-cs-westus-devtest-50
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              env-cs-westus-devtest-51
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              env-cs-westus-devtest-52
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              env-cs-westus-devtest-53
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              env-cs-westus-devtest-54
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              env-cs-westus-devtest-57
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              env-cs-westus-devtest-59
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              env-cs-westus-devtest-61
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              env-cs-westus-devtest-62
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              env-cs-westus-devtest-63
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              env-cs-westus-devtest-64
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              env-cs-westus-devtest-65
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              env-cs-westus-devtest-66
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              env-cs-westus-devtest-67
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              env-cs-westus-devtest-68
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              env-cs-westus-devtest-69
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              env-cs-westus-devtest-70
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              env-cs-westus-devtest-71
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              env-cs-westus-devtest-72
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              env-cs-westus-devtest-73
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              env-cs-westus-devtest-74
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              env-cs-westus-devtest-77
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              env-cs-westus-devtest-78
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              env-cs-westus-devtest-79
-VMware Solution by CloudSimple                           Microsoft.VMWareCloudSimple              env-cs-westus-devtest-80
-VMware Solution by CloudSimple                           Microsoft.VMWareCloudSimple              env-cs-westus-devtest-81
-VMware Solution by CloudSimple                           Microsoft.VMWareCloudSimple              env-cs-westus-devtest-82
-VMware Solution by CloudSimple                           Microsoft.VMWareCloudSimple              env-cs-westus-devtest-83
-VMware Solution by CloudSimple                           Microsoft.VMWareCloudSimple              env-cs-westus-devtest-84
-VMware Solution by CloudSimple                           Microsoft.VMWareCloudSimple              expire-on-7-25-19
-VMware Solution by CloudSimple                           Microsoft.VMWareCloudSimple              itops-he
-VMware Solution by CloudSimple                           Microsoft.VMWareCloudSimple              kiev-test-demo
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              multi-region-1
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              multi-region-2
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              multi-region-3
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              multi-region-4
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              mustEmitFractions
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              mustEmitNone
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              mustEmitOnes
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              mustEmitZeros
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              stg-csos
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              subscriptionsWhiteList
-VMware Solution by CloudSimple                           Microsoft.VMWareCloudSimple              westeurope-test
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              westus-he-test
-VMware Solution by CloudSimple                           Microsoft.VMwareCloudSimple              westus-maas
+-                                                        Microsoft.VMwareCloudSimple              CloudSimpleRP1
+-                                                        Microsoft.VMwareCloudSimple              cloudSimpleRp11
+-                                                        Microsoft.VMwareCloudSimple              cloudSimpleRp12
+-                                                        Microsoft.VMwareCloudSimple              CloudSimpleRP16
+-                                                        Microsoft.VMwareCloudSimple              cloudSimpleRp17
+-                                                        Microsoft.VMwareCloudSimple              cloudSimpleRp18
+-                                                        Microsoft.VMwareCloudSimple              cloudSimpleRp2
+-                                                        Microsoft.VMwareCloudSimple              cloudSimpleRp3
+-                                                        microsoft.vmwarecloudsimple              eastus-devtest-bl31
+-                                                        Microsoft.VMwareCloudSimple              env-azure-eastus-devtest-01
+-                                                        Microsoft.VMwareCloudSimple              env-azure-eastus-devtest-02
+-                                                        Microsoft.VMwareCloudSimple              env-azure-eastus-devtest-03
+-                                                        Microsoft.VMwareCloudSimple              env-azure-eastus-devtest-04
+-                                                        Microsoft.VMwareCloudSimple              env-azure-eastus-devtest-05
+-                                                        Microsoft.VMwareCloudSimple              env-azure-eastus-devtest-06
+-                                                        Microsoft.VMwareCloudSimple              env-azure-eastus-devtest-07
+-                                                        Microsoft.VMwareCloudSimple              env-azure-eastus-devtest-08
+-                                                        Microsoft.VMwareCloudSimple              env-cs-devtest-virt-01
+-                                                        Microsoft.VMwareCloudSimple              env-cs-devtest-virt-02
+-                                                        Microsoft.VMwareCloudSimple              env-cs-westus-devtest-01
+-                                                        Microsoft.VMwareCloudSimple              env-cs-westus-devtest-02
+-                                                        Microsoft.VMwareCloudSimple              env-cs-westus-devtest-03
+-                                                        Microsoft.VMwareCloudSimple              env-cs-westus-devtest-04
+-                                                        Microsoft.VMwareCloudSimple              env-cs-westus-devtest-05
+-                                                        Microsoft.VMwareCloudSimple              env-cs-westus-devtest-06
+-                                                        Microsoft.VMwareCloudSimple              env-cs-westus-devtest-07
+-                                                        Microsoft.VMwareCloudSimple              env-cs-westus-devtest-08
+-                                                        Microsoft.VMwareCloudSimple              env-cs-westus-devtest-09
+-                                                        Microsoft.VMwareCloudSimple              env-cs-westus-devtest-10
+-                                                        Microsoft.VMwareCloudSimple              env-cs-westus-devtest-11
+-                                                        Microsoft.VMwareCloudSimple              env-cs-westus-devtest-12
+-                                                        Microsoft.VMwareCloudSimple              env-cs-westus-devtest-13
+-                                                        Microsoft.VMwareCloudSimple              env-cs-westus-devtest-14
+-                                                        Microsoft.VMwareCloudSimple              env-cs-westus-devtest-15
+-                                                        Microsoft.VMwareCloudSimple              env-cs-westus-devtest-16
+-                                                        Microsoft.VMwareCloudSimple              env-cs-westus-devtest-17
+-                                                        Microsoft.VMwareCloudSimple              env-cs-westus-devtest-18
+-                                                        Microsoft.VMwareCloudSimple              env-cs-westus-devtest-19
+-                                                        Microsoft.VMwareCloudSimple              env-cs-westus-devtest-20
+-                                                        Microsoft.VMwareCloudSimple              env-cs-westus-devtest-23
+-                                                        Microsoft.VMwareCloudSimple              env-cs-westus-devtest-24
+-                                                        Microsoft.VMwareCloudSimple              env-cs-westus-devtest-25
+-                                                        Microsoft.VMwareCloudSimple              env-cs-westus-devtest-26
+-                                                        Microsoft.VMwareCloudSimple              env-cs-westus-devtest-27
+-                                                        Microsoft.VMwareCloudSimple              env-cs-westus-devtest-28
+-                                                        Microsoft.VMwareCloudSimple              env-cs-westus-devtest-30
+-                                                        Microsoft.VMwareCloudSimple              env-cs-westus-devtest-31
+-                                                        Microsoft.VMwareCloudSimple              env-cs-westus-devtest-32
+-                                                        Microsoft.VMwareCloudSimple              env-cs-westus-devtest-33
+-                                                        Microsoft.VMwareCloudSimple              env-cs-westus-devtest-34
+-                                                        Microsoft.VMwareCloudSimple              env-cs-westus-devtest-37
+-                                                        Microsoft.VMwareCloudSimple              env-cs-westus-devtest-38
+-                                                        Microsoft.VMwareCloudSimple              env-cs-westus-devtest-39
+-                                                        Microsoft.VMwareCloudSimple              env-cs-westus-devtest-40
+-                                                        Microsoft.VMwareCloudSimple              env-cs-westus-devtest-41
+-                                                        Microsoft.VMwareCloudSimple              env-cs-westus-devtest-42
+-                                                        Microsoft.VMwareCloudSimple              env-cs-westus-devtest-43
+-                                                        Microsoft.VMwareCloudSimple              env-cs-westus-devtest-44
+-                                                        Microsoft.VMwareCloudSimple              env-cs-westus-devtest-45
+-                                                        Microsoft.VMwareCloudSimple              env-cs-westus-devtest-46
+-                                                        Microsoft.VMwareCloudSimple              env-cs-westus-devtest-47
+-                                                        Microsoft.VMwareCloudSimple              env-cs-westus-devtest-48
+-                                                        Microsoft.VMwareCloudSimple              env-cs-westus-devtest-49
+-                                                        Microsoft.VMwareCloudSimple              env-cs-westus-devtest-50
+-                                                        Microsoft.VMwareCloudSimple              env-cs-westus-devtest-51
+-                                                        Microsoft.VMwareCloudSimple              env-cs-westus-devtest-52
+-                                                        Microsoft.VMwareCloudSimple              env-cs-westus-devtest-53
+-                                                        Microsoft.VMwareCloudSimple              env-cs-westus-devtest-54
+-                                                        Microsoft.VMwareCloudSimple              env-cs-westus-devtest-57
+-                                                        Microsoft.VMwareCloudSimple              env-cs-westus-devtest-59
+-                                                        Microsoft.VMwareCloudSimple              env-cs-westus-devtest-61
+-                                                        Microsoft.VMwareCloudSimple              env-cs-westus-devtest-62
+-                                                        Microsoft.VMwareCloudSimple              env-cs-westus-devtest-63
+-                                                        Microsoft.VMwareCloudSimple              env-cs-westus-devtest-64
+-                                                        Microsoft.VMwareCloudSimple              env-cs-westus-devtest-65
+-                                                        Microsoft.VMwareCloudSimple              env-cs-westus-devtest-66
+-                                                        Microsoft.VMwareCloudSimple              env-cs-westus-devtest-67
+-                                                        Microsoft.VMwareCloudSimple              env-cs-westus-devtest-68
+-                                                        Microsoft.VMwareCloudSimple              env-cs-westus-devtest-69
+-                                                        Microsoft.VMwareCloudSimple              env-cs-westus-devtest-70
+-                                                        Microsoft.VMwareCloudSimple              env-cs-westus-devtest-71
+-                                                        Microsoft.VMwareCloudSimple              env-cs-westus-devtest-72
+-                                                        Microsoft.VMwareCloudSimple              env-cs-westus-devtest-73
+-                                                        Microsoft.VMwareCloudSimple              env-cs-westus-devtest-74
+-                                                        Microsoft.VMwareCloudSimple              env-cs-westus-devtest-77
+-                                                        Microsoft.VMwareCloudSimple              env-cs-westus-devtest-78
+-                                                        Microsoft.VMwareCloudSimple              env-cs-westus-devtest-79
+-                                                        Microsoft.VMWareCloudSimple              env-cs-westus-devtest-80
+-                                                        Microsoft.VMWareCloudSimple              env-cs-westus-devtest-81
+-                                                        Microsoft.VMWareCloudSimple              env-cs-westus-devtest-82
+-                                                        Microsoft.VMWareCloudSimple              env-cs-westus-devtest-83
+-                                                        Microsoft.VMWareCloudSimple              env-cs-westus-devtest-84
+-                                                        Microsoft.VMWareCloudSimple              expire-on-7-25-19
+-                                                        Microsoft.VMWareCloudSimple              itops-he
+-                                                        Microsoft.VMWareCloudSimple              kiev-test-demo
+-                                                        Microsoft.VMwareCloudSimple              multi-region-1
+-                                                        Microsoft.VMwareCloudSimple              multi-region-2
+-                                                        Microsoft.VMwareCloudSimple              multi-region-3
+-                                                        Microsoft.VMwareCloudSimple              multi-region-4
+-                                                        Microsoft.VMwareCloudSimple              mustEmitFractions
+-                                                        Microsoft.VMwareCloudSimple              mustEmitNone
+-                                                        Microsoft.VMwareCloudSimple              mustEmitOnes
+-                                                        Microsoft.VMwareCloudSimple              mustEmitZeros
+-                                                        Microsoft.VMwareCloudSimple              stg-csos
+-                                                        Microsoft.VMwareCloudSimple              subscriptionsWhiteList
+-                                                        Microsoft.VMWareCloudSimple              westeurope-test
+-                                                        Microsoft.VMwareCloudSimple              westus-he-test
+-                                                        Microsoft.VMwareCloudSimple              westus-maas
 Microsoft Web Apps                                       Microsoft.Web                            ASEInEastUS2EUAP
 Microsoft Web Apps                                       Microsoft.Web                            AustraliaCentral2RegionEnabled
 Microsoft Web Apps                                       Microsoft.Web                            AustraliaCentralRegionEnabled
@@ -1410,6 +2022,7 @@ Microsoft Web Apps                                       Microsoft.Web          
 Microsoft Network                                        Microsoft.Network                        IsHybridServicesTestSubscription
 Microsoft SQL Database                                   Microsoft.Sql                            BlockCustomerManagedKey
 Microsoft Resources                                      Microsoft.Resources                      AllowLinkedNotificationsToHiddenRP
+Microsoft Compute                                        Microsoft.Compute                        AllowVMScaleSetImageOfferUpgrade
 Microsoft Storage                                        Microsoft.Storage                        AllowAccountEncryptionKeyForQueues
 Microsoft Storage                                        Microsoft.Storage                        AllowAccountEncryptionKeyForTables
 Microsoft Web Apps                                       Microsoft.Web                            NorwayWest
@@ -1457,9 +2070,8 @@ Azure Red Hat OpenShift                                  Microsoft.RedHatOpenshi
 Microsoft Azure Data                                     Microsoft.AzureData                      azurearcprivatepreview
 Microsoft Container Service                              Microsoft.ContainerService               AKS-NewAPIVersion
 Microsoft Network                                        Microsoft.Network                        AllowApplicationGatewayV2UrlRewrite
-Azure Data Box                                           Microsoft.DataBox                        HongKongBoxAccess
 Azure Data Box                                           Microsoft.DataBox                        IndiaBoxAccess
-VMware Solution by CloudSimple                           microsoft.vmwarecloudsimple              new-region-test-client
+-                                                        microsoft.vmwarecloudsimple              new-region-test-client
 Microsoft Network                                        Microsoft.Network                        EnablePrivateLink
 Microsoft Storage                                        Microsoft.Storage                        MPAWorm
 Microsoft.Kusto                                          Microsoft.Kusto                          AllowMoveDatabase
@@ -1495,7 +2107,7 @@ Microsoft Compute                                        Microsoft.Compute      
 Microsoft Network                                        Microsoft.Network                        AllowApplicationGatewayV1AndV2InSameSubnet
 Microsoft Network                                        Microsoft.Network                        AllowApplicationGatewayPrivateLink
 Microsoft Storage                                        Microsoft.Storage                        HnsSnapshot
-Microsoft StorSimple Device Manager                      Microsoft.StorSimple                     ShowBannerForDeviceUpdate
+-                                                        Microsoft.StorSimple                     ShowBannerForDeviceUpdate
 Microsoft ResourceHealth                                 Microsoft.ResourceHealth                 EnableKustoClustersRhc
 Azure Digital Twins                                      Microsoft.DigitalTwins                   PrivatePreview
 Azure Digital Twins                                      Microsoft.DigitalTwins                   Endpoints
@@ -1558,8 +2170,6 @@ Microsoft Resources                                      Microsoft.Resources    
 Domain Services Resource Provider                        Microsoft.AAD                            testAccess
 Microsoft Container Service                              Microsoft.ContainerService               OpenShiftSupportGate
 Microsoft Network                                        Microsoft.Network                        AllowBringYourOwnIpAddressForThirdParties
-Microsoft Network                                        Microsoft.Network                        AllowVipswap
-Microsoft Container Service                              Microsoft.ContainerService               EnableAzureRBACPreview
 Microsoft Monitoring Insights                            microsoft.securitygraph                  IsgAccess
 Microsoft Container Service                              Microsoft.ContainerService               ProximityPlacementGroupPreview
 Microsoft Network                                        Microsoft.Network                        AllowSubscriptionLoadBalancerCaching
@@ -1605,10 +2215,10 @@ Microsoft Resources                                      Microsoft.Resources    
 Microsoft Compute                                        Microsoft.Compute                        SystemPriorityCopy
 -                                                        Microsoft.Swiftlet                       AllowValidationRegions
 Microsoft Container Service                              Microsoft.ContainerService               UserAssignedIdentityPreview
-Microsoft.Codespaces                                     Microsoft.Codespaces                     CanaryUSEC
+-                                                        Microsoft.Codespaces                     CanaryUSEC
 Microsoft Compute                                        Microsoft.Compute                        UltraDisk512E
 -                                                        Microsoft.Resiliency                     PreviewAccess
-Microsoft.IntelligentITDigitalTwin                       Microsoft.IntelligentITDigitalTwin       AccessControl
+-                                                        Microsoft.IntelligentITDigitalTwin       AccessControl
 Microsoft Network                                        Microsoft.Network                        AllowNetappInfraOnBM
 Microsoft.Migrate                                        microsoft.migrate                        TestFeatureEV2
 Microsoft.NetApp Resource Provider                       Microsoft.NetApp                         ANFDoubleEncryption
@@ -1667,7 +2277,7 @@ Microsoft.DeviceUpdate                                   Microsoft.DeviceUpdate 
 Microsoft.Cdn                                            Microsoft.Cdn                            EUAPRunnerRPV2
 Microsoft Storage                                        Microsoft.Storage                        AllowStorageServiceEncryptionIdentity
                                                          Microsoft.SqlVirtualMachine              BulkRegistration
-Microsoft Storage Pool                                   Microsoft.StoragePool                    PublicPreview
+-                                                        Microsoft.StoragePool                    PublicPreview
 Microsoft Customer Lockbox                               Microsoft.CustomerLockbox                CustomerLockboxFeature
 Microsoft Network                                        Microsoft.Network                        ReserveMacOnCreateNic
 Microsoft Storage                                        Microsoft.Storage                        AllowAttributeBasedAccessControl
@@ -1698,22 +2308,16 @@ Microsoft.AppAssessment                                  Microsoft.AppAssessment
 Microsoft.NetApp Resource Provider                       Microsoft.NetApp                         ANFAesEncryption
 Microsoft.NetApp Resource Provider                       Microsoft.NetApp                         ANFLdapSigning
 Microsoft.DeviceUpdate                                   Microsoft.DeviceUpdate                   AzureDeviceUpdatePerf
-Azure Data Box                                           Microsoft.Databox                        UACDataboxAccess
 Microsoft DB for MySQL                                   Microsoft.dbformysql                     singleServerCMW
 Microsoft DB for MySQL                                   Microsoft.dbformysql                     singleServerVnet
-Azure Data Box                                           Microsoft.Databox                        BrazilSouthAccess
 Azure Data Box                                           Microsoft.Databox                        BRSDataboxAccess
 Azure Data Box                                           Microsoft.Databox                        BRSDiskAccess
 Azure Data Box                                           Microsoft.Databox                        BRSHeavyAccess
 Azure Data Box                                           Microsoft.Databox                        UACHeavyAccess
-Azure Data Box                                           Microsoft.Databox                        UACDiskAccess
 Azure Data Box                                           Microsoft.Databox                        UAECentralAccess
 Azure Data Box                                           Microsoft.Databox                        UKSouthAccess
-Azure Data Box                                           Microsoft.Databox                        UKSDataboxAccess
-Azure Data Box                                           Microsoft.Databox                        UKSDiskAccess
 Azure Data Box                                           Microsoft.Databox                        UKSHeavyAccess
 Azure Data Box                                           Microsoft.Databox                        SZNHeavyAccess
-Azure Data Box                                           Microsoft.Databox                        SZNDiskAccess
 Azure Data Box                                           Microsoft.Databox                        SZNDataboxAccess
 Azure Data Box                                           Microsoft.Databox                        SwitzerlandNorthAccess
 Microsoft.NetApp Resource Provider                       Microsoft.NetApp                         ANFVolumeGroup
@@ -1812,7 +2416,7 @@ Microsoft DB for PostgreSQL                              Microsoft.DBForpostgres
 Microsoft Security                                       microsoft.security                       iotsolutionmigration
 Microsoft.AlertsManagement                               Microsoft.AlertsManagement               PreviewSmartDetectionsMigration
 Microsoft.AlertsManagement                               Microsoft.AlertsManagement               SmartAlertsTeamExperimentalDetectors
-Microsoft Import/Export                                  Microsoft.ImportExport                   KoreaSouthAccess
+-                                                        Microsoft.ImportExport                   KoreaSouthAccess
 Azure Log Analytics                                      microsoft.operationalinsights            IsTroubleShootEnabled
 -                                                        GitHub.Enterprise                        EnableAccess
 Microsoft Compute                                        Microsoft.Compute                        VMApps
@@ -1968,6 +2572,7 @@ Microsoft.HDInsight                                      Microsoft.HDInsight    
 Microsoft.HDInsight                                      Microsoft.HDInsight                      HiloPrivatePreview
 Microsoft.RecoveryServices                               Microsoft.RecoveryServices               AzureBackupResourceGuardEnabled
 Microsoft Storage                                        Microsoft.Storage                        AllowPremiumObjectReplication
+Microsoft.Cdn                                            Microsoft.Cdn                            BypassCnameCheckForCustomDomainDeletion
 Microsoft Databricks                                     Microsoft.Databricks                     EnableAPIVersion20210401Preview
 Microsoft Compute                                        Microsoft.Compute                        SharedDisksForStandardSSD
 Microsoft Network                                        Microsoft.Network                        AllowPrivateEndpointStaticIpConfigurations
@@ -2053,7 +2658,6 @@ Microsoft DB for PostgreSQL                              Microsoft.DBforPostgreS
 Microsoft Search                                         Microsoft.Search                         afecint
 Microsoft Azure Stream Analytics                         Microsoft.StreamAnalytics                MultiAzDedicatedCluster
 Microsoft Compute                                        Microsoft.Compute                        InGuestAutoPatchVmssFlexPreview
-Microsoft Container Service                              microsoft.ContainerService               UpdateAzureRBACPreview
 Microsoft Container Service                              microsoft.ContainerService               EnablePrivateClusterPublicFQDN
 Microsoft Container Service                              microsoft.ContainerService               HTTPProxyConfigPreview
 Microsoft Container Service                              microsoft.ContainerService               DisableLocalAccountsPreview
@@ -2092,7 +2696,7 @@ Microsoft Cognitive Services                             Microsoft.CognitiveServ
 Microsoft Cognitive Services                             Microsoft.CognitiveServices              LegalTerms.TextAnalytics.TAForHealthRAITermsAccepted
 Microsoft Cognitive Services                             Microsoft.CognitiveServices              LegalTerms.TextAnalytics.TAForPIIRAITermsAccepted
 Microsoft Cognitive Services                             Microsoft.CognitiveServices              LegalTerms.ComputerVision.SpatialAnaysisRAITermsAccepted
--                                                        Microsoft.ConfidentialLedger             betaAccess
+Microsoft.ConfidentialLedger                             Microsoft.ConfidentialLedger             betaAccess
 Microsoft Azure Stream Analytics                         Microsoft.StreamAnalytics                EnableFixedSnapshotIntervalReferenceDataLookup
 Microsoft Azure Stream Analytics                         Microsoft.StreamAnalytics                EnablePartitionedReferenceDataLookup
 Microsoft Azure Stream Analytics                         Microsoft.StreamAnalytics                EnableFullSnapshotIntervalReferenceDataLookup
@@ -2179,7 +2783,7 @@ Microsoft.VideoIndexer                                   Microsoft.VideoIndexer 
                                                          Private.SanjeevDRPTest                   Enabled
 Microsoft DB for PostgreSQL                              Microsoft.DBForPostgreSQL                flexibleServerRestoreNetworking
 Microsoft Container Service                              microsoft.ContainerService               AKS-ScaleDownModePreview
-Microsoft.HpcWorkbench                                   Microsoft.HpcWorkbench                   PrivatePreview_03012021
+-                                                        Microsoft.HpcWorkbench                   PrivatePreview_03012021
 Microsoft Chaos                                          Microsoft.Chaos                          ArtifactsPreview
 Microsoft Web Apps                                       Microsoft.Web                            WestUS3RegionEnabled
 Microsoft Kubernetes Configuration                       Microsoft.KubernetesConfiguration        FluxConfigurations
@@ -2192,7 +2796,6 @@ Microsoft Resources                                      Microsoft.Resources    
 Microsoft Resources                                      Microsoft.Resources                      AzureEdgeZoneMiamiA
 Microsoft Resources                                      Microsoft.Resources                      AzureEdgeZoneLosVegasA
 Microsoft Resources                                      Microsoft.Resources                      AzureEdgeZoneNewYorkA
-Microsoft Resources                                      Microsoft.Resources                      EdgeZoneVZWindsorA
 Microsoft Resources                                      Microsoft.Resources                      EdgeZoneATTDallasA
 Microsoft Azure Stream Analytics                         Microsoft.StreamAnalytics                RecordExternalization
 Microsoft Compute                                        Microsoft.Compute                        VmInspectionPreview
@@ -2203,12 +2806,10 @@ Microsoft Network                                        Microsoft.Network      
 Microsoft Network                                        Microsoft.Network                        EnableSdnApplianceForMonitoringServers
 -                                                        Microsoft.Cascade                        FrontloadDeploymentFeatureEastUs
 Azure Data Box                                           Microsoft.DataBox                        CustomerDiskCreateAccess
-Azure Data Box                                           Microsoft.DataBox                        EnableCustomerDiskSku
 Microsoft.NetApp Resource Provider                       Microsoft.NetApp                         ANFSingleFileSnapshotRestore
 Microsoft Security                                       Microsoft.Security                       OrionDev1
 Microsoft.VideoIndexer                                   Microsoft.VideoIndexer                   DevFeatureExposure
 Microsoft.SignalRService                                 Microsoft.SignalRService                 AllowStandardS2
-Azure Red Hat OpenShift                                  Microsoft.RedHatOpenShift                AdminKubeconfig
 Microsoft DB for PostgreSQL                              Microsoft.DBForPostgreSQL                hideServerGroupPreviewFeature
 -                                                        Microsoft.Cascade                        FrontloadTestFeature
 Microsoft Compute                                        Microsoft.Compute                        DoNotApprove
@@ -2231,7 +2832,6 @@ Microsoft Chaos                                          Microsoft.Chaos        
 Microsoft Chaos                                          Microsoft.Chaos                          PublicPreviewAccess
 Microsoft.TestBase                                       microsoft.testbase                       EUAPAccess
 Microsoft.TestBase                                       microsoft.testbase                       PilotAccess
-Microsoft Container Service                              microsoft.ContainerService               AKS-NATGatewayPreview
 Microsoft Container Service                              microsoft.ContainerService               EnableMultipleStandardLoadBalancers
                                                          Private.Contoso                          EnableProvider
 Microsoft.AlertsManagement                               microsoft.alertsManagement               ActionRulesApiV2021
@@ -2244,12 +2844,10 @@ Microsoft DB for PostgreSQL                              Microsoft.DBForPostgreS
 MicrosoftNetworkFunction                                 Microsoft.NetworkFunction                AllowRoutingToTestNfvrpInstance
 Microsoft Security Insights                              microsoft.securityinsights               strictAutomationThrottlingLimits
 Microsoft.RecoveryServices                               Microsoft.RecoveryServices               EnableHealthMetrics
-Microsoft Search                                         Microsoft.Search                         RbacPreview
 Microsoft.AVS                                            Microsoft.AVS                            testRoutingTrafficManager
 Microsoft Cognitive Services                             Microsoft.CognitiveServices              Face.Detection
 Microsoft Cognitive Services                             Microsoft.CognitiveServices              Face.Verification
 Microsoft Cognitive Services                             Microsoft.CognitiveServices              Face.Identification
-Microsoft Cognitive Services                             Microsoft.CognitiveServices              Face.SensitiveAttributes
 Microsoft Cognitive Services                             Microsoft.CognitiveServices              Face.LivenessDetection
 Microsoft Cognitive Services                             Microsoft.CognitiveServices              Face.Preview
 Microsoft.AVS                                            Microsoft.AVS                            AzureArcForAVS
@@ -2271,9 +2869,9 @@ Microsoft.AVS                                            Microsoft.AVS          
 Microsoft.Kusto                                          Microsoft.Kusto                          SupportBigFollower
 Microsoft DB for MySQL                                   Microsoft.DBforMySQL                     resourceHealthSupported
 Microsoft Maintenance Service                            Microsoft.Maintenance                    InGuestPatchBetaAccess
-Microsoft Storage Pool                                   Microsoft.StoragePool                    GA-2021-08-01
+-                                                        Microsoft.StoragePool                    GA-2021-08-01
 Microsoft Container Service                              microsoft.ContainerService               WasmNodePoolPreview
--                                                        Microsoft.Automanage                     PatchPreview
+Microsoft Automanage                                     Microsoft.Automanage                     PatchPreview
 Microsoft Singularity                                    Microsoft.Singularity                    scale3Test
 Microsoft.NetApp Resource Provider                       Microsoft.NetApp                         ANFBasicToStdNetworkFeaturesUpgrade
 Microsoft Network                                        Microsoft.Network                        EnableDefaultLoadBalancerForFastPathNonVmssTenant
@@ -2358,8 +2956,160 @@ Microsoft Databricks                                     Microsoft.Databricks   
                                                          Private.Windows365                       EnableProvider
                                                          Private.FixMe                            EnableProvider
                                                          Private.Workloads                        EnableProvider
+                                                         Private.XRPaaSLiveTest                   EnableProvider
+                                                         Private.GraphDB                          EnableProvider
+Microsoft Web Apps                                       Microsoft.Web                            SouthAfricaWestRegionEnabled
+-                                                        Microsoft.Contoso                        DefaultFeature
+                                                         Private.PlatformPlayground               EnableProvider
+-                                                        Microsoft.M365                           DefaultFeature
+-                                                        Microsoft.WindowsPushNotificationServices DefaultFeature
+                                                         private.externalDeviceRegistry           EnableProvider
+                                                         Private.HDInsight                        EnableProvider
+-                                                        Microsoft.Windows365                     DefaultFeature
+                                                         Private.VPTest                           EnableProvider
+Microsoft Security                                       Microsoft.Security                       PPApiSecurityAccessDev
+Microsoft Security                                       Microsoft.Security                       PPApiSecurityAccessInt
+                                                         private.appsecurity                      EnableProvider
+                                                         Private.SamplePartnerCF                  EnableProvider
+                                                         private.deviceregistry                   EnableProvider
+                                                         Private.ModSimWorkbench                  EnableProvider
+Microsoft.ModSimWorkbench                                Microsoft.ModSimWorkbench                DefaultFeature
+                                                         Private.ALTS                             EnableProvider
+Microsoft.OracleDiscovery                                Microsoft.OracleDiscovery                DefaultFeature
+-                                                        Microsoft.DatabaseInsights               DefaultFeature
+Microsoft.OffAzureSpringBoot                             Microsoft.OffAzureSpringBoot             DefaultFeature
+SolarWinds.Observability                                 SolarWinds.Observability                 DefaultFeature
+-                                                        Microsoft.AppSecurity                    DefaultFeature
+                                                         Private.SovereignEnclave                 EnableProvider
+                                                         Private.SupplyChainDevice                EnableProvider
+                                                         Private.ALTSTest                         EnableProvider
+-                                                        Microsoft.EnergyDataPlatform             DefaultFeature
+                                                         Private.Oryx                             EnableProvider
+-                                                        Microsoft.KX                             DefaultFeature
+                                                         Private.Bluefin                          EnableProvider
+Microsoft Compute                                        Microsoft.Compute                        DirectSharingHigherLimits
+                                                         Private.Skyman                           EnableProvider
+Microsoft.CleanRoom                                      Microsoft.CleanRoom                      DefaultFeature
+Microsoft DB for PostgreSQL                              Microsoft.DBForPostgreSQL                enableMajorVersionUpgrade_australiasoutheast
+Microsoft DB for PostgreSQL                              Microsoft.DBForPostgreSQL                enableMajorVersionUpgrade_canadaeast
+Microsoft DB for PostgreSQL                              Microsoft.DBForPostgreSQL                enableMajorVersionUpgrade_eastasia
+                                                         Private.DevModSimWorkbench               EnableProvider
+                                                         Private.Search                           EnableProvider
+-                                                        Microsoft.DeviceRegistry                 DefaultFeature
+Microsoft.Maps                                           Microsoft.Maps                           FeaturesServiceAccess
+                                                         private.strimzikafka                     EnableProvider
+                                                         Private.HealthModeling                   EnableProvider
+-                                                        Microsoft.ManagedStorageClass            DefaultFeature
+Microsoft.HealthcareApis                                 Microsoft.HealthcareApis                 MedTechErrorMessageServicePreview
+GitHub.Network                                           GitHub.Network                           DefaultFeature
+Microsoft Web Apps                                       Microsoft.Web                            DisableResourcesPerRGLimitForAPIMinWebApp
+Microsoft Search                                         Microsoft.Search                         DefaultFeature
+-                                                        microsoft.streamingforstrimzikafka       DefaultFeature
+-                                                        Microsoft.WhiteBoxCadlProvider           DefaultFeature
+                                                         Private.DatabaseWatcher                  EnableProvider
+Microsoft.SaaSHub                                        Microsoft.SaaSHub                        DefaultFeature
+Microsoft Web Apps                                       Microsoft.Web                            plc-df36aee8-c644-400b-a0ab-fd0f1191211d
+Microsoft.OperatorVoicemail                              Microsoft.OperatorVoicemail              DefaultFeature
+                                                         Private.EuCloudPrototype                 EnableProvider
+Microsoft.DatabaseWatcher                                Microsoft.DatabaseWatcher                DefaultFeature
+Microsoft Data Factory                                   Microsoft.DataFactory                    cdm-f76de4a1-629f-4651-9d76-1d7b56544f3c
+Microsoft.AzureDataTransfer                              Microsoft.AzureDataTransfer              DefaultFeature
+-                                                        Microsoft.MobilePacketCore               DefaultFeature
+Microsoft.EntitlementManagement                          Microsoft.EntitlementManagement          DefaultFeature
+                                                         Private.Symphony                         EnableProvider
+                                                         Private.DevTunnels                       EnableProvider
+-                                                        Microsoft.SystemIntegrityMonitoring      DefaultFeature
+                                                         Private.Mission                          EnableProvider
+Microsoft Network                                        Microsoft.Network                        EnableMgmtNicV2
+                                                         Private.IntegrationService               EnableProvider
+Microsoft Cognitive Search                               Microsoft.CognitiveSearch                DefaultFeature
+-                                                        Microsoft.MobilePacketCore               AllowMobilePacketCoreCustomer
+-                                                        Microsoft.AzureLinuxTestingService       DefaultFeature
+Microsoft Web Apps                                       Microsoft.Web                            AseV3FirstPartyMultitenancy
+Microsoft.NetApp Resource Provider                       Microsoft.NetApp                         AFECEnablePPG
+-                                                        Microsoft.Carbon                         DefaultFeature
+                                                         Private.EdgeMarketPlace                  EnableProvider
+                                                         Private.NSPRPassTest                     EnableProvider
+-                                                        Microsoft.StandbyPool                    DefaultFeature
+                                                         Private.NSPRPaaSTest                     EnableProvider
+Microsoft.ManufacturingPlatform                          Microsoft.ManufacturingPlatform          DefaultFeature
+                                                         Private.NSPTestPaaSRP                    EnableProvider
+-                                                        Informatica.DataManagement               DefaultFeature
+-                                                        Microsoft.AzureTerraform                 DefaultFeature
+Microsoft Azure API Center                               Microsoft.ApiCenter                      DefaultFeature
+                                                         Private.SoftwareInventory                EnableProvider
+-                                                        Microsoft.Print                          DefaultFeature
+Microsoft.HealthModel                                    Microsoft.HealthModel                    DefaultFeature
+                                                         Private.E4K                              EnableProvider
+                                                         Private.EdgeSite                         EnableProvider
+                                                         Private.kubeapps                         EnableProvider
+                                                         Private.AIOpsCloudHealth                 EnableProvider
+Microsoft Container Service                              Microsoft.ContainerService               ate-f1d1800e-d38e-41f2-b63c-72d59ecaf9c0
+                                                         Private.AszLabHw                         EnableProvider
+Microsoft Container Service                              Microsoft.ContainerService               bec-f1d1800e-d38e-41f2-b63c-72d59ecaf9c0
+Microsoft Storage                                        Microsoft.Storage                        AllowLargeBlockBlob
+                                                         Private.AszLabHardware                   EnableProvider
+                                                         Private.AzureStackHCI                    EnableProvider
+                                                         Private.FIM                              EnableProvider
+Microsoft Web Apps                                       Microsoft.Web                            itn-df36aee8-c644-400b-a0ab-fd0f1191211d
+-                                                        Microsoft.BakeryHybrid                   DefaultFeature
+                                                         Private.AdvisorPrivate                   EnableProvider
+                                                         Private.CommonEdge                       EnableProvider
+                                                         Private.Porter                           EnableProvider
+                                                         Private.MysqlDiscovery                   EnableProvider
+                                                         Private.AksHybrid                        EnableProvider
+                                                         Private.SnowLake                         EnableProvider
+                                                         Private.Armate                           EnableProvider
+                                                         Private.Copilot                          EnableProvider
+-                                                        Microsoft.PartnerManagedConsumerRecurrence DefaultFeature
+                                                         Private.HPCClusters                      EnableProvider
+Microsoft Network                                        Microsoft.Network                        vWANNFVRPMigrationITN
+-                                                        PureStorage.Block                        DefaultFeature
+                                                         Private.ScheduledActions                 EnableProvider
+                                                         Private.GEMPrivateRP                     EnableProvider
+                                                         Private.AzureTerraform                   EnableProvider
+-                                                        Microsoft.DevTunnels                     DefaultFeature
+-                                                        Microsoft.EdgeMarketPlace                DefaultFeature
+-                                                        Astronomer.Astro                         DefaultFeature
+                                                         Private.Learning                         EnableProvider
+                                                         Private.ServiceRP                        EnableProvider
+-                                                        Microsoft.ConnectedCredentials           DefaultFeature
+                                                         Private.OracleDatabase                   EnableProvider
+Microsoft.AwsConnector                                   Microsoft.AwsConnector                   DefaultFeature
+                                                         Private.BBeeDev3                         EnableProvider
+Microsoft Security                                       Microsoft.Security                       DefenderForDevOpsAccessDev
+-                                                        Microsoft.IntegrationSpaces              DefaultFeature
+Microsoft Security                                       Microsoft.Security                       DefenderForDevOpsAccessInt
+                                                         Private.BBeeDev1                         EnableProvider
+Microsoft ContainerRegistry                              Microsoft.ContainerRegistry              ilc-3c737fd7-1389-4626-868f-c18df5790cb6
+                                                         Private.Monitor                          EnableProvider
+-                                                        microsoft.symphony                       DefaultFeature
+Microsoft Web Apps                                       Microsoft.Web                            ilc-df36aee8-c644-400b-a0ab-fd0f1191211d
+                                                         Private.KX                               EnableProvider
+-                                                        Microsoft.Edge                           DefaultFeature
+                                                         Private.DevCenter                        EnableProvider
+                                                         Private.CloudHealth                      EnableProvider
+                                                         Private.Access                           EnableProvider
+-                                                        Microsoft.EdgeZones                      DefaultFeature
+                                                         Private.BBeeDev4                         EnableProvider
+Microsoft Compute                                        Microsoft.Compute                        LayerPoolSubscription
+                                                         Private.StorageInsights                  EnableProvider
+-                                                        microsoft.bluefin                        DefaultFeature
+Microsoft.AzureImageTestingForLinux                      Microsoft.AzureImageTestingForLinux      DefaultFeature
+Microsoft.Quota                                          Microsoft.Quota                          GroupQuotaPreview
+Microsoft Network                                        Microsoft.Network                        AllowMerlinSubscriptionMove
+                                                         Private.Edge                             EnableProvider
+                                                         Private.HybridFabric                     EnableProvider
+Microsoft API Management                                 Microsoft.ApiManagement                  itn-6ba70dfa-ead9-4cc1-b894-049f8a17c22b
+Microsoft API Management                                 Microsoft.ApiManagement                  ilc-6ba70dfa-ead9-4cc1-b894-049f8a17c22b
+                                                         Private.OracleDatabaseDev                EnableProvider
+-                                                        Microsoft.AlicespringsDataplane          DefaultFeature
+Microsoft.ModSimWorkbench                                Microsoft.ModSimWorkbench                earlyAccess
+-                                                        Microsoft.Skytap                         DefaultFeature
 Microsoft Cognitive Services                             Microsoft.CognitiveServices              ComputerVision.Legacy
 Microsoft Compute                                        Microsoft.Compute                        CGPublicNameUpdate
+Microsoft.AVS                                            Microsoft.AVS                            SelfServeMaintenance
+                                                         Providers.Test                           DFFeatureTest
 -                                                        Microsoft.CostManagementBeta             TenantRegistration
 Microsoft Storage                                        Microsoft.Storage                        ContainerSoftDelete
 Microsoft Storage                                        Microsoft.Storage                        AllowArchive
