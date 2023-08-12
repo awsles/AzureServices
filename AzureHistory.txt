@@ -2956,3 +2956,779 @@ NEW ACTIONS:
   Wandisco.Fusion/operations/read                                                  False          Lists all of the available RP operations.
 
 
+====================================================================================================
+12-Aug-2023 : There are 0 actions across  Azure services.
+              748 changes have been detected: 748 new; 0 deprecated.
+There are 10 new provider names and 5 deprecated provider names.
+NEW :
+  Microsoft.AadCustomSecurityAttributesDiagnosticSettings
+  Microsoft.ApiCenter
+  Microsoft.AwsConnector
+  Microsoft.AzureImageTestingForLinux
+  Microsoft.AzurePlaywrightService
+  Microsoft.EntitlementManagement
+  Microsoft.Fabric
+  Microsoft.HealthModel
+  microsoft.hybridnetwork
+  microsoft.scvmm
+DEPRECATED :
+  Microsoft.Codespaces
+  Microsoft.EdgeZones
+  Microsoft.Graph
+  Microsoft.HpcWorkbench
+  Microsoft.SystemIntegrityMonitoring
+
+
+NEW ACTIONS:
+  Provider Operation (Action)                                                      IsDataAction   Description
+  ---------------------------                                                      ------------   -----------
+  microsoft.web/sites/detectors/read                                               False          Get Web Apps Detectors.
+  Microsoft.Workloads/sapDiscoverySites/write                                      False          SAPDiscoverySites_Update.
+  Microsoft.Workloads/sapDiscoverySites/write                                      False          Creates a discovery site for SAP Migration.
+  Microsoft.Workloads/sapVirtualInstances/applicationInstances/delete              False          Deletes the SAP Application Server Instance. <br><br>This operation will be used by service only. Delete by end user will return a Bad Request error.
+  Microsoft.Workloads/sapVirtualInstances/applicationInstances/read                False          Lists the SAP Application server Instances in an SVI.
+  Microsoft.Workloads/sapVirtualInstances/applicationInstances/read                False          Gets the SAP Application Server Instance.
+  Microsoft.Workloads/sapVirtualInstances/applicationInstances/start/action        False          Starts the SAP Application server Instance in an SVI.
+  Microsoft.Workloads/sapVirtualInstances/applicationInstances/stop/action         False          Stops the SAP Application server Instance in an SVI.
+  Microsoft.Workloads/sapVirtualInstances/applicationInstances/write               False          Puts the SAP Application Server Instance.
+  Microsoft.Workloads/sapVirtualInstances/applicationInstances/write               False          Puts the SAP Application Server Instance.
+  Microsoft.Workloads/sapVirtualInstances/centralInstances/delete                  False          Deletes the SAP Central Instance. <br><br>This will be used by service only. Delete by end user will return a Bad Request error.
+  Microsoft.Workloads/sapVirtualInstances/centralInstances/read                    False          Gets the SAP Central Instance.
+  Microsoft.Workloads/sapVirtualInstances/centralInstances/read                    False          Lists the SAP Central Instances in an SVI.
+  Microsoft.Workloads/sapVirtualInstances/centralInstances/start/action            False          Starts the SAP Central server Instance in an SVI.
+  Microsoft.Workloads/sapVirtualInstances/centralInstances/stop/action             False          Stops the SAP Central server Instance in an SVI.
+  Microsoft.Workloads/sapVirtualInstances/centralInstances/write                   False          Puts the SAP Central Instance. <br><br>This will be used by service only. PUT by end user will return a Bad Request error.
+  Microsoft.Workloads/sapVirtualInstances/centralInstances/write                   False          Updates the SAP Central Instance. <br><br>This can be used to update tags.
+  Microsoft.Workloads/sapVirtualInstances/databaseInstances/delete                 False          Deletes the SAP Database Instance. <br><br>This will be used by service only. Delete by end user will return a Bad Request error.
+  Microsoft.Workloads/sapVirtualInstances/databaseInstances/read                   False          Gets the SAP Database Instance.
+  Microsoft.Workloads/sapVirtualInstances/databaseInstances/read                   False          Lists the SAP Database Instances in an SVI.
+  Microsoft.Workloads/sapDiscoverySites/sapInstances/write                         False          Updates the SAP Instance resource.
+  Microsoft.Workloads/sapVirtualInstances/databaseInstances/start/action           False          Starts the database instance of the SAP system.
+  Microsoft.Workloads/sapDiscoverySites/sapInstances/write                         False          Creates the SAP Instance resource. <br><br>This will be used by service only. PUT operation on this resource by end user will return a Bad Request error.
+  Microsoft.Workloads/sapDiscoverySites/sapInstances/serverInstances/write         False          Creates the Server Instance resource. <br><br>This will be used by service only. PUT operation on this resource by end user will return a Bad Request error.
+  Microsoft.Workloads/phpWorkloads/wordpressInstances/delete                       False          Delete WordpressInstances resource
+  Microsoft.Workloads/phpWorkloads/wordpressInstances/read                         False          Gets a WordpressInstances resource
+  Microsoft.Workloads/phpWorkloads/wordpressInstances/read                         False          Lists WordpressInstances resources under a phpWorkload resource
+  Microsoft.Workloads/phpWorkloads/wordpressInstances/write                        False          Create or updated WordpressInstances resource
+  Microsoft.Workloads/phpWorkloads/write                                           False          Create or updated phpWorkloads resource
+  Microsoft.Workloads/phpWorkloads/write                                           False          Update PHP workload resource.
+  Microsoft.Workloads/register/action                                              False          Register the subscription for Microsoft.Workloads
+  Microsoft.Workloads/RegisteredSubscriptions/read                                 False          Reads registered subscriptions
+  Microsoft.Workloads/sapDiscoverySites/delete                                     False          Deletes a SAP Migration discovery site resource and its child resources, that is the associated SAP Instances and Server Instances.
+  Microsoft.Workloads/sapDiscoverySites/importEntities/action                      False          Import a SAP Migration discovery site resource and it's child resources, that is the SAP instances and Server instances.
+  Microsoft.Workloads/sapDiscoverySites/read                                       False          Gets a SAP Migration discovery site resource.
+  Microsoft.Workloads/sapDiscoverySites/read                                       False          Gets all SAP Migration discovery site resources in a Resource Group.
+  Microsoft.Workloads/sapDiscoverySites/read                                       False          Gets all SAP Migration discovery site resources in a Subscription.
+  Microsoft.Workloads/sapDiscoverySites/sapInstances/delete                        False          Deletes the SAP Instance resource. <br><br>This will be used by service only. Delete operation on this resource by end user will return a Bad Request error. You can delete the parent resource, which is the SAP Migration discovery site resource, using the delete operation on it.
+  Microsoft.Workloads/sapDiscoverySites/sapInstances/read                          False          Lists the SAP Instance resources for the given SAP Migration discovery site resource.
+  Microsoft.Workloads/sapDiscoverySites/sapInstances/read                          False          Gets the SAP Instance resource.
+  Microsoft.Workloads/sapDiscoverySites/sapInstances/serverInstances/delete        False          Deletes the Server Instance resource. <br><br>This will be used by service only. Delete operation on this resource by end user will return a Bad Request error. You can delete the parent resource, which is the SAP Migration discovery site resource, using the delete operation on it.
+  Microsoft.Workloads/sapDiscoverySites/sapInstances/serverInstances/read          False          Gets the Server Instance resource.
+  Microsoft.Workloads/sapDiscoverySites/sapInstances/serverInstances/read          False          Lists the Server Instance resources for the given SAP Instance resource.
+  Microsoft.Workloads/sapDiscoverySites/sapInstances/serverInstances/write         False          Updates the Server Instance resource. This operation on a resource by end user will return a Bad Request error.
+  Microsoft.Workloads/sapVirtualInstances/databaseInstances/stop/action            False          Stops the database instance of the SAP system.
+  Microsoft.Workloads/sapVirtualInstances/databaseInstances/write                  False          Puts the SAP Database Instance.
+  Microsoft.Workloads/sapVirtualInstances/databaseInstances/write                  False          Puts the SAP Database Instance.
+  NewRelic.Observability/monitors/vmHostPayloads/action                            False          The payload to be sent for installing NewRelic agent on VM
+  NewRelic.Observability/monitors/write                                            False          Write monitors
+  NewRelic.Observability/operations/read                                           False          List available Operations in NewRelic.Observability
+  NewRelic.Observability/organizations/read                                        False          List all organizations for a user
+  NewRelic.Observability/plans/read                                                False          List plan data for a account or organization
+  NewRelic.Observability/register/action                                           False          Registers NewRelic.Observability Resource provider
+  NewRelic.Observability/registeredSubscriptions/read                              False          Get registered subscription details
+  NewRelic.Observability/unregister/action                                         False          Unregisters NewRelic.Observability Resource provider
+  NGINX.NGINXPLUS/locations/operationStatuses/read                                 False          Get operation statuses
+  NGINX.NGINXPLUS/locations/operationStatuses/write                                False          Write operation statuses
+  NGINX.NGINXPLUS/locations/read                                                   False          Get locations
+  NGINX.NGINXPLUS/nginxDeployments/certificates/Delete                             False          Delete certificates
+  NGINX.NGINXPLUS/nginxDeployments/certificates/Read                               False          Read certificates
+  NGINX.NGINXPLUS/nginxDeployments/certificates/Write                              False          Write certificates
+  NGINX.NGINXPLUS/nginxDeployments/configurations/Delete                           False          Delete configurations
+  NGINX.NGINXPLUS/nginxDeployments/configurations/Read                             False          Read configurations
+  NGINX.NGINXPLUS/nginxDeployments/configurations/Write                            False          Write configurations
+  NGINX.NGINXPLUS/nginxDeployments/Delete                                          False          Delete nginxDeployments
+  NGINX.NGINXPLUS/nginxDeployments/Read                                            False          Read nginxDeployments
+  NewRelic.Observability/monitors/tagRules/write                                   False          Write tag rules
+  NewRelic.Observability/monitors/tagRules/read                                    False          Read tag rules
+  NewRelic.Observability/monitors/switchBilling/action                             False          Switches billing for NewRelic monitor resource to Azure
+  NewRelic.Observability/monitors/read                                             False          Read monitors
+  Microsoft.Workloads/sapVirtualInstances/delete                                   False          Deletes an SAP Virtual Instance.
+  Microsoft.Workloads/sapVirtualInstances/read                                     False          Gets an SAP Virtual Instance.
+  Microsoft.Workloads/sapVirtualInstances/read                                     False          Gets all SAP Virtual Instances in the subscription.
+  Microsoft.Workloads/sapVirtualInstances/read                                     False          Gets all SAP Virtual Instances in a resource group.
+  Microsoft.Workloads/sapVirtualInstances/start/action                             False          Starts the SAP System.
+  Microsoft.Workloads/sapVirtualInstances/stop/action                              False          Stops the SAP System.
+  Microsoft.Workloads/sapVirtualInstances/write                                    False          Creates an SAP Virtual Instance.
+  Microsoft.Workloads/sapVirtualInstances/write                                    False          Updates an SAP Virtual Instance.
+  Microsoft.Workloads/skus/read                                                    False          Gets the list of Microsoft.Workloads SKUs available for your Subscription
+  Microsoft.Workloads/phpWorkloads/read                                            False          Lists phpWorkload resources in a resource group
+  Microsoft.Workloads/unregister/action                                            False          Unregister the subscription for Microsoft.Workloads
+  NewRelic.Observability/locations/operationStatuses/read                          False          Get operation statuses
+  NewRelic.Observability/locations/operationStatuses/write                         False          Write operation statuses
+  NewRelic.Observability/locations/read                                            False          Get locations
+  NewRelic.Observability/monitors/delete                                           False          Delete monitors
+  NewRelic.Observability/monitors/getMetricRules/action                            False          Get Metric rules for a NewRelic resource
+  NewRelic.Observability/monitors/getMetricStatus/action                           False          Get Metric status for resources
+  NewRelic.Observability/monitors/listAppServices/action                           False          List all the app services that have NewRelic agent installed
+  NewRelic.Observability/monitors/listHosts/action                                 False          List all VMs that are sending compute logs for a monitor
+  NewRelic.Observability/monitors/monitoredResources/action                        False          List all resources that are being monitored by the monitor resource
+  NewRelic.Observability/accounts/read                                             False          List all Accounts that for a user
+  Microsoft.Workloads/phpWorkloads/read                                            False          Gets a phpWorkload resource
+  Microsoft.Workloads/phpWorkloads/read                                            False          Lists phpWorkload resources in a subscription
+  Microsoft.Workloads/phpWorkloads/delete                                          False          Delete phpWorkloads resource
+  Microsoft.Web/workerApps/delete                                                  False          Delete a Worker App
+  Microsoft.Web/workerApps/operationResults/read                                   False          Get the results of a Worker App operation
+  Microsoft.Web/workerApps/read                                                    False          Get the properties for a Worker App
+  Microsoft.Web/workerApps/write                                                   False          Create a Worker App or update an existing one
+  Microsoft.WindowsESU/multipleActivationKeys/Delete                               False          Delete multipleActivationKeys
+  Microsoft.WindowsESU/multipleActivationKeys/Read                                 False          Read multipleActivationKeys
+  Microsoft.WindowsESU/multipleActivationKeys/Write                                False          Write multipleActivationKeys
+  Microsoft.WindowsIoT/DeviceServices/delete                                       False          Deletes Device Services resources.
+  Microsoft.WindowsIoT/DeviceServices/read                                         False          Reads Device Services resources.
+  Microsoft.WindowsIoT/DeviceServices/write                                        False          Writes Device Services resources.
+  Microsoft.WindowsIoT/Operations/read                                             False          Read the operations for all resource types.
+  Microsoft.WindowsIoT/register/action                                             False          Subscription Registration Action
+  Microsoft.WorkloadBuilder/migrationAgents/Delete                                 False          Delete migrationAgents
+  Microsoft.WorkloadBuilder/migrationAgents/Read                                   False          Read migrationAgents
+  Microsoft.WorkloadBuilder/migrationAgents/Write                                  False          Set migrationAgents
+  Microsoft.WorkloadBuilder/RegisteredSubscriptions/read                           False          Reads registered subscriptions
+  Microsoft.WorkloadBuilder/workloads/Delete                                       False          Delete workloads
+  Microsoft.WorkloadBuilder/workloads/instances/Delete                             False          Delete instances
+  Microsoft.WorkloadBuilder/workloads/instances/Read                               False          Read instances
+  microsoft.web/webappstacks/read                                                  False          Get Web App Stacks.
+  microsoft.web/verifyhostingenvironmentvnet/action                                False          Verify Hosting Environment Vnet.
+  microsoft.web/validate/action                                                    False          Validate .
+  microsoft.web/unregister/action                                                  False          Unregister Microsoft.Web resource provider for the subscription.
+  Microsoft.Web/staticSites/listsecrets/action                                     False          List the secrets for a Static Site
+  Microsoft.Web/staticSites/privateEndpointConnectionProxies/Delete                False          Delete Private Endpoint Connection Proxies for a Static Site
+  Microsoft.Web/staticSites/privateEndpointConnectionProxies/operations/Read       False          Read Private Endpoint Connection Proxy Operations for a Static Site
+  Microsoft.Web/staticSites/privateEndpointConnectionProxies/Read                  False          Get Private Endpoint Connection Proxies for a Static Site
+  Microsoft.Web/staticSites/privateEndpointConnectionProxies/validate/action       False          Validate Private Endpoint Connection Proxies for a Static Site
+  Microsoft.Web/staticSites/privateEndpointConnectionProxies/Write                 False          Create or Update Private Endpoint Connection Proxies for a Static Site
+  Microsoft.Web/staticSites/privateEndpointConnections/Delete                      False          Delete a Private Endpoint Connection for a Static Site
+  Microsoft.Web/staticSites/privateEndpointConnections/Read                        False          Get a private endpoint connection or the list of private endpoint connections for a static site
+  Microsoft.Web/staticSites/privateEndpointConnections/Write                       False          Approve or Reject Private Endpoint Connection for a Static Site
+  Microsoft.WorkloadBuilder/workloads/instances/Write                              False          Set instances
+  Microsoft.Web/staticSites/privateLinkResources/Read                              False          Get Private Link Resources
+  Microsoft.Web/staticSites/Read                                                   False          Get the properties of a Static Site
+  Microsoft.Web/staticSites/resetapikey/Action                                     False          Reset the api key for a Static Site
+  Microsoft.Web/staticSites/showDatabaseConnections/action                         False          Show details for Database Connections for a Static Site
+  Microsoft.Web/staticSites/userProvidedFunctionApps/Delete                        False          Detach a User Provided Function App from a Static Site
+  Microsoft.Web/staticSites/userProvidedFunctionApps/Read                          False          Get Static Site User Provided Function Apps
+  Microsoft.Web/staticSites/userProvidedFunctionApps/Write                         False          Register a User Provided Function App with a Static Site
+  Microsoft.Web/staticSites/validateCustomDomainOwnership/action                   False          Validate the custom domain ownership for a static site
+  Microsoft.Web/staticSites/Write                                                  False          Create a new Static Site or update an existing one
+  Microsoft.Web/staticSites/zipdeploy/action                                       False          Deploy a Static Site from zipped content
+  Microsoft.Web/staticSites/providers/Microsoft.Insights/metricDefinitions/Read    False          Gets the available metrics for Static Site
+  NGINX.NGINXPLUS/nginxDeployments/Write                                           False          Write nginxDeployments
+  Microsoft.WorkloadBuilder/workloads/Read                                         False          Read workloads
+  Microsoft.WorkloadBuilder/workloads/versions/artifacts/Read                      False          Read artifacts
+  Microsoft.Workloads/locations/sapVirtualInstanceMetadata/getAvailabilityZoneDetails/action False          Get SAP Availability Zone Details.
+  Microsoft.Workloads/locations/sapVirtualInstanceMetadata/getDiskConfigurations/action False          Get SAP Disk Configurations.
+  Microsoft.Workloads/locations/sapVirtualInstanceMetadata/getSapSupportedSku/action False          Get SAP supported SKUs.
+  Microsoft.Workloads/locations/sapVirtualInstanceMetadata/getSizingRecommendations/action False          Get SAP sizing recommendations.
+  Microsoft.Workloads/monitors/delete                                              False          Deletes a SAP monitor with the specified subscription, resource group, and monitor name.
+  Microsoft.Workloads/monitors/providerInstances/delete                            False          Deletes a provider instance for the specified subscription, resource group, Monitor name, and resource name.
+  Microsoft.Workloads/monitors/providerInstances/read                              False          Gets a list of provider instances in the specified SAP monitor. The operations returns various properties of each provider instances.
+  Microsoft.Workloads/monitors/providerInstances/read                              False          Gets properties of a provider instance for the specified subscription, resource group, Monitor name, and resource name.
+  Microsoft.Workloads/monitors/providerInstances/write                             False          Creates a provider instance for the specified subscription, resource group, Monitor name, and resource name.
+  Microsoft.Workloads/monitors/read                                                False          Gets a list of SAP monitors in the specified resource group.
+  Microsoft.Workloads/monitors/read                                                False          Gets a list of SAP monitors in the specified subscription. The operations returns various properties of each SAP monitor.
+  Microsoft.Workloads/monitors/read                                                False          Gets properties of a SAP monitor for the specified subscription, resource group, and resource name.
+  Microsoft.Workloads/monitors/sapLandscapeMonitor/delete                          False          Deletes a SAP Landscape monitor configuration with the specified subscription, resource group, and monitor name.
+  Microsoft.Workloads/monitors/sapLandscapeMonitor/read                            False          Gets properties of a SAP Landscape monitor configuration for the specified subscription, resource group, and resource name.
+  Microsoft.Workloads/monitors/sapLandscapeMonitor/read                            False          Gets a list of properties of a SAP Landscape monitor configuration for the specified subscription, resource group, and resource name.
+  Microsoft.Workloads/monitors/sapLandscapeMonitor/write                           False          Creates a SAP Landscape monitor configuration for the specified subscription, resource group, and resource name.
+  Microsoft.Workloads/monitors/write                                               False          Patches the Tags field of a SAP monitor for the specified subscription, resource group, and monitor name.
+  Microsoft.Workloads/monitors/write                                               False          Creates a SAP monitor for the specified subscription, resource group, and resource name.
+  Microsoft.Workloads/Operations/read                                              False          read Operations
+  Microsoft.Workloads/Locations/OperationStatuses/write                            False          write OperationStatuses
+  Microsoft.Workloads/Locations/OperationStatuses/read                             False          read OperationStatuses
+  Microsoft.Workloads/insights/write                                               False          Patches the Workload Insights instance for the specified subscription, resource group, and instance name.
+  Microsoft.Workloads/insights/write                                               False          Creates a Workloads Insights instance for the specified subscription, resource group, and instance name.
+  Microsoft.WorkloadBuilder/workloads/versions/artifacts/Write                     False          Set artifacts
+  Microsoft.WorkloadBuilder/workloads/versions/Delete                              False          Delete versions
+  Microsoft.WorkloadBuilder/workloads/versions/Read                                False          Read versions
+  Microsoft.WorkloadBuilder/workloads/versions/Write                               False          Set versions
+  Microsoft.WorkloadBuilder/workloads/Write                                        False          Set workloads
+  Microsoft.Workloads/connectors/acssBackups/delete                                False          Deletes the backup connection resource of virtual instance for SAP.
+  Microsoft.Workloads/connectors/acssBackups/read                                  False          Lists the backup connection resources of virtual instance for SAP under the given connector resource.
+  Microsoft.Workloads/connectors/acssBackups/read                                  False          Gets the backup connection resource of virtual instance for SAP.
+  Microsoft.Workloads/connectors/acssBackups/write                                 False          Creates the backup connection resource of virtual instance for SAP.
+  Microsoft.WorkloadBuilder/workloads/versions/artifacts/Delete                    False          Delete artifacts
+  Microsoft.Workloads/connectors/acssBackups/write                                 False          Updates the backup connection resource of virtual instance for SAP. <br><br>This can be used to update tags on the resource.
+  Microsoft.Workloads/connectors/read                                              False          Gets a connector resource
+  Microsoft.Workloads/connectors/read                                              False          Gets all connector resources in a Resource Group.
+  Microsoft.Workloads/connectors/read                                              False          Gets all connector resources in a Subscription.
+  Microsoft.Workloads/connectors/write                                             False          Creates a connector resource
+  Microsoft.Workloads/connectors/write                                             False          Updates a connector resource
+  Microsoft.Workloads/insights/delete                                              False          Deletes a Workloads Insights instance for the specified subscription, resource group and instance name.
+  Microsoft.Workloads/insights/read                                                False          Gets properties of Workloads Insights instance for the specified subscription, resource group and instance name.
+  Microsoft.Workloads/insights/read                                                False          Gets a list of Workloads Insight instances in the specified subscription and resource group. The operations returns various properties of each instance.
+  Microsoft.Workloads/insights/read                                                False          Gets a list of Workloads Insight instances in the specified subscription. The operations returns various properties of each instance.
+  Microsoft.Workloads/connectors/delete                                            False          Deletes a connector resource and its child resources, which are the associated connection resources. All the child resources have to be deleted before deleting the connector resource.
+  Microsoft.Web/staticSites/listfunctionappsettings/Action                         False          List function app settings for a Static Site
+  NGINX.NGINXPLUS/operations/read                                                  False          List operations available on NGINX.NGINXPLUS resource provider
+  NGINX.NGINXPLUS/unregister/action                                                False          Unregister the subscription for the NGINX.NGINXPLUS resource provider
+  SolarWinds.Observability/organizations/tagRules/read                             False          List TagRule resources by SolarWindsOrganizationResource
+  SolarWinds.Observability/organizations/tagRules/read                             False          Get a TagRule
+  SolarWinds.Observability/organizations/tagRules/write                            False          Update a TagRule
+  SolarWinds.Observability/organizations/tagRules/write                            False          Create a TagRule
+  SolarWinds.Observability/organizations/write                                     False          Update a SolarWindsOrganizationResource
+  SolarWinds.Observability/organizations/write                                     False          Create a SolarWindsOrganizationResource
+  SolarWinds.Observability/register/action                                         False          Register the subscription for SolarWinds.Observability
+  SolarWinds.Observability/registeredSubscriptions/read                            False          read registeredSubscriptions
+  SolarWinds.Observability/unregister/action                                       False          Unregister the subscription for SolarWinds.Observability
+  Wandisco.Fusion/fusionGroups/azureZones/delete                                   False          Deletes a given azureZone.
+  Wandisco.Fusion/fusionGroups/azureZones/plugins/delete                           False          Deletes a given Plugin.
+  Wandisco.Fusion/fusionGroups/azureZones/plugins/read                             False          Returns an AzureZone Plugin
+  Wandisco.Fusion/fusionGroups/azureZones/plugins/write                            False          Creates or updates a Plugin
+  Wandisco.Fusion/fusionGroups/azureZones/read                                     False          Returns a given azureZone.
+  Wandisco.Fusion/fusionGroups/azureZones/write                                    False          Creates a given azureZone.
+  Wandisco.Fusion/fusionGroups/delete                                              False          Delete a fusionGroup resource.
+  Wandisco.Fusion/fusionGroups/hiveReplicationRules/consistencyCheck/action        False          Trigger a consistency check on a Hive Replication Rule
+  Wandisco.Fusion/fusionGroups/hiveReplicationRules/delete                         False          Delete a hiveReplicationRule
+  Wandisco.Fusion/fusionGroups/hiveReplicationRules/read                           False          Return a given hiveReplicationRule
+  SolarWinds.Observability/organizations/tagRules/delete                           False          Delete a TagRule
+  Wandisco.Fusion/fusionGroups/hiveReplicationRules/write                          False          Create or update a hiveReplicationRule
+  SolarWinds.Observability/organizations/singleSignOnConfigurations/write          False          Create a SingleSignOn
+  SolarWinds.Observability/organizations/singleSignOnConfigurations/read           False          Get a SingleSignOn
+  Qumulo.Storage/fileSystems/read                                                  False          List FileSystemResource resources by resource group
+  Qumulo.Storage/fileSystems/write                                                 False          Update a FileSystemResource
+  Qumulo.Storage/fileSystems/write                                                 False          Create a FileSystemResource
+  Qumulo.Storage/locations/operationStatuses/read                                  False          read operationStatuses
+  Qumulo.Storage/locations/operationStatuses/write                                 False          write operationStatuses
+  Qumulo.Storage/operations/read                                                   False          read operations
+  Qumulo.Storage/register/action                                                   False          Register the subscription for Qumulo.Storage
+  Qumulo.Storage/registeredSubscriptions/read                                      False          read registeredSubscriptions
+  Qumulo.Storage/unregister/action                                                 False          Unregister the subscription for Qumulo.Storage
+  SolarWinds.Observability/checkNameAvailability/action                            False          action checkNameAvailability
+  SolarWinds.Observability/locations/operationStatuses/read                        False          read operationStatuses
+  SolarWinds.Observability/locations/operationStatuses/write                       False          write operationStatuses
+  SolarWinds.Observability/operations/read                                         False          read operations
+  SolarWinds.Observability/organizations/delete                                    False          Delete a SolarWindsOrganizationResource
+  SolarWinds.Observability/organizations/listMonitoredResources/action             False          List the resources currently being monitored by the SolarWinds organization resource.
+  SolarWinds.Observability/organizations/read                                      False          List SolarWindsOrganizationResource resources by resource group
+  SolarWinds.Observability/organizations/read                                      False          List SolarWindsOrganizationResource resources by subscription ID
+  SolarWinds.Observability/organizations/read                                      False          Get a SolarWindsOrganizationResource
+  SolarWinds.Observability/organizations/singleSignOnConfigurations/delete         False          Delete aSingleSignOn
+  SolarWinds.Observability/organizations/singleSignOnConfigurations/read           False          List SingleSignOn resources by SolarWindsOrganizationResource
+  Wandisco.Fusion/fusionGroups/managedOnPremZones/delete                           False          Deletes a given ManagedOnPremZone.
+  Wandisco.Fusion/fusionGroups/managedOnPremZones/induct/action                    False          Induct a managed OnPremZone.
+  Wandisco.Fusion/fusionGroups/managedOnPremZones/read                             False          Returns a given ManagedOnPremZone.
+  Wandisco.Fusion/migrators/liveDataMigrations/start/action                        False          Start an existing migrator migration
+  Wandisco.Fusion/migrators/liveDataMigrations/stop/action                         False          Stop a migrator migration
+  Wandisco.Fusion/migrators/liveDataMigrations/write                               False          Create a Migrator migration
+  Wandisco.Fusion/migrators/metadataMigrations/delete                              False          Deletes a given Metadata Migration.
+  Wandisco.Fusion/migrators/metadataMigrations/read                                False          Returns a given Metadata Migration.
+  Wandisco.Fusion/migrators/metadataMigrations/start/action                        False          Start an existing metadata migration
+  Wandisco.Fusion/migrators/metadataMigrations/stop/action                         False          Stop a metadata migration
+  Wandisco.Fusion/migrators/metadataMigrations/write                               False          Creates a Metadata Migration.
+  Wandisco.Fusion/migrators/metadataTargets/delete                                 False          Deletes a given Metadata Target.
+  Wandisco.Fusion/migrators/metadataTargets/read                                   False          Returns a given Metadata Target.
+  Wandisco.Fusion/migrators/metadataTargets/write                                  False          Creates a Metadata Target.
+  Wandisco.Fusion/migrators/pathMappings/delete                                    False          Deletes a given LiveDataPathMapping.
+  Wandisco.Fusion/migrators/pathMappings/read                                      False          Returns an LiveDataPathMapping
+  Wandisco.Fusion/migrators/pathMappings/write                                     False          Creates an LiveDataPathMapping
+  Wandisco.Fusion/migrators/read                                                   False          Returns a given Migrator.
+  Wandisco.Fusion/migrators/targets/delete                                         False          Deletes a given Migrator Target.
+  Wandisco.Fusion/migrators/targets/read                                           False          Returns a given Migrator Target.
+  Wandisco.Fusion/migrators/targets/write                                          False          Creates a Migrator Target.
+  Wandisco.Fusion/migrators/updateDownloadLocation/action                          False          Update the downloadLocation of the Migrator.
+  Wandisco.Fusion/migrators/liveDataMigrations/read                                False          Read a migrator migration
+  Wandisco.Fusion/migrators/liveDataMigrations/delete                              False          Delete a Migrator migration
+  Wandisco.Fusion/migrators/getInstallKey/action                                   False          Get the install key of a Migrator
+  Wandisco.Fusion/migrators/generateUpgrade/action                                 False          Generate the updated version of a Migrator.
+  Wandisco.Fusion/fusionGroups/managedOnPremZones/updateDownloadLocation/action    False          Update the downloadLocation of the Managed OnPrem Zone.
+  Wandisco.Fusion/fusionGroups/managedOnPremZones/write                            False          Creates a managed OnPremZone.
+  Wandisco.Fusion/fusionGroups/read                                                False          Returns a given FusionGroup.
+  Wandisco.Fusion/fusionGroups/replicationRules/consistencyCheck/action            False          Trigger a consistency check on a Replication Rule
+  Wandisco.Fusion/fusionGroups/replicationRules/delete                             False          Delete a replicationRule
+  Wandisco.Fusion/fusionGroups/replicationRules/migrations/abort/action            False          Abort a migration
+  Wandisco.Fusion/fusionGroups/replicationRules/migrations/delete                  False          Delete a migration
+  Wandisco.Fusion/fusionGroups/replicationRules/migrations/pause/action            False          Pause a migration
+  Wandisco.Fusion/fusionGroups/replicationRules/migrations/read                    False          Read migration
+  Qumulo.Storage/fileSystems/read                                                  False          Get a FileSystemResource
+  Wandisco.Fusion/fusionGroups/replicationRules/migrations/resume/action           False          Resume a migration
+  Wandisco.Fusion/fusionGroups/replicationRules/read                               False          Return a given replicationRule
+  Wandisco.Fusion/fusionGroups/replicationRules/write                              False          Create or update a replicationRule
+  Wandisco.Fusion/fusionGroups/write                                               False          Create or update fusionGroup resource.
+  Wandisco.Fusion/locations/operationStatuses/read                                 False          Return the given operationStatus.
+  Wandisco.Fusion/locations/operationStatuses/write                                False          Patches a given operationStatus.
+  Wandisco.Fusion/migrators/delete                                                 False          Deletes a given Migrator.
+  Wandisco.Fusion/migrators/exclusionTemplates/delete                              False          Deletes a given Exclusion Template.
+  Wandisco.Fusion/migrators/exclusionTemplates/read                                False          Returns an Exclusion Template
+  Wandisco.Fusion/migrators/exclusionTemplates/write                               False          Creates an Exclusion Template
+  Wandisco.Fusion/fusionGroups/replicationRules/migrations/write                   False          Start a migration
+  Qumulo.Storage/fileSystems/read                                                  False          List FileSystemResource resources by subscription ID
+  Qumulo.Storage/fileSystems/delete                                                False          Delete a FileSystemResource
+  Qumulo.Storage/checkNameAvailability/action                                      False          action checkNameAvailability
+  PaloAltoNetworks.Cloudngfw/globalRulestacks/listFirewalls/action                 False          List of Firewalls associated with Rulestack
+  PaloAltoNetworks.Cloudngfw/globalRulestacks/listPredefinedUrlCategories/action   False          List predefined URL categories for rulestack
+  PaloAltoNetworks.Cloudngfw/globalRulestacks/listSecurityServices/action          False          List the security services for rulestack
+  PaloAltoNetworks.Cloudngfw/globalRulestacks/postRules/delete                     False          Delete a PostRulesResource
+  PaloAltoNetworks.Cloudngfw/globalRulestacks/postRules/getCounters/action         False          Get counters
+  PaloAltoNetworks.Cloudngfw/globalRulestacks/postRules/read                       False          List PostRulesResource resources by Tenant
+  PaloAltoNetworks.Cloudngfw/globalRulestacks/postRules/read                       False          Get a PostRulesResource
+  PaloAltoNetworks.Cloudngfw/globalRulestacks/postRules/refreshCounters/action     False          Refresh counters
+  PaloAltoNetworks.Cloudngfw/globalRulestacks/postRules/resetCounters/action       False          Reset counters
+  PaloAltoNetworks.Cloudngfw/globalRulestacks/postRules/write                      False          Create a PostRulesResource
+  PaloAltoNetworks.Cloudngfw/globalRulestacks/prefixlists/delete                   False          Delete a PrefixListGlobalRulestackResource
+  PaloAltoNetworks.Cloudngfw/globalRulestacks/prefixlists/read                     False          List PrefixListGlobalRulestackResource resources by Tenant
+  PaloAltoNetworks.Cloudngfw/globalRulestacks/prefixlists/read                     False          Get a PrefixListGlobalRulestackResource
+  PaloAltoNetworks.Cloudngfw/globalRulestacks/prefixlists/write                    False          Create a PrefixListGlobalRulestackResource
+  PaloAltoNetworks.Cloudngfw/globalRulestacks/preRules/delete                      False          Delete a PreRulesResource
+  PaloAltoNetworks.Cloudngfw/globalRulestacks/preRules/getCounters/action          False          Get counters
+  PaloAltoNetworks.Cloudngfw/globalRulestacks/preRules/read                        False          Get a PreRulesResource
+  PaloAltoNetworks.Cloudngfw/globalRulestacks/preRules/read                        False          List PreRulesResource resources by Tenant
+  PaloAltoNetworks.Cloudngfw/globalRulestacks/preRules/refreshCounters/action      False          Refresh counters
+  PaloAltoNetworks.Cloudngfw/globalRulestacks/listCountries/action                 False          List of countries for Rulestack
+  PaloAltoNetworks.Cloudngfw/globalRulestacks/listAppIds/action                    False          List of AppIds for GlobalRulestack ApiVersion
+  PaloAltoNetworks.Cloudngfw/globalRulestacks/listAdvancedSecurityObjects/action   False          Get the list of advanced security objects
+  PaloAltoNetworks.Cloudngfw/globalRulestacks/getChangeLog/action                  False          Get changelog
+  PaloAltoNetworks.Cloudngfw/checkNameAvailability/action                          False          action checkNameAvailability
+  PaloAltoNetworks.Cloudngfw/firewalls/delete                                      False          Delete a FirewallResource
+  PaloAltoNetworks.Cloudngfw/firewalls/getGlobalRulestack/action                   False          Get Global Rulestack associated with the Firewall
+  PaloAltoNetworks.Cloudngfw/firewalls/getLogProfile/action                        False          Log Profile for Firewall
+  PaloAltoNetworks.Cloudngfw/firewalls/read                                        False          Get a FirewallResource
+  PaloAltoNetworks.Cloudngfw/firewalls/read                                        False          List FirewallResource resources by resource group
+  PaloAltoNetworks.Cloudngfw/firewalls/read                                        False          List FirewallResource resources by subscription ID
+  PaloAltoNetworks.Cloudngfw/firewalls/saveLogProfile/action                       False          Log Profile for Firewall
+  PaloAltoNetworks.Cloudngfw/firewalls/write                                       False          Update a FirewallResource
+  PaloAltoNetworks.Cloudngfw/globalRulestacks/preRules/resetCounters/action        False          Reset counters
+  PaloAltoNetworks.Cloudngfw/firewalls/write                                       False          Create a FirewallResource
+  PaloAltoNetworks.Cloudngfw/globalRulestacks/certificates/read                    False          List CertificateObjectGlobalRulestackResource resources by Tenant
+  PaloAltoNetworks.Cloudngfw/globalRulestacks/certificates/read                    False          Get a CertificateObjectGlobalRulestackResource
+  PaloAltoNetworks.Cloudngfw/globalRulestacks/certificates/write                   False          Create a CertificateObjectGlobalRulestackResource
+  PaloAltoNetworks.Cloudngfw/globalRulestacks/commit/action                        False          Commit rulestack configuration
+  PaloAltoNetworks.Cloudngfw/globalRulestacks/delete                               False          Delete a GlobalRulestackResource
+  PaloAltoNetworks.Cloudngfw/globalRulestacks/fqdnlists/delete                     False          Delete a FqdnListGlobalRulestackResource
+  PaloAltoNetworks.Cloudngfw/globalRulestacks/fqdnlists/read                       False          Get a FqdnListGlobalRulestackResource
+  PaloAltoNetworks.Cloudngfw/globalRulestacks/fqdnlists/read                       False          List FqdnListGlobalRulestackResource resources by Tenant
+  PaloAltoNetworks.Cloudngfw/globalRulestacks/fqdnlists/write                      False          Create a FqdnListGlobalRulestackResource
+  PaloAltoNetworks.Cloudngfw/globalRulestacks/certificates/delete                  False          Delete a CertificateObjectGlobalRulestackResource
+  NGINX.NGINXPLUS/register/action                                                  False          Register the subscription for the NGINX.NGINXPLUS resource provider
+  PaloAltoNetworks.Cloudngfw/globalRulestacks/preRules/write                       False          Create a PreRulesResource
+  PaloAltoNetworks.Cloudngfw/globalRulestacks/read                                 False          List GlobalRulestackResource resources by Tenant
+  PaloAltoNetworks.Cloudngfw/localRulestacks/localRules/refreshCounters/action     False          Refresh counters
+  PaloAltoNetworks.Cloudngfw/localRulestacks/localRules/resetCounters/action       False          Reset counters
+  PaloAltoNetworks.Cloudngfw/localRulestacks/localRules/write                      False          Create a LocalRulesResource
+  PaloAltoNetworks.Cloudngfw/localRulestacks/prefixlists/delete                    False          Delete a PrefixListResource
+  PaloAltoNetworks.Cloudngfw/localRulestacks/prefixlists/read                      False          List PrefixListResource resources by LocalRulestacks
+  PaloAltoNetworks.Cloudngfw/localRulestacks/prefixlists/read                      False          Get a PrefixListResource
+  PaloAltoNetworks.Cloudngfw/localRulestacks/prefixlists/write                     False          Create a PrefixListResource
+  PaloAltoNetworks.Cloudngfw/localRulestacks/read                                  False          List LocalRulestackResource resources by subscription ID
+  PaloAltoNetworks.Cloudngfw/localRulestacks/read                                  False          Get a LocalRulestackResource
+  PaloAltoNetworks.Cloudngfw/localRulestacks/read                                  False          List LocalRulestackResource resources by resource group
+  PaloAltoNetworks.Cloudngfw/localRulestacks/revert/action                         False          Revert rulestack configuration
+  PaloAltoNetworks.Cloudngfw/localRulestacks/write                                 False          Create a LocalRulestackResource
+  PaloAltoNetworks.Cloudngfw/localRulestacks/write                                 False          Update a LocalRulestackResource
+  PaloAltoNetworks.Cloudngfw/Locations/operationStatuses/read                      False          read operationStatuses
+  PaloAltoNetworks.Cloudngfw/Locations/operationStatuses/write                     False          write operationStatuses
+  PaloAltoNetworks.Cloudngfw/operations/read                                       False          read operations
+  PaloAltoNetworks.Cloudngfw/register/action                                       False          Register the subscription for PaloAltoNetworks.Cloudngfw
+  PaloAltoNetworks.Cloudngfw/registeredSubscriptions/read                          False          read registeredSubscriptions
+  PaloAltoNetworks.Cloudngfw/unregister/action                                     False          Unregister the subscription for PaloAltoNetworks.Cloudngfw
+  PaloAltoNetworks.Cloudngfw/localRulestacks/localRules/read                       False          Get a LocalRulesResource
+  PaloAltoNetworks.Cloudngfw/localRulestacks/localRules/read                       False          List LocalRulesResource resources by LocalRulestacks
+  PaloAltoNetworks.Cloudngfw/localRulestacks/localRules/getCounters/action         False          Get counters
+  PaloAltoNetworks.Cloudngfw/localRulestacks/localRules/delete                     False          Delete a LocalRulesResource
+  PaloAltoNetworks.Cloudngfw/globalRulestacks/revert/action                        False          Revert rulestack configuration
+  PaloAltoNetworks.Cloudngfw/globalRulestacks/write                                False          Create a GlobalRulestackResource
+  PaloAltoNetworks.Cloudngfw/globalRulestacks/write                                False          Update a GlobalRulestackResource
+  PaloAltoNetworks.Cloudngfw/localRulestacks/certificates/delete                   False          Delete a CertificateObjectLocalRulestackResource
+  PaloAltoNetworks.Cloudngfw/localRulestacks/certificates/read                     False          List CertificateObjectLocalRulestackResource resources by LocalRulestacks
+  PaloAltoNetworks.Cloudngfw/localRulestacks/certificates/read                     False          Get a CertificateObjectLocalRulestackResource
+  PaloAltoNetworks.Cloudngfw/localRulestacks/certificates/write                    False          Create a CertificateObjectLocalRulestackResource
+  PaloAltoNetworks.Cloudngfw/localRulestacks/commit/action                         False          Commit rulestack configuration
+  PaloAltoNetworks.Cloudngfw/localRulestacks/delete                                False          Delete a LocalRulestackResource
+  PaloAltoNetworks.Cloudngfw/globalRulestacks/read                                 False          Get a GlobalRulestackResource
+  PaloAltoNetworks.Cloudngfw/localRulestacks/fqdnlists/delete                      False          Delete a FqdnListLocalRulestackResource
+  PaloAltoNetworks.Cloudngfw/localRulestacks/fqdnlists/read                        False          Get a FqdnListLocalRulestackResource
+  PaloAltoNetworks.Cloudngfw/localRulestacks/fqdnlists/write                       False          Create a FqdnListLocalRulestackResource
+  PaloAltoNetworks.Cloudngfw/localRulestacks/getChangeLog/action                   False          Get changelog
+  PaloAltoNetworks.Cloudngfw/localRulestacks/listAdvancedSecurityObjects/action    False          Get the list of advanced security objects
+  PaloAltoNetworks.Cloudngfw/localRulestacks/listAppIds/action                     False          List of AppIds for LocalRulestack ApiVersion
+  PaloAltoNetworks.Cloudngfw/localRulestacks/listCountries/action                  False          List of countries for Rulestack
+  PaloAltoNetworks.Cloudngfw/localRulestacks/listFirewalls/action                  False          List of Firewalls associated with Rulestack
+  PaloAltoNetworks.Cloudngfw/localRulestacks/listPredefinedUrlCategories/action    False          List predefined URL categories for rulestack
+  PaloAltoNetworks.Cloudngfw/localRulestacks/listSecurityServices/action           False          List the security services for rulestack
+  PaloAltoNetworks.Cloudngfw/localRulestacks/fqdnlists/read                        False          List FqdnListLocalRulestackResource resources by LocalRulestacks
+  Microsoft.Web/staticSites/listConfiguredRoles/action                             False          Lists the roles configured for the static site.
+  Microsoft.Web/staticSites/listappsettings/Action                                 False          List app settings for a Static Site
+  Microsoft.Web/staticSites/linkedBackends/Write                                   False          Register a Linked Backend with a Static Site
+  Microsoft.Web/sites/providers/Microsoft.Insights/metricDefinitions/Read          False          Gets the available metrics for Web App
+  microsoft.web/sites/publiccertificates/delete                                    False          Delete Web Apps Public Certificates.
+  microsoft.web/sites/publiccertificates/read                                      False          Get Web Apps Public Certificates.
+  microsoft.web/sites/publiccertificates/write                                     False          Update Web Apps Public Certificates.
+  Microsoft.Web/sites/publish/Action                                               False          Publish a Web App
+  Microsoft.Web/sites/publishxml/Action                                            False          Get publishing profile xml for a Web App
+  microsoft.web/sites/publishxml/read                                              False          Get Web Apps Publishing XML.
+  Microsoft.Web/sites/Read                                                         False          Get the properties of a Web App
+  microsoft.web/sites/recommendationhistory/read                                   False          Get Web Apps Recommendation History.
+  microsoft.web/sites/recommendations/disable/action                               False          Disable Web Apps Recommendations.
+  Microsoft.Web/sites/recommendations/Read                                         False          Get the list of recommendations for web app.
+  microsoft.web/sites/recover/action                                               False          Recover Web Apps.
+  Microsoft.Web/sites/resetSlotConfig/Action                                       False          Reset web app configuration
+  microsoft.web/sites/resourcehealthmetadata/read                                  False          Get Web Apps Resource Health Metadata.
+  Microsoft.Web/sites/restart/Action                                               False          Restart a Web App
+  microsoft.web/sites/restore/read                                                 False          Get Web Apps Restore.
+  microsoft.web/sites/restore/write                                                False          Restore Web Apps.
+  microsoft.web/sites/restorefrombackupblob/action                                 False          Restore Web App From Backup Blob.
+  microsoft.web/sites/restorefromdeletedapp/action                                 False          Restore Web Apps From Deleted App.
+  microsoft.web/sites/providers/Microsoft.Insights/logDefinitions/read             False          Gets the available logs for Web App
+  microsoft.web/sites/restoresnapshot/action                                       False          Restore Web Apps Snapshots.
+  microsoft.web/sites/providers/Microsoft.Insights/diagnosticSettings/write        False          Creates or updates the diagnostic setting for the resource
+  microsoft.web/sites/processes/threads/read                                       False          Get Web Apps Processes Threads.
+  microsoft.web/sites/operationresults/read                                        False          Get Web Apps Operation Results.
+  microsoft.web/sites/operations/read                                              False          Get Web Apps Operations.
+  microsoft.web/sites/perfcounters/read                                            False          Get Web Apps Performance Counters.
+  microsoft.web/sites/premieraddons/delete                                         False          Delete Web Apps Premier Addons.
+  microsoft.web/sites/premieraddons/read                                           False          Get Web Apps Premier Addons.
+  microsoft.web/sites/premieraddons/write                                          False          Update Web Apps Premier Addons.
+  microsoft.web/sites/privateaccess/read                                           False          Get data around private site access enablement and authorized Virtual Networks that can access the site.
+  Microsoft.Web/sites/privateEndpointConnectionProxies/Delete                      False          Delete Private Endpoint Connection Proxies
+  Microsoft.Web/sites/privateEndpointConnectionProxies/operations/Read             False          Read Private Endpoint Connection Proxy Operations
+  Microsoft.Web/sites/privateEndpointConnectionProxies/Read                        False          Read Private Endpoint Connection Proxies
+  Microsoft.Web/sites/privateEndpointConnectionProxies/validate/action             False          Validate Private Endpoint Connection Proxies
+  Microsoft.Web/sites/privateEndpointConnectionProxies/Write                       False          Create or Update Private Endpoint Connection Proxies
+  Microsoft.Web/sites/privateEndpointConnections/Delete                            False          Delete a Private Endpoint Connection.
+  Microsoft.Web/sites/privateEndpointConnections/Read                              False          Get a Private Endpoint Connection or the list of Private Endpoint Connections.
+  Microsoft.Web/sites/privateEndpointConnections/Write                             False          Approve or Reject a private endpoint connection.
+  Microsoft.Web/sites/PrivateEndpointConnectionsApproval/action                    False          Approve Private Endpoint Connections
+  Microsoft.Web/sites/privateLinkResources/Read                                    False          Get Private Link Resources.
+  microsoft.web/sites/processes/modules/read                                       False          Get Web Apps Processes Modules.
+  microsoft.web/sites/processes/read                                               False          Get Web Apps Processes.
+  microsoft.web/sites/providers/Microsoft.Insights/diagnosticSettings/read         False          Gets the diagnostic setting for the resource
+  microsoft.web/sites/siteextensions/delete                                        False          Delete Web Apps Site Extensions.
+  microsoft.web/sites/siteextensions/read                                          False          Get Web Apps Site Extensions.
+  microsoft.web/sites/siteextensions/write                                         False          Update Web Apps Site Extensions.
+  microsoft.web/sites/slots/config/snapshots/read                                  False          Get Web App Slots Config Snapshots.
+  microsoft.web/sites/slots/config/validateupgradepath/action                      False          Validate upgrade path for Web App Slot.
+  microsoft.web/sites/slots/config/validateupgradepath/action                      False          Validate upgrade path for Web App.
+  microsoft.web/sites/slots/config/web/appsettings/delete                          False          Delete Web App Slot's App Setting
+  microsoft.web/sites/slots/config/web/connectionstrings/delete                    False          Delete Web App slot's single connection string
+  microsoft.web/sites/slots/config/web/connectionstrings/read                      False          Get Web App Slot's single connection string
+  microsoft.web/sites/slots/config/web/connectionstrings/write                     False          Create or Update Web App Slot's single sonnection string
+  Microsoft.Web/sites/slots/config/Write                                           False          Update Web App Slot's configuration settings
+  microsoft.web/sites/slots/containerlogs/action                                   False          Get Zipped Container Logs for Web App Slot.
+  microsoft.web/sites/slots/containerlogs/download/action                          False          Download Web Apps Slots Container Logs.
+  microsoft.web/sites/slots/continuouswebjobs/delete                               False          Delete Web Apps Slots Continuous Web Jobs.
+  microsoft.web/sites/slots/continuouswebjobs/read                                 False          Get Web Apps Slots Continuous Web Jobs.
+  microsoft.web/sites/slots/continuouswebjobs/start/action                         False          Start Web Apps Slots Continuous Web Jobs.
+  microsoft.web/sites/slots/continuouswebjobs/stop/action                          False          Stop Web Apps Slots Continuous Web Jobs.
+  Microsoft.Web/sites/slots/Delete                                                 False          Delete an existing Web App Slot
+  microsoft.web/sites/slots/deployments/delete                                     False          Delete Web Apps Slots Deployments.
+  microsoft.web/sites/slots/deployments/log/read                                   False          Get Web Apps Slots Deployments Log.
+  microsoft.web/sites/slots/deployments/read                                       False          Get Web Apps Slots Deployments.
+  microsoft.web/sites/slots/deployments/write                                      False          Update Web Apps Slots Deployments.
+  microsoft.web/sites/slots/config/snapshots/listsecrets/action                    False          Web Apps List Slot Secrets From Snapshot.
+  Microsoft.Web/sites/slots/config/Read                                            False          Get Web App Slot's configuration settings
+  Microsoft.Web/sites/slots/config/list/Action                                     False          List Web App Slot's security sensitive settings, such as publishing credentials, app settings and connection strings
+  microsoft.web/sites/slots/config/delete                                          False          Delete Web Apps Slots Config.
+  microsoft.web/sites/slotcopy/action                                              False          Copy content from deployment slot.
+  microsoft.web/sites/slots/analyzecustomhostname/read                             False          Get Web Apps Slots Analyze Custom Hostname.
+  Microsoft.Web/sites/slots/applySlotConfig/Action                                 False          Apply web app slot configuration from target slot to the current slot.
+  Microsoft.Web/sites/slots/backup/Action                                          False          Create new Web App Slot backup.
+  microsoft.web/sites/slots/backup/read                                            False          Get Web Apps Slots Backup.
+  microsoft.web/sites/slots/backup/write                                           False          Update Web Apps Slots Backup.
+  microsoft.web/sites/slots/backups/action                                         False          Discover Web Apps Slots Backups.
+  microsoft.web/sites/slots/backups/delete                                         False          Delete Web Apps Slots Backups.
+  microsoft.web/sites/slots/backups/list/action                                    False          List Web Apps Slots Backups.
+  microsoft.web/sites/newpassword/action                                           False          Newpassword Web Apps.
+  Microsoft.Web/sites/slots/backups/Read                                           False          Get the properties of a web app slots' backup
+  Microsoft.Web/sites/slots/basicPublishingCredentialsPolicies/ftp/Read            False          Get whether FTP publishing credentials are allowed for a Web App Slot
+  Microsoft.Web/sites/slots/basicPublishingCredentialsPolicies/ftp/Write           False          Update whether FTP publishing credentials are allowed for a Web App Slot
+  Microsoft.Web/sites/slots/basicPublishingCredentialsPolicies/Read                False          List which publishing credentials are allowed for a Web App Slot
+  Microsoft.Web/sites/slots/basicPublishingCredentialsPolicies/scm/Read            False          Get whether SCM publishing credentials are allowed for a Web App Slot
+  Microsoft.Web/sites/slots/basicPublishingCredentialsPolicies/scm/Write           False          Update whether SCM publishing credentials are allowed for a Web App Slot
+  Microsoft.Web/sites/slots/basicPublishingCredentialsPolicies/Write               False          List which publishing credentials are allowed for a Web App Slot
+  microsoft.web/sites/slots/config/appsettings/read                                False          Get Web App Slot settings.
+  microsoft.web/sites/slots/config/appsettings/read                                False          Get Web App Slot's single App setting.
+  microsoft.web/sites/slots/config/appsettings/write                               False          Create or Update Web App Slot's Single App setting
+  microsoft.web/sites/slots/backups/restore/action                                 False          Restore Web Apps Slots Backups.
+  microsoft.web/sites/networktraces/operationresults/read                          False          Get Web Apps Network Trace Operation Results.
+  microsoft.web/sites/networktrace/action                                          False          Network Trace Web Apps.
+  microsoft.web/sites/networkfeatures/read                                         False          Get Web App Features.
+  microsoft.web/sites/domainownershipidentifiers/delete                            False          Delete Web Apps Domain Ownership Identifiers.
+  microsoft.web/sites/domainownershipidentifiers/read                              False          Get Web Apps Domain Ownership Identifiers.
+  microsoft.web/sites/domainownershipidentifiers/write                             False          Update Web Apps Domain Ownership Identifiers.
+  Microsoft.Web/sites/eventGridFilters/delete                                      False          Delete Event Grid Filter on web app.
+  Microsoft.Web/sites/eventGridFilters/read                                        False          Get Event Grid Filter on web app.
+  Microsoft.Web/sites/eventGridFilters/write                                       False          Put Event Grid Filter on web app.
+  microsoft.web/sites/extensions/api/action                                        False          Invoke App Service Extensions APIs.
+  microsoft.web/sites/extensions/delete                                            False          Delete Web Apps Site Extensions.
+  microsoft.web/sites/extensions/read                                              False          Get Web Apps Site Extensions.
+  microsoft.web/sites/extensions/write                                             False          Update Web Apps Site Extensions.
+  microsoft.web/sites/functions/action                                             False          Functions Web Apps.
+  microsoft.web/sites/functions/delete                                             False          Delete Web Apps Functions.
+  microsoft.web/sites/functions/keys/delete                                        False          Delete Function keys.
+  microsoft.web/sites/functions/keys/write                                         False          Update Function keys.
+  microsoft.web/sites/functions/listkeys/action                                    False          List Function keys.
+  microsoft.web/sites/functions/listsecrets/action                                 False          List Function secrets.
+  microsoft.web/sites/functions/masterkey/read                                     False          Get Web Apps Functions Masterkey.
+  microsoft.web/sites/functions/read                                               False          Get Web Apps Functions.
+  microsoft.web/sites/functions/token/read                                         False          Get Web Apps Functions Token.
+  microsoft.web/sites/diagnostics/workerprocessrecycle/read                        False          Get Web Apps Diagnostics Worker Process Recycle.
+  microsoft.web/sites/diagnostics/workeravailability/read                          False          Get Web Apps Diagnostics Workeravailability.
+  microsoft.web/sites/diagnostics/threadcount/read                                 False          Get Web Apps Diagnostics Thread Count.
+  microsoft.web/sites/diagnostics/siteswap/read                                    False          Get Web Apps Diagnostics Site Swap.
+  microsoft.web/sites/diagnostics/analyses/execute/Action                          False          Run Web Apps Diagnostics Analysis.
+  microsoft.web/sites/diagnostics/analyses/read                                    False          Get Web Apps Diagnostics Analysis.
+  microsoft.web/sites/diagnostics/aspnetcore/read                                  False          Get Web Apps Diagnostics for ASP.NET Core app.
+  microsoft.web/sites/diagnostics/autoheal/read                                    False          Get Web Apps Diagnostics Autoheal.
+  microsoft.web/sites/diagnostics/deployment/read                                  False          Get Web Apps Diagnostics Deployment.
+  microsoft.web/sites/diagnostics/deployments/read                                 False          Get Web Apps Diagnostics Deployments.
+  microsoft.web/sites/diagnostics/detectors/execute/Action                         False          Run Web Apps Diagnostics Detector.
+  microsoft.web/sites/diagnostics/detectors/read                                   False          Get Web Apps Diagnostics Detector.
+  microsoft.web/sites/diagnostics/failedrequestsperuri/read                        False          Get Web Apps Diagnostics Failed Requests Per Uri.
+  microsoft.web/sites/functions/write                                              False          Update Web Apps Functions.
+  microsoft.web/sites/diagnostics/frebanalysis/read                                False          Get Web Apps Diagnostics FREB Analysis.
+  microsoft.web/sites/diagnostics/read                                             False          Get Web Apps Diagnostics Categories.
+  microsoft.web/sites/diagnostics/runtimeavailability/read                         False          Get Web Apps Diagnostics Runtime Availability.
+  microsoft.web/sites/diagnostics/servicehealth/read                               False          Get Web Apps Diagnostics Service Health.
+  microsoft.web/sites/diagnostics/sitecpuanalysis/read                             False          Get Web Apps Diagnostics Site CPU Analysis.
+  microsoft.web/sites/diagnostics/sitecrashes/read                                 False          Get Web Apps Diagnostics Site Crashes.
+  microsoft.web/sites/diagnostics/sitelatency/read                                 False          Get Web Apps Diagnostics Site Latency.
+  microsoft.web/sites/diagnostics/sitememoryanalysis/read                          False          Get Web Apps Diagnostics Site Memory Analysis.
+  microsoft.web/sites/diagnostics/siterestartsettingupdate/read                    False          Get Web Apps Diagnostics Site Restart Setting Update.
+  microsoft.web/sites/diagnostics/siterestartuserinitiated/read                    False          Get Web Apps Diagnostics Site Restart User Initiated.
+  microsoft.web/sites/diagnostics/loganalyzer/read                                 False          Get Web Apps Diagnostics Log Analyzer.
+  microsoft.web/sites/slots/deployWorkflowArtifacts/action                         False          Create the artifacts in a deployment slot in a Logic App.
+  microsoft.web/sites/host/functionkeys/delete                                     False          Delete Functions Host Function keys.
+  microsoft.web/sites/host/listkeys/action                                         False          List Functions Host keys.
+  microsoft.web/sites/instances/extensions/log/read                                False          Get Web Apps Instances Extensions Log.
+  microsoft.web/sites/instances/extensions/processes/read                          False          Get Web Apps Instances Extensions Processes.
+  microsoft.web/sites/instances/extensions/read                                    False          Get Web Apps Instances Extensions.
+  microsoft.web/sites/instances/processes/delete                                   False          Delete Web Apps Instances Processes.
+  microsoft.web/sites/instances/processes/modules/read                             False          Get Web Apps Instances Processes Modules.
+  microsoft.web/sites/instances/processes/read                                     False          Get Web Apps Instances Processes.
+  microsoft.web/sites/instances/processes/threads/read                             False          Get Web Apps Instances Processes Threads.
+  microsoft.web/sites/instances/read                                               False          Get Web Apps Instances.
+  microsoft.web/sites/listbackups/action                                           False          List Web App backups.
+  microsoft.web/sites/listsyncfunctiontriggerstatus/action                         False          List Sync Function Trigger Status.
+  microsoft.web/sites/listworkflowsconnections/action                              False          List logic app's connections by its ID in a Logic App.
+  microsoft.web/sites/metricdefinitions/read                                       False          Get Web Apps Metric Definitions.
+  microsoft.web/sites/metrics/read                                                 False          Get Web Apps Metrics.
+  microsoft.web/sites/metricsdefinitions/read                                      False          Get Web Apps Metrics Definitions.
+  microsoft.web/sites/migratemysql/action                                          False          Migrate MySql Web Apps.
+  microsoft.web/sites/migratemysql/read                                            False          Get Web Apps Migrate MySql.
+  microsoft.web/sites/networkConfig/delete                                         False          Delete App Service Network Configuration.
+  microsoft.web/sites/networkConfig/read                                           False          Get App Service Network Configuration.
+  microsoft.web/sites/networkConfig/write                                          False          Update App Service Network Configuration.
+  microsoft.web/sites/instances/deployments/read                                   False          Get Web Apps Instances Deployments.
+  microsoft.web/sites/instances/deployments/delete                                 False          Delete Web Apps Instances Deployments.
+  microsoft.web/sites/hybridconnectionrelays/read                                  False          Get Web Apps Hybrid Connection Relays.
+  microsoft.web/sites/hybridconnectionnamespaces/relays/write                      False          Update Web Apps Hybrid Connection Namespaces Relays.
+  microsoft.web/sites/host/listsyncstatus/action                                   False          List Sync Function Triggers Status.
+  microsoft.web/sites/host/sync/action                                             False          Sync Function Triggers.
+  microsoft.web/sites/host/systemkeys/delete                                       False          Delete Functions Host System keys.
+  microsoft.web/sites/host/systemkeys/write                                        False          Update Functions Host System keys.
+  microsoft.web/sites/hostnamebindings/delete                                      False          Delete Web Apps Hostname Bindings.
+  microsoft.web/sites/hostnamebindings/read                                        False          Get Web Apps Hostname Bindings.
+  microsoft.web/sites/hostnamebindings/write                                       False          Update Web Apps Hostname Bindings.
+  microsoft.web/sites/hostruntime/functions/keys/read                              False          Get Web Apps Hostruntime Functions Keys.
+  Microsoft.Web/sites/hostruntime/host/_master/read                                False          Get Function App's master key for admin operations
+  microsoft.web/sites/host/functionkeys/write                                      False          Update Functions Host Function keys.
+  Microsoft.Web/sites/hostruntime/host/action                                      False          Perform Function App runtime action like sync triggers, add functions, invoke functions, delete functions etc.
+  microsoft.web/sites/hostruntime/webhooks/api/workflows/runs/read                 False          List Web Apps Hostruntime Workflow Runs.
+  microsoft.web/sites/hostruntime/webhooks/api/workflows/triggers/listCallbackUrl/action False          Get Web Apps Hostruntime Workflow Trigger Uri.
+  microsoft.web/sites/hostruntime/webhooks/api/workflows/triggers/read             False          List Web Apps Hostruntime Workflow Triggers.
+  microsoft.web/sites/hybridconnection/delete                                      False          Delete Web Apps Hybrid Connection.
+  microsoft.web/sites/hybridconnection/read                                        False          Get Web Apps Hybrid Connection.
+  microsoft.web/sites/hybridconnection/write                                       False          Update Web Apps Hybrid Connection.
+  microsoft.web/sites/hybridconnectionnamespaces/relays/delete                     False          Delete Web Apps Hybrid Connection Namespaces Relays.
+  microsoft.web/sites/hybridconnectionnamespaces/relays/listkeys/action            False          List Keys Web Apps Hybrid Connection Namespaces Relays.
+  microsoft.web/sites/hybridconnectionnamespaces/relays/read                       False          Get Web Apps Hybrid Connection Namespaces Relays.
+  microsoft.web/sites/hostruntime/host/read                                        False          Get Web Apps Hostruntime Host.
+  microsoft.web/sites/slots/detectors/read                                         False          Get Web Apps Slots Detectors.
+  microsoft.web/sites/slots/diagnostics/analyses/execute/Action                    False          Run Web Apps Slots Diagnostics Analysis.
+  microsoft.web/sites/slots/diagnostics/analyses/read                              False          Get Web Apps Slots Diagnostics Analysis.
+  Microsoft.Web/sites/slotsdiffs/Action                                            False          Get differences in configuration between web app and slots
+  Microsoft.Web/sites/slotsswap/Action                                             False          Swap Web App deployment slots
+  microsoft.web/sites/snapshots/read                                               False          Get Web Apps Snapshots.
+  Microsoft.Web/sites/sourcecontrols/Delete                                        False          Delete Web App's source control configuration settings
+  Microsoft.Web/sites/sourcecontrols/Read                                          False          Get Web App's source control configuration settings
+  Microsoft.Web/sites/sourcecontrols/Write                                         False          Update Web App's source control configuration settings
+  Microsoft.Web/sites/start/Action                                                 False          Start a Web App
+  Microsoft.Web/sites/stop/Action                                                  False          Stop a Web App
+  microsoft.web/sites/sync/action                                                  False          Sync Web Apps.
+  microsoft.web/sites/syncfunctiontriggers/action                                  False          Sync Function Triggers.
+  microsoft.web/sites/triggeredwebjobs/delete                                      False          Delete Web Apps Triggered WebJobs.
+  microsoft.web/sites/triggeredwebjobs/history/read                                False          Get Web Apps Triggered WebJobs History.
+  microsoft.web/sites/triggeredwebjobs/read                                        False          Get Web Apps Triggered WebJobs.
+  microsoft.web/sites/triggeredwebjobs/run/action                                  False          Run Web Apps Triggered WebJobs.
+  microsoft.web/sites/usages/read                                                  False          Get Web Apps Usages.
+  microsoft.web/sites/virtualnetworkconnections/delete                             False          Delete Web Apps Virtual Network Connections.
+  microsoft.web/sites/virtualnetworkconnections/gateways/read                      False          Get Web Apps Virtual Network Connections Gateways.
+  microsoft.web/sites/virtualnetworkconnections/gateways/write                     False          Update Web Apps Virtual Network Connections Gateways.
+  microsoft.web/sites/virtualnetworkconnections/read                               False          Get Web Apps Virtual Network Connections.
+  Microsoft.Web/sites/slots/Write                                                  False          Create a new Web App Slot or update an existing one
+  microsoft.web/sites/slots/workflowsconfiguration/read                            False          Get logic app's configuration information by its ID in a deployment slot in a Logic App.
+  microsoft.web/sites/slots/workflows/read                                         False          List the workflows in a deployment slot in a Logic App.
+  microsoft.web/sites/slots/webjobs/read                                           False          Get Web Apps Slots WebJobs.
+  microsoft.web/sites/slots/siteextensions/write                                   False          Update Web Apps Slots Site Extensions.
+  microsoft.web/sites/slots/slotcopy/action                                        False          Copy content from one deployment slot to another.
+  Microsoft.Web/sites/slots/slotsdiffs/Action                                      False          Get differences in configuration between web app and slots
+  Microsoft.Web/sites/slots/slotsswap/Action                                       False          Swap Web App deployment slots
+  microsoft.web/sites/slots/snapshots/read                                         False          Get Web Apps Slots Snapshots.
+  Microsoft.Web/sites/slots/sourcecontrols/Delete                                  False          Delete Web App Slot's source control configuration settings
+  Microsoft.Web/sites/slots/sourcecontrols/Read                                    False          Get Web App Slot's source control configuration settings
+  Microsoft.Web/sites/slots/sourcecontrols/Write                                   False          Update Web App Slot's source control configuration settings
+  Microsoft.Web/sites/slots/start/Action                                           False          Start a Web App Slot
+  microsoft.web/sites/virtualnetworkconnections/write                              False          Update Web Apps Virtual Network Connections.
+  Microsoft.Web/sites/slots/stop/Action                                            False          Stop a Web App Slot
+  microsoft.web/sites/slots/syncfunctiontriggers/action                            False          Sync Function Triggers for deployment slot.
+  microsoft.web/sites/slots/triggeredwebjobs/delete                                False          Delete Web Apps Slots Triggered WebJobs.
+  microsoft.web/sites/slots/triggeredwebjobs/read                                  False          Get Web Apps Slots Triggered WebJobs.
+  microsoft.web/sites/slots/triggeredwebjobs/run/action                            False          Run Web Apps Slots Triggered WebJobs.
+  microsoft.web/sites/slots/usages/read                                            False          Get Web Apps Slots Usages.
+  microsoft.web/sites/slots/virtualnetworkconnections/delete                       False          Delete Web Apps Slots Virtual Network Connections.
+  microsoft.web/sites/slots/virtualnetworkconnections/gateways/write               False          Update Web Apps Slots Virtual Network Connections Gateways.
+  microsoft.web/sites/slots/virtualnetworkconnections/read                         False          Get Web Apps Slots Virtual Network Connections.
+  microsoft.web/sites/slots/virtualnetworkconnections/write                        False          Update Web Apps Slots Virtual Network Connections.
+  microsoft.web/sites/slots/sync/action                                            False          Sync Web Apps Slots.
+  microsoft.web/sites/slots/siteextensions/read                                    False          Get Web Apps Slots Site Extensions.
+  microsoft.web/sites/webjobs/read                                                 False          Get Web Apps WebJobs.
+  microsoft.web/sites/workflowsconfiguration/read                                  False          Get logic app's configuration information by its ID in a Logic App.
+  Microsoft.Web/staticSites/builds/userProvidedFunctionApps/Write                  False          Register a User Provided Function App with a Static Site Build
+  Microsoft.Web/staticSites/builds/zipdeploy/action                                False          Deploy a Static Site Build from zipped content
+  Microsoft.Web/staticSites/config/Write                                           False          Create or update app settings for a Static Site
+  Microsoft.Web/staticSites/createinvitation/action                                False          Creates invitiation link for static site user for a set of roles
+  Microsoft.Web/staticSites/customdomains/Delete                                   False          Delete a custom domain for a Static Site
+  Microsoft.Web/staticSites/customdomains/Read                                     False          List the custom domains for a Static Site
+  Microsoft.Web/staticSites/customdomains/validate/Action                          False          Validate a custom domain can be added to a Static Site
+  Microsoft.Web/staticSites/customdomains/Write                                    False          Create a custom domain for a Static Site
+  Microsoft.Web/staticSites/databaseConnections/Delete                             False          Delete a Database Connection from a Static Site
+  Microsoft.Web/staticSites/databaseConnections/Read                               False          Get Static Site Database Connection
+  Microsoft.Web/staticSites/databaseConnections/show/action                        False          Show details for a Database Connection for a Static Site
+  Microsoft.Web/staticSites/databaseConnections/Write                              False          Create or Update a Database Connection with a Static Site
+  Microsoft.Web/staticSites/Delete                                                 False          Delete an existing Static Site
+  Microsoft.Web/staticSites/detach/Action                                          False          Detach a Static Site from the currently linked repository
+  Microsoft.Web/staticSites/functions/Read                                         False          List the functions for a Static Site
+  Microsoft.Web/staticSites/getuser/Action                                         False          Get a user's information for a Static Site
+  Microsoft.Web/staticSites/linkedBackends/Delete                                  False          Unlink a Backend from a Static Site
+  Microsoft.Web/staticSites/linkedBackends/Read                                    False          Get Static Site Linked Backends
+  Microsoft.Web/staticSites/linkedBackends/validate/action                         False          Validate a Linked Backend for a Static Site
+  Microsoft.Web/staticSites/builds/userProvidedFunctionApps/Read                   False          Get Static Site Build User Provided Function Apps
+  Microsoft.Web/staticSites/builds/userProvidedFunctionApps/Delete                 False          Detach a User Provided Function App from a Static Site Build
+  Microsoft.Web/staticSites/builds/showDatabaseConnections/action                  False          Show details for Database Connections for a Static Site Build
+  Microsoft.Web/staticSites/builds/listfunctionappsettings/Action                  False          List function app settings for a Static Site Build
+  Microsoft.Web/sites/Write                                                        False          Create a new Web App or update an existing one
+  microsoft.web/skus/read                                                          False          Get SKUs.
+  microsoft.web/sourcecontrols/read                                                False          Get Source Controls.
+  microsoft.web/sourcecontrols/write                                               False          Update Source Controls.
+  Microsoft.Web/staticSites/authproviders/listusers/Action                         False          List the users for a Static Site
+  Microsoft.Web/staticSites/authproviders/users/Delete                             False          Delete a user for a Static Site
+  Microsoft.Web/staticSites/authproviders/users/Write                              False          Update a user for a Static Site
+  Microsoft.Web/staticSites/build/Delete                                           False          Delete a build for a Static Site
+  Microsoft.Web/staticSites/build/Read                                             False          Get a build for a Static Site
+  microsoft.web/sites/workflows/read                                               False          List the workflows in a Logic App.
+  Microsoft.Web/staticSites/builds/config/Write                                    False          Create or update app settings for a Static Site Build
+  Microsoft.Web/staticSites/builds/databaseConnections/Read                        False          Get Static Site Build Database Connections
+  Microsoft.Web/staticSites/builds/databaseConnections/show/action                 False          Show details for a Database Connection for a Static Site Build
+  Microsoft.Web/staticSites/builds/databaseConnections/Write                       False          Create or Update a Database Connection with a Static Site Build
+  Microsoft.Web/staticSites/builds/functions/Read                                  False          List the functions for a Static Site Build
+  Microsoft.Web/staticSites/builds/linkedBackends/Delete                           False          Unlink a Backend from a Static Site Build
+  Microsoft.Web/staticSites/builds/linkedBackends/Read                             False          Get Static Site Build Linked Backends
+  Microsoft.Web/staticSites/builds/linkedBackends/validate/action                  False          Validate a Linked Backend for a Static Site Build
+  Microsoft.Web/staticSites/builds/linkedBackends/Write                            False          Register a Linked Backend with a Static Site Build
+  Microsoft.Web/staticSites/builds/listappsettings/Action                          False          List app settings for a Static Site Build
+  Microsoft.Web/staticSites/builds/databaseConnections/Delete                      False          Delete a Database Connection from a Static Site Build
+  Wandisco.Fusion/migrators/write                                                  False          Creates a Migrator.
+  microsoft.web/sites/slots/siteextensions/delete                                  False          Delete Web Apps Slots Site Extensions.
+  microsoft.web/sites/slots/restorefromdeletedapp/action                           False          Restore Web App Slots From Deleted App.
+  microsoft.web/sites/slots/extensions/api/action                                  False          Invoke App Service Slots Extensions APIs.
+  microsoft.web/sites/slots/extensions/read                                        False          Get Web Apps Slots Extensions.
+  microsoft.web/sites/slots/extensions/write                                       False          Update Web Apps Slots Extensions.
+  microsoft.web/sites/slots/functions/keys/delete                                  False          Delete Function keys.
+  microsoft.web/sites/slots/functions/keys/write                                   False          Update Function keys.
+  microsoft.web/sites/slots/functions/listkeys/action                              False          List Function keys.
+  microsoft.web/sites/slots/functions/listsecrets/action                           False          List Secrets Web Apps Slots Functions.
+  microsoft.web/sites/slots/functions/read                                         False          Get Web Apps Slots Functions.
+  microsoft.web/sites/slots/host/functionkeys/delete                               False          Delete Functions Host Function keys.
+  microsoft.web/sites/slots/host/functionkeys/write                                False          Update Functions Host Function keys.
+  microsoft.web/sites/slots/host/listkeys/action                                   False          List Functions Host keys.
+  microsoft.web/sites/slots/host/sync/action                                       False          Sync Function Triggers.
+  microsoft.web/sites/slots/host/systemkeys/delete                                 False          Delete Functions Host System keys.
+  microsoft.web/sites/slots/host/systemkeys/write                                  False          Update Functions Host System keys.
+  microsoft.web/sites/slots/hostnamebindings/delete                                False          Delete Web Apps Slots Hostname Bindings.
+  microsoft.web/sites/slots/hostnamebindings/read                                  False          Get Web Apps Slots Hostname Bindings.
+  microsoft.web/sites/slots/hostnamebindings/write                                 False          Update Web Apps Slots Hostname Bindings.
+  microsoft.web/sites/slots/hybridconnection/delete                                False          Delete Web Apps Slots Hybrid Connection.
+  microsoft.web/sites/slots/hybridconnection/read                                  False          Get Web Apps Slots Hybrid Connection.
+  microsoft.web/sites/slots/domainownershipidentifiers/write                       False          Update Web App Slots Domain Ownership Identifiers.
+  microsoft.web/sites/slots/domainownershipidentifiers/read                        False          Get Web Apps Slots Domain Ownership Identifiers.
+  microsoft.web/sites/slots/domainownershipidentifiers/delete                      False          Delete Web App Slots Domain Ownership Identifiers.
+  microsoft.web/sites/slots/diagnostics/workerprocessrecycle/read                  False          Get Web Apps Slots Diagnostics Worker Process Recycle.
+  microsoft.web/sites/slots/diagnostics/aspnetcore/read                            False          Get Web Apps Slots Diagnostics for ASP.NET Core app.
+  microsoft.web/sites/slots/diagnostics/autoheal/read                              False          Get Web Apps Slots Diagnostics Autoheal.
+  microsoft.web/sites/slots/diagnostics/deployment/read                            False          Get Web Apps Slots Diagnostics Deployment.
+  microsoft.web/sites/slots/diagnostics/deployments/read                           False          Get Web Apps Slots Diagnostics Deployments.
+  microsoft.web/sites/slots/diagnostics/detectors/execute/Action                   False          Run Web Apps Slots Diagnostics Detector.
+  microsoft.web/sites/slots/diagnostics/detectors/read                             False          Get Web Apps Slots Diagnostics Detector.
+  microsoft.web/sites/slots/diagnostics/frebanalysis/read                          False          Get Web Apps Slots Diagnostics FREB Analysis.
+  microsoft.web/sites/slots/diagnostics/loganalyzer/read                           False          Get Web Apps Slots Diagnostics Log Analyzer.
+  microsoft.web/sites/slots/diagnostics/read                                       False          Get Web Apps Slots Diagnostics.
+  microsoft.web/sites/slots/hybridconnection/write                                 False          Update Web Apps Slots Hybrid Connection.
+  microsoft.web/sites/slots/diagnostics/runtimeavailability/read                   False          Get Web Apps Slots Diagnostics Runtime Availability.
+  microsoft.web/sites/slots/diagnostics/sitecpuanalysis/read                       False          Get Web Apps Slots Diagnostics Site CPU Analysis.
+  microsoft.web/sites/slots/diagnostics/sitecrashes/read                           False          Get Web Apps Slots Diagnostics Site Crashes.
+  microsoft.web/sites/slots/diagnostics/sitelatency/read                           False          Get Web Apps Slots Diagnostics Site Latency.
+  microsoft.web/sites/slots/diagnostics/sitememoryanalysis/read                    False          Get Web Apps Slots Diagnostics Site Memory Analysis.
+  microsoft.web/sites/slots/diagnostics/siterestartsettingupdate/read              False          Get Web Apps Slots Diagnostics Site Restart Setting Update.
+  microsoft.web/sites/slots/diagnostics/siterestartuserinitiated/read              False          Get Web Apps Slots Diagnostics Site Restart User Initiated.
+  microsoft.web/sites/slots/diagnostics/siteswap/read                              False          Get Web Apps Slots Diagnostics Site Swap.
+  microsoft.web/sites/slots/diagnostics/threadcount/read                           False          Get Web Apps Slots Diagnostics Thread Count.
+  microsoft.web/sites/slots/diagnostics/workeravailability/read                    False          Get Web Apps Slots Diagnostics Workeravailability.
+  microsoft.web/sites/slots/diagnostics/servicehealth/read                         False          Get Web Apps Slots Diagnostics Service Health.
+  microsoft.web/sites/slots/restoresnapshot/action                                 False          Restore Web Apps Slots Snapshots.
+  microsoft.web/sites/slots/hybridconnectionnamespaces/relays/delete               False          Delete Web Apps Slots Hybrid Connection Namespaces Relays.
+  microsoft.web/sites/slots/hybridconnectionrelays/read                            False          Get Web Apps Slots Hybrid Connection Relays.
+  microsoft.web/sites/slots/privateaccess/read                                     False          Get data around private site access enablement and authorized Virtual Networks that can access the site.
+  microsoft.web/sites/slots/processes/read                                         False          Get Web Apps Slots Processes.
+  microsoft.web/sites/slots/providers/Microsoft.Insights/diagnosticSettings/read   False          Gets the diagnostic setting for the resource
+  microsoft.web/sites/slots/providers/Microsoft.Insights/diagnosticSettings/write  False          Creates or updates the diagnostic setting for the resource
+  microsoft.web/sites/slots/providers/Microsoft.Insights/logDefinitions/read       False          Gets the available logs for Web App slots
+  Microsoft.Web/sites/slots/providers/Microsoft.Insights/metricDefinitions/Read    False          Gets the available metrics for Web App Slot
+  microsoft.web/sites/slots/publiccertificates/delete                              False          Delete Web Apps Slots Public Certificates.
+  microsoft.web/sites/slots/publiccertificates/read                                False          Get Web Apps Slots Public Certificates.
+  microsoft.web/sites/slots/publiccertificates/write                               False          Create or Update Web Apps Slots Public Certificates.
+  Microsoft.Web/sites/slots/publish/Action                                         False          Publish a Web App Slot
+  Microsoft.Web/sites/slots/publishxml/Action                                      False          Get publishing profile xml for Web App Slot
+  Microsoft.Web/sites/slots/Read                                                   False          Get the properties of a Web App deployment slot
+  microsoft.web/sites/slots/recover/action                                         False          Recover Web Apps Slots.
+  Microsoft.Web/sites/slots/resetSlotConfig/Action                                 False          Reset web app slot configuration
+  microsoft.web/sites/slots/resourcehealthmetadata/read                            False          Get Web Apps Slots Resource Health Metadata.
+  Microsoft.Web/sites/slots/restart/Action                                         False          Restart a Web App Slot
+  microsoft.web/sites/slots/restore/read                                           False          Get Web Apps Slots Restore.
+  microsoft.web/sites/slots/restore/write                                          False          Restore Web Apps Slots.
+  microsoft.web/sites/slots/restorefrombackupblob/action                           False          Restore Web Apps Slot From Backup Blob.
+  microsoft.web/sites/slots/premieraddons/write                                    False          Update Web Apps Slots Premier Addons.
+  microsoft.web/sites/slots/premieraddons/read                                     False          Get Web Apps Slots Premier Addons.
+  microsoft.web/sites/slots/premieraddons/delete                                   False          Delete Web Apps Slots Premier Addons.
+  microsoft.web/sites/slots/phplogging/read                                        False          Get Web Apps Slots Phplogging.
+  microsoft.web/sites/slots/instances/deployments/read                             False          Get Web Apps Slots Instances Deployments.
+  microsoft.web/sites/slots/instances/processes/delete                             False          Delete Web Apps Slots Instances Processes.
+  microsoft.web/sites/slots/instances/processes/read                               False          Get Web Apps Slots Instances Processes.
+  microsoft.web/sites/slots/instances/read                                         False          Get Web Apps Slots Instances.
+  microsoft.web/sites/slots/listbackups/action                                     False          List Web App Slot backups.
+  microsoft.web/sites/slots/listsyncfunctiontriggerstatus/action                   False          List Sync Function Trigger Status for deployment slot.
+  microsoft.web/sites/slots/listworkflowsconnections/action                        False          List logic app's connections by its ID in a deployment slot in a Logic App.
+  microsoft.web/sites/slots/metricdefinitions/read                                 False          Get Web Apps Slots Metric Definitions.
+  microsoft.web/sites/slots/metrics/read                                           False          Get Web Apps Slots Metrics.
+  microsoft.web/sites/slots/hybridconnectionnamespaces/relays/write                False          Update Web Apps Slots Hybrid Connection Namespaces Relays.
+  microsoft.web/sites/slots/migratemysql/read                                      False          Get Web Apps Slots Migrate MySql.
+  microsoft.web/sites/slots/networkConfig/read                                     False          Get App Service Slots Network Configuration.
+  microsoft.web/sites/slots/networkConfig/write                                    False          Update App Service Slots Network Configuration.
+  microsoft.web/sites/slots/networkfeatures/read                                   False          Get Web App Slot Features.
+  microsoft.web/sites/slots/networktrace/action                                    False          Network Trace Web Apps Slots.
+  microsoft.web/sites/slots/networktraces/operationresults/read                    False          Get Web Apps Slots Network Trace Operation Results.
+  microsoft.web/sites/slots/newpassword/action                                     False          Newpassword Web Apps Slots.
+  microsoft.web/sites/slots/operationresults/read                                  False          Get Web Apps Slots Operation Results.
+  microsoft.web/sites/slots/operations/read                                        False          Get Web Apps Slots Operations.
+  microsoft.web/sites/slots/perfcounters/read                                      False          Get Web Apps Slots Performance Counters.
+  microsoft.web/sites/slots/networkConfig/delete                                   False          Delete App Service Slots Network Configuration.
+  Wandisco.Fusion/operations/read                                                  False          Lists all of the available RP operations.
+
+
