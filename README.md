@@ -42,6 +42,7 @@ In retrieving the data, a few anomalies have been observed with the original sou
 
 * You will only see permissions and services which have been feature-enabled (registered) within the current Azure subscription.
 * Some Azure service providers do not correctly report their available operations (i.e., valid permissions may not be listed).
+* There are inconsistencies in the services and provider names reported by each provider.
 
 ---
 # Script
