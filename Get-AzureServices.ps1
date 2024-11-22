@@ -29,7 +29,7 @@
 		.\Get-AzureServices.ps1 -ServicesOnly | Export-Csv -Path 'AzureServices.csv' -Encoding utf8 -force
 	TO CONVERT AzureServices.CSV TO FORMATTED TEXT: 
 		"{0,-56} {1,-40} {2}" -f 'ProviderNamespace','ProviderName','Description' | out-file -FilePath 'AzureServices.txt' -Encoding utf8 -force -width 210 ;
-		"{0,-56} {1,-40} {2}" -f '=================','============','===========' | out-file -FilePath 'AzureServiceFeatures.txt' -Encoding utf8 -force -width 210 -Append;
+		"{0,-56} {1,-40} {2}" -f '=================','============','===========' | out-file -FilePath 'AzureServices.txt' -Encoding utf8 -force -width 210 -Append;
 		Import-Csv -Path 'AzureServices.csv' | foreach { ("{0,-56} {1,-40} {2}" -f $_.ProviderNamespace, $_.ProviderName, $_.Description) } | out-file -FilePath 'AzureServices.txt' -width 210 -Encoding utf8 -Append
 
 	TO GET A CSV OF ALL RBAC ACTIONS:
@@ -47,7 +47,7 @@
 
 .NOTES
 	Author: Les Waters
-	Version: v0.14b
+	Version: v0.14c
 	Date: 04-May-22
 	Repository: https://github.com/leswaters/AzureServices
 	License: MIT License
