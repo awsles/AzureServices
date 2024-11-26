@@ -1,8 +1,8 @@
 # AzureServices
 List of Azure service providers, operations (actions), and feature control switches.
 
-As of 04-May-22, 13526 operations were discovered across 280 Azure service providers (66 of which have no operations defined).
-As of 22-Nov-24, 20996 operations were discovered across 426 Azure service providers (143 of which have no operations defined).
+As of 04-May-22, 13,526 operations were discovered across 280 Azure service providers (66 of which have no operations defined).
+As of 22-Nov-24, 20,996 operations were discovered across 426 Azure service providers (143 of which have no operations defined).
 
 ## Description
 This repository contains three CSV files which document the various Azure service providers (services) as well as the
