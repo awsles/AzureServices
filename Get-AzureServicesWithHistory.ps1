@@ -21,7 +21,9 @@
 .PARAMETER Update
 	If specified, then the OutputFile is updated.
 	
-.EXAMPLE	
+.EXAMPLE
+	LOGIN FIRST:
+		LOgin-AzAccount
 	TO SEE A QUICK VIEW:
 		.\Get-AzureServicesWithHistory.ps1  -Update
 	
@@ -32,7 +34,7 @@
 
 .NOTES
 	Author: Lester W.
-	Version: v0.08
+	Version: v0.08a
 	Date: 09-May-23
 	Repository: https://github.com/leswaters/AzureServices
 	License: MIT License
