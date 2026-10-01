@@ -1,29 +1,36 @@
-﻿ProviderNamespace                                        ProviderName                             Description
+ProviderNamespace                                        ProviderName                             Description
 =================                                        ============                             ===========
--                                                        ArizeAi.ObservabilityEval                
+Anyscale Platform                                        Anyscale.Platform                        
+ArizeAi.ObservabilityEval                                ArizeAi.ObservabilityEval                
 Astronomer.Astro                                         Astronomer.Astro                         
 -                                                        CloudSimple.PrivateCloudIaaS             
--                                                        Commvault.ContentStore                   
+Commvault.ContentStore                                   Commvault.ContentStore                   
+Dell.Storage                                             Dell.Storage                             
 Dynatrace.Observability                                  Dynatrace.Observability                  
 -                                                        GitHub.Enterprise                        
 GitHub.Network                                           GitHub.Network                           
 Informatica.DataManagement                               Informatica.DataManagement               
--                                                        LambdaTest.HyperExecute                  
--                                                        LiftrBasic.SampleRP                      
+-                                                        Kore.AgentPlatform                       
+LambdaTest.HyperExecute                                  LambdaTest.HyperExecute                  
+Liftrbasic.Samplerp                                      Liftrbasic.Samplerp                      
 Domain Services Resource Provider                        Microsoft.AAD                            
+-                                                        Microsoft.AAD.ResilienceServices         
 Azure Active Directory                                   microsoft.aadiam                         
+-                                                        Microsoft.AccessPoint                    
 Microsoft Addons                                         Microsoft.Addons                         
 Microsoft ADHybridHealthService                          Microsoft.ADHybridHealthService          
 Microsoft Advisor                                        Microsoft.Advisor                        
-Microsoft AgFoodPlatform                                 Microsoft.AgFoodPlatform                 
-Microsoft.AgriculturePlatform                            Microsoft.AgriculturePlatform            
+-                                                        Microsoft.AdvisorResilience              
+-                                                        Microsoft.AgFoodPlatform                 
+-                                                        Microsoft.AgriculturePlatform            
 -                                                        Microsoft.AI                             
+-                                                        Microsoft.AIOps                          
 -                                                        Microsoft.AISupercomputer                
 -                                                        Microsoft.AksHybrid                      
 Microsoft.AlertsManagement                               Microsoft.AlertsManagement               
 -                                                        Microsoft.AlicespringsDataplane          
 Microsoft Analysis Services                              Microsoft.AnalysisServices               
-Microsoft AnyBuild                                       Microsoft.AnyBuild                       
+-                                                        Microsoft.AnyBuild                       
 Microsoft Azure API Center                               Microsoft.ApiCenter                      
 Microsoft API Management                                 Microsoft.ApiManagement                  
 -                                                        Microsoft.ApiSecurity                    
@@ -31,46 +38,65 @@ Microsoft Apps                                           microsoft.app
 Microsoft.AppAssessment                                  Microsoft.AppAssessment                  
 Microsoft.AppComplianceAutomation                        Microsoft.AppComplianceAutomation        
 Microsoft App Configuration                              Microsoft.AppConfiguration               
+Microsoft.ApplicationMigration                           Microsoft.ApplicationMigration           
+Microsoft.AppLink                                        Microsoft.AppLink                        
 Microsoft Azure Spring Apps                              Microsoft.AppPlatform                    
-Microsoft.AppSecurity                                    Microsoft.AppSecurity                    
+Microsoft.Approvals                                      Microsoft.Approvals                      
+-                                                        Microsoft.AppSecurity                    
+Microsoft.ArcContainerStorage                            microsoft.arccontainerstorage            
 -                                                        Microsoft.Archive                        
 -                                                        Microsoft.ArcNetworking                  
 -                                                        Microsoft.ARM.AFEC                       
+-                                                        Microsoft.Asgard                         
+-                                                        Microsoft.Asterra                        
+-                                                        Microsoft.AszLabHardware                 
 Microsoft Azure Attestation                              Microsoft.Attestation                    
 Microsoft Authorization                                  Microsoft.Authorization                  
 Microsoft Automanage                                     Microsoft.Automanage                     
 Microsoft Automation                                     Microsoft.Automation                     
 Microsoft.AVS                                            Microsoft.AVS                            
-Microsoft.AwsConnector                                   Microsoft.AwsConnector                   
+Microsoft.AwsConnector                                   Microsoft.AWSConnector                   
+-                                                        Microsoft.AzAllocator                    
+-                                                        Microsoft.AzPubSub                       
 Microsoft Azure Active Directory                         Microsoft.AzureActiveDirectory           
 Microsoft.AzureArcData                                   Microsoft.AzureArcData                   
 Microsoft.AzureBusinessContinuity                        Microsoft.AzureBusinessContinuity        
+-                                                        Microsoft.AzureCertificateService        
+-                                                        Microsoft.AzureCis                       
 -                                                        Microsoft.AzureCloudMetadata             
+Microsoft.AzureContextCache                              Microsoft.AzureContextCache              
 -                                                        Microsoft.AzureData                      
 Microsoft.AzureDataTransfer                              Microsoft.AzureDataTransfer              
 -                                                        Microsoft.AzureDevOpsPlatform            
 Microsoft Azure Fleet                                    Microsoft.AzureFleet                     
+-                                                        Microsoft.AzureFleetCapacity             
 Microsoft.AzureImageTestingForLinux                      Microsoft.AzureImageTestingForLinux      
 Microsoft Azure Large Instance                           Microsoft.AzureLargeInstance             
 -                                                        Microsoft.AzureLinuxTestingService       
 -                                                        Microsoft.AzurePercept                   
 Microsoft.AzurePlaywrightService                         Microsoft.AzurePlaywrightService         
+Microsoft.AzureResilienceManagement                      Microsoft.AzureResilienceManagement      
 Microsoft.AzureScan                                      Microsoft.AzureScan                      
 Microsoft.AzureSphere                                    Microsoft.AzureSphere                    
 -                                                        Microsoft.AzureSphereGen2                
 Azure Stack Resource Provider                            Microsoft.AzureStack                     
 Microsoft.AzureStackHCI                                  Microsoft.AzureStackHCI                  
--                                                        Microsoft.AzureTerraform                 
-Microsoft.BackupSolutions                                Microsoft.BackupSolutions                
+-                                                        Microsoft.AzureStackHCI.StackHCI         
+-                                                        Microsoft.AzureStackHCI.StackHCIVM       
+Microsoft.AzureTerraform                                 Microsoft.AzureTerraform                 
+-                                                        Microsoft.AzureZonalNetworkManager       
+-                                                        Microsoft.BackupSolutions                
 -                                                        Microsoft.BakeryHybrid                   
 -                                                        Microsoft.BakeryUnmanaged                
-ProviderName                                             Microsoft.BareMetal                      
+-                                                        Microsoft.BAMI                           
+Microsoft.BareMetal                                      Microsoft.BareMetal                      
 Microsoft BareMetal Infrastructure                       Microsoft.BareMetalInfrastructure        
 Microsoft Batch                                          Microsoft.Batch                          
 -                                                        Microsoft.BatchAI                        
 -                                                        Microsoft.BigAnalytics                   
 Microsoft Billing                                        Microsoft.Billing                        
 Microsoft BillingBenefits                                Microsoft.BillingBenefits                
+Microsoft.BillingTrust                                   Microsoft.BillingTrust                   
 Bing Search                                              Microsoft.Bing                           
 -                                                        Microsoft.Blockchain                     
 Microsoft.BlockchainTokens                               Microsoft.BlockchainTokens               
@@ -79,25 +105,25 @@ Microsoft Blueprint                                      Microsoft.Blueprint
 Bot Service Resource Provider                            Microsoft.BotService                     
 Microsoft Cache                                          Microsoft.Cache                          
 Microsoft Capacity                                       Microsoft.Capacity                       
-Microsoft.CapacityAllocation                             Microsoft.CapacityAllocation             
+-                                                        Microsoft.CapacityAllocation             
+-                                                        Microsoft.CapacityRestrictionPolicy      
 Microsoft.Carbon                                         Microsoft.Carbon                         
 -                                                        Microsoft.Cascade                        
 Microsoft.Cdn                                            Microsoft.Cdn                            
+-                                                        Microsoft.CertificateInventory           
 Microsoft Certificates                                   Microsoft.CertificateRegistration        
-Microsoft.Certify                                        Microsoft.Certify                        
-Microsoft Change Analysis                                Microsoft.ChangeAnalysis                 
--                                                        Microsoft.ChangeSafety                   
+-                                                        Microsoft.Certify                        
+-                                                        Microsoft.ChangeAnalysis                 
+Microsoft.ChangeSafety                                   Microsoft.ChangeSafety                   
 Microsoft Chaos                                          Microsoft.Chaos                          
-Microsoft ClassicCompute                                 Microsoft.ClassicCompute                 
 -                                                        Microsoft.ClassicIaaSMigrate             
 -                                                        Microsoft.ClassicInfrastructureMigrate   
-Microsoft ClassicNetwork                                 Microsoft.ClassicNetwork                 
-Microsoft ClassicStorage                                 Microsoft.ClassicStorage                 
 -                                                        Microsoft.ClassicSubscription            
 Microsoft.CleanRoom                                      Microsoft.CleanRoom                      
 Microsoft.CloudDevicePlatform                            Microsoft.CloudDevicePlatform            
 -                                                        microsoft.cloudes                        
 Microsoft.CloudHealth                                    Microsoft.CloudHealth                    
+-                                                        Microsoft.CloudpcInternal                
 Microsoft CloudTest                                      Microsoft.CloudTest                      
 Microsoft.CodeSigning                                    Microsoft.CodeSigning                    
 -                                                        Microsoft.Codespaces                     
@@ -105,9 +131,11 @@ Microsoft.CodeSigning                                    Microsoft.CodeSigning
 Microsoft Cognitive Services                             Microsoft.CognitiveServices              
 Microsoft Commerce                                       Microsoft.Commerce                       
 Azure Communication Services                             Microsoft.Communication                  
-Microsoft.Community                                      Microsoft.Community                      
+-                                                        Microsoft.Community                      
 -                                                        Microsoft.CompositeSolutions             
 Microsoft Compute                                        Microsoft.Compute                        
+-                                                        Microsoft.ComputeBulkActions             
+Microsoft Compute Limit                                  Microsoft.ComputeLimit                   
 Microsoft.ComputeSchedule                                Microsoft.ComputeSchedule                
 Microsoft.ConfidentialLedger                             Microsoft.ConfidentialLedger             
 Microsoft.Confluent                                      Microsoft.Confluent                      
@@ -119,11 +147,15 @@ Microsoft.ConnectedVehicle                               Microsoft.ConnectedVehi
 Microsoft.ConnectedVMwarevSphere                         microsoft.connectedvmwarevsphere         
 Microsoft.Consumption                                    Microsoft.Consumption                    
 Microsoft Container Instance                             Microsoft.ContainerInstance              
+-                                                        Microsoft.ContainerNetworking            
 -                                                        Microsoft.ContainerRegisry               
 Microsoft ContainerRegistry                              Microsoft.ContainerRegistry              
 Microsoft Container Service                              Microsoft.ContainerService               
 -                                                        Microsoft.ContainerStorage               
 -                                                        Microsoft.Contoso                        
+-                                                        Microsoft.Copilot                        
+-                                                        Microsoft.CopilotStudio                  
+-                                                        Microsoft.Cosmic                         
 Microsoft.CostManagement                                 Microsoft.CostManagement                 
 -                                                        Microsoft.CostManagementBeta             
 Microsoft.CostManagementExports                          Microsoft.CostManagementExports          
@@ -144,24 +176,28 @@ Microsoft Databricks                                     Microsoft.Databricks
 Microsoft.Datadog                                        Microsoft.Datadog                        
 -                                                        Microsoft.DataExchange                   
 Microsoft Data Factory                                   Microsoft.DataFactory                    
+-                                                        Microsoft.Datalabs                       
 Microsoft DataLakeAnalytics                              Microsoft.DataLakeAnalytics              
 Microsoft DataLakeStore                                  Microsoft.DataLakeStore                  
 Azure Database Migration Service                         Microsoft.DataMigration                  
+-                                                        Microsoft.DataMigration.AzOSSDMS         
 Microsoft.DataProtection                                 Microsoft.DataProtection                 
 Microsoft Data Replication                               Microsoft.DataReplication                
 Microsoft Data Share                                     Microsoft.DataShare                      
 Microsoft DB for MariaDB                                 Microsoft.DBforMariaDB                   
 Microsoft DB for MySQL                                   Microsoft.DBforMySQL                     
 Microsoft DB for PostgreSQL                              Microsoft.DBforPostgreSQL                
-Microsoft Delegated Network Service                      Microsoft.DelegatedNetwork               
--                                                        Microsoft.DependencyMap                  
+-                                                        Microsoft.DecisionWorkflows              
+-                                                        Microsoft.DefenderAgentSecurity          
+-                                                        Microsoft.DelegatedNetwork               
+Microsoft.DependencyMap                                  Microsoft.DependencyMap                  
 -                                                        Microsoft.DeploymentManager              
 Microsoft.DesktopVirtualization                          Microsoft.DesktopVirtualization          
 -                                                        Microsoft.DevAI                          
 Microsoft.DevCenter                                      Microsoft.DevCenter                      
--                                                        Microsoft.DevelopmentWindows365          
+Microsoft.DevelopmentWindows365                          Microsoft.DevelopmentWindows365          
 Microsoft Developer Hub                                  Microsoft.DevHub                         
--                                                        Microsoft.DeviceOnboarding               
+Microsoft.DeviceOnboarding                               Microsoft.DeviceOnboarding               
 Microsoft.DeviceRegistry                                 Microsoft.DeviceRegistry                 
 Microsoft Devices                                        Microsoft.Devices                        
 Microsoft.DeviceUpdate                                   Microsoft.DeviceUpdate                   
@@ -169,37 +205,54 @@ Microsoft.DevOpsInfrastructure                           Microsoft.DevOpsInfrast
 -                                                        Microsoft.DevSpaces                      
 Microsoft DevTest Labs                                   Microsoft.DevTestLab                     
 -                                                        Microsoft.DevTunnels                     
+-                                                        Microsoft.DigitalAssets                  
 Azure Digital Twins                                      Microsoft.DigitalTwins                   
+Microsoft.Discovery                                      Microsoft.Discovery                      
 -                                                        microsoft.dns                            
+-                                                        Microsoft.DnsInternal                    
 Microsoft DocumentDB                                     Microsoft.DocumentDB                     
+-                                                        Microsoft.DomainInventory                
 Microsoft Domains                                        Microsoft.DomainRegistration             
-Microsoft Durable Task Scheduler                         Microsoft.DurableTask                    
+-                                                        Microsoft.Dsts                           
+-                                                        Microsoft.DstsInventory                  
+Microsoft.DurableTask                                    Microsoft.DurableTask                    
 -                                                        Microsoft.Dynamics365Fraudprotection     
 Microsoft.Easm                                           Microsoft.Easm                           
 Microsoft.Edge                                           Microsoft.Edge                           
-Microsoft.EdgeManagement                                 Microsoft.EdgeManagement                 
 Microsoft.EdgeMarketplace                                Microsoft.EdgeMarketPlace                
 Edge Ordering                                            Microsoft.EdgeOrder                      
 Microsoft.EdgeZones                                      Microsoft.EdgeZones                      
 Microsoft.Elastic                                        Microsoft.Elastic                        
 MicrosoftElasticSan                                      Microsoft.ElasticSan                     
+-                                                        Microsoft.EncryptedTransport             
 -                                                        Microsoft.EnergyDataPlatform             
 Microsoft EnterpriseSupport                              Microsoft.EnterpriseSupport              
 Microsoft.EntitlementManagement                          Microsoft.EntitlementManagement          
+Microsoft.EntraidGovernance                              Microsoft.EntraIDGovernance              
+-                                                        Microsoft.EntraIdGovernanceAccelerator   
+-                                                        Microsoft.EntraInventory                 
+-                                                        Microsoft.ErrorAtlas                     
+-                                                        Microsoft.ErrorInsights                  
 Microsoft Event Grid                                     Microsoft.EventGrid                      
 Microsoft Azure EventHub                                 Microsoft.EventHub                       
 Experimentation Resource Provider                        Microsoft.Experimentation                
--                                                        Microsoft.Expresspod                     
+-                                                        Microsoft.ExpressPod                     
 Microsoft.ExtendedLocation                               Microsoft.ExtendedLocation               
 -                                                        Microsoft.ExternalShim                   
 Microsoft Fabric                                         Microsoft.Fabric                         
+-                                                        Microsoft.FacilityManagerInventory       
 -                                                        Microsoft.FairfieldGardens               
 Microsoft Feature                                        Microsoft.Features                       
+Microsoft.FileShares                                     Microsoft.FileShares                     
 Microsoft.FluidRelay                                     Microsoft.FluidRelay                     
 -                                                        Microsoft.FootprintMonitoring            
+-                                                        Microsoft.FoundryLocal                   
 -                                                        Microsoft.Frontdoor                      
-Microsoft Gallery                                        Microsoft.Gallery                        
+Microsoft.GcpConnector                                   Microsoft.GCPConnector                   
+-                                                        Microsoft.GenevaMetrics                  
+Microsoft.Genome                                         Microsoft.Genome                         
 -                                                        Microsoft.Genomics                       
+-                                                        Microsoft.GraduationTest                 
 -                                                        Microsoft.Graph                          
 Microsoft.GraphServices                                  Microsoft.GraphServices                  
 Microsoft Guest Configuration                            Microsoft.GuestConfiguration             
@@ -209,9 +262,15 @@ Microsoft Hardware Security Modules                      Microsoft.HardwareSecur
 Microsoft.HDInsight                                      Microsoft.HDInsight                      
 Microsoft.HealthBot                                      Microsoft.HealthBot                      
 Microsoft.HealthcareApis                                 Microsoft.HealthcareApis                 
+Microsoft.HealthcareInterop                              Microsoft.HealthcareInterop              
+-                                                        Microsoft.HealthcareInterop.Cloud        
+-                                                        Microsoft.HealthcareInterop.Edge         
 Microsoft.HealthDataAIServices                           Microsoft.HealthDataAIServices           
 Microsoft.HealthModel                                    Microsoft.HealthModel                    
+-                                                        Microsoft.HealthPlatform                 
 Microsoft.Help                                           Microsoft.Help                           
+                                                         Microsoft.HorizonDb                      
+-                                                        Microsoft.HostedRpa                      
 -                                                        Microsoft.HpcWorkbench                   
 -                                                        Microsoft.HPKTest                        
 Microsoft HybridCompute                                  Microsoft.HybridCompute                  
@@ -220,19 +279,22 @@ Microsoft.HybridContainerService                         Microsoft.HybridContain
 -                                                        Microsoft.HybridData                     
 Microsoft.HybridNetwork                                  microsoft.hybridnetwork                  
 -                                                        Microsoft.HybridOnboarding               
-Microsoft.Impact                                         MICROSOFT.IMPACT                         
+-                                                        Microsoft.Hypernet                       
+Microsoft.Impact                                         Microsoft.Impact                         
 -                                                        Microsoft.ImportExport                   
 -                                                        Microsoft.IndustryDataLifecycle          
+Microsoft Inference Service                              Microsoft.InferenceService               
 Microsoft Azure Monitor                                  Microsoft.Insights                       
 Microsoft.IntegrationSpaces                              Microsoft.IntegrationSpaces              
 -                                                        Microsoft.IntelligentITDigitalTwin       
+Microsoft Monitoring Insights                            Microsoft.Intune                         
 Microsoft.Inventory                                      Microsoft.Inventory                      
 Azure IoT Central                                        Microsoft.IoTCentral                     
 Microsoft.IoTFirmwareDefense                             Microsoft.IoTFirmwareDefense             
 Microsoft.IoTOperations                                  Microsoft.IoTOperations                  
 Microsoft.IoTOperationsDataProcessor                     Microsoft.IoTOperationsDataProcessor     
-Microsoft.IoTOperationsMQ                                Microsoft.IoTOperationsMQ                
-Microsoft.IoTOperationsOrchestrator                      Microsoft.IoTOperationsOrchestrator      
+-                                                        Microsoft.IoTOperationsMQ                
+-                                                        Microsoft.IoTOperationsOrchestrator      
 Microsoft IoT Security                                   Microsoft.IoTSecurity                    
 -                                                        Microsoft.IoTSpaces                      
 Microsoft Key Vault                                      Microsoft.KeyVault                       
@@ -244,9 +306,10 @@ Microsoft.Kusto                                          Microsoft.Kusto
 -                                                        Microsoft.KX                             
 Microsoft Azure Lab Services                             Microsoft.LabServices                    
 -                                                        Microsoft.LiftrPilot                     
+-                                                        Microsoft.Lionrock                       
 Microsoft.LoadTestService                                Microsoft.LoadTestService                
 Microsoft Logic                                          Microsoft.Logic                          
-Microsoft.Logz                                           Microsoft.Logz                           
+-                                                        Microsoft.Logz                           
 -                                                        Microsoft.M365                           
 -                                                        Microsoft.M365ConsumptionServices        
 -                                                        Microsoft.M365SecurityAndCompliance      
@@ -257,80 +320,116 @@ Microsoft Maintenance Service                            Microsoft.Maintenance
 Microsoft Managed Identity                               Microsoft.ManagedIdentity                
 -                                                        Microsoft.ManagedNetwork                 
 Microsoft.ManagedNetworkFabric                           Microsoft.ManagedNetworkFabric           
+Microsoft.ManagedOps                                     Microsoft.ManagedOps                     
 Microsoft Managed Services                               Microsoft.ManagedServices                
 -                                                        Microsoft.ManagedStorageClass            
 Microsoft Management                                     Microsoft.Management                     
-Microsoft.ManufacturingPlatform                          Microsoft.ManufacturingPlatform          
+-                                                        Microsoft.ManufacturingPlatform          
 Microsoft.Maps                                           Microsoft.Maps                           
 Microsoft Marketplace                                    Microsoft.Marketplace                    
 Microsoft Marketplace Ordering                           Microsoft.MarketplaceOrdering            
-Microsoft Media Services                                 Microsoft.Media                          
 Microsoft.MessagingCatalog                               Microsoft.MessagingCatalog               
 Microsoft.MessagingConnectors                            Microsoft.MessagingConnectors            
 -                                                        Microsoft.Microsoft                      
 Microsoft.Migrate                                        Microsoft.Migrate                        
 -                                                        Microsoft.Mindaro                        
 Microsoft.Mission                                        Microsoft.Mission                        
-Microsoft.MixedReality                                   Microsoft.MixedReality                   
-Microsoft.MobileNetwork                                  Microsoft.MobileNetwork                  
+-                                                        Microsoft.Mission.CM                     
+-                                                        Microsoft.MixedReality                   
+-                                                        Microsoft.MobileNetwork                  
 -                                                        Microsoft.MobilePacketCore               
-Microsoft.ModSimWorkbench                                Microsoft.ModSimWorkbench                
+-                                                        Microsoft.Modsimworkbench                
 Microsoft Monitoring                                     microsoft.monitor                        
+-                                                        Microsoft.Mycroft                        
 Microsoft.MySQLDiscovery                                 Microsoft.MySQLDiscovery                 
 Microsoft.NetApp Resource Provider                       Microsoft.NetApp                         
 Microsoft Network                                        Microsoft.Network                        
 -                                                        Microsoft.NetworkAnalytics               
 Microsoft.NetworkCloud                                   Microsoft.NetworkCloud                   
 MicrosoftNetworkFunction                                 Microsoft.NetworkFunction                
+-                                                        Microsoft.NetworkingPubSub               
+-                                                        Microsoft.NetworkResourceProvider        
+-                                                        Microsoft.NetworkSecurity                
+-                                                        Microsoft.NetworkSecurity.NeuroShield    
 -                                                        Microsoft.Netwotk                        
 Microsoft.NexusIdentity                                  Microsoft.NexusIdentity                  
 -                                                        Microsoft.Notebooks                      
 Microsoft Azure Notification Hub                         Microsoft.NotificationHubs               
+-                                                        Microsoft.NsmPlus                        
 -                                                        Microsoft.NspTestPaasRp                  
 Microsoft.Nutanix                                        Microsoft.Nutanix                        
 Microsoft.OffAzure                                       Microsoft.OffAzure                       
-Microsoft.OffAzureSpringBoot                             Microsoft.OffAzureSpringBoot             
+-                                                        Microsoft.OffAzureSpringBoot             
+-                                                        Microsoft.Offers                         
+-                                                        Microsoft.OneDriveSharePoint             
+Microsoft.OnlineExperimentation                          Microsoft.OnlineExperimentation          
 Microsoft.OpenEnergyPlatform                             Microsoft.OpenEnergyPlatform             
 -                                                        Microsoft.OpenLogisticsPlatform          
 Azure Log Analytics                                      Microsoft.OperationalInsights            
 Microsoft Operations Management                          Microsoft.OperationsManagement           
 Microsoft.OperatorVoicemail                              Microsoft.OperatorVoicemail              
-Microsoft.OracleDiscovery                                Microsoft.OracleDiscovery                
-Orbital Resource Provider                                Microsoft.Orbital                        
+-                                                        Microsoft.OracleDiscovery                
+Microsoft.Orbital                                        Microsoft.Orbital                        
+-                                                        Microsoft.OrionDB                        
+-                                                        Microsoft.PartnerEnrollment              
 -                                                        Microsoft.PartnerManagedConsumerRecurrence 
+-                                                        Microsoft.PartnerProcurement             
 Microsoft.Peering                                        Microsoft.Peering                        
 -                                                        Microsoft.PhysicalNetwork                
 Microsoft.Pki                                            Microsoft.Pki                            
+-                                                        Microsoft.PlatformNotifications          
+Microsoft.PlatformValidation                             Microsoft.PlatformValidation             
 -                                                        Microsoft.PlayFab                        
 Microsoft Policy Insights                                Microsoft.PolicyInsights                 
 Microsoft Portal                                         Microsoft.Portal                         
--                                                        Microsoft.PortalServices                 
+Microsoft.PortalServices                                 Microsoft.PortalServices                 
+-                                                        Microsoft.PowerAutomate                  
 Microsoft.PowerBI                                        Microsoft.PowerBI                        
 Microsoft Power BI Dedicated                             Microsoft.PowerBIDedicated               
+-                                                        Microsoft.PowerPages                     
 Microsoft Power Platform                                 Microsoft.PowerPlatform                  
+-                                                        Microsoft.PowerPlatformConnector         
+-                                                        Microsoft.PowerPlatformUsage             
+-                                                        Microsoft.Premonition                    
 -                                                        Microsoft.Print                          
+-                                                        Microsoft.Privacy                        
 -                                                        Microsoft.ProfessionalService            
-Microsoft.ProgrammableConnectivity                       Microsoft.ProgrammableConnectivity       
+Microsoft.ProgramEnrollment                              Microsoft.ProgramEnrollment              
+-                                                        Microsoft.ProgrammableConnectivity       
 -                                                        Microsoft.Project                        
+-                                                        Microsoft.ProjectBabylon                 
 -                                                        Microsoft.Proposal                       
 Microsoft.ProviderHub                                    Microsoft.ProviderHub                    
+-                                                        Microsoft.ProviderHub.AgentService       
 -                                                        Microsoft.ProviderHubDevTest             
 Microsoft Purview                                        Microsoft.Purview                        
 Microsoft.Quantum                                        Microsoft.Quantum                        
 Microsoft.Quota                                          Microsoft.Quota                          
-Microsoft.RecommendationsService                         Microsoft.RecommendationsService         
+-                                                        Microsoft.RecommendationsService         
 Microsoft.RecoveryServices                               Microsoft.RecoveryServices               
 Azure Red Hat OpenShift                                  Microsoft.RedHatOpenShift                
+-                                                        Microsoft.RegionalNetworkManager         
+Microsoft.Relationships                                  Microsoft.Relationships                  
 Microsoft Azure Relay                                    Microsoft.Relay                          
 -                                                        Microsoft.RemoteApp                      
 -                                                        Microsoft.Resilience                     
 -                                                        Microsoft.Resiliency                     
 -                                                        Microsoft.Resouces                       
+Microsoft.ResourceBuilder                                Microsoft.ResourceBuilder                
 Microsoft ResourceConnector                              Microsoft.ResourceConnector              
 Microsoft Resource Graph                                 Microsoft.ResourceGraph                  
 Microsoft ResourceHealth                                 Microsoft.ResourceHealth                 
+Microsoft Resource Intelligence                          Microsoft.ResourceIntelligence           
+-                                                        Microsoft.ResourceMover                  
 Microsoft Resource Notifications                         Microsoft.ResourceNotifications          
 Microsoft Resources                                      Microsoft.Resources                      
+-                                                        Microsoft.RiskReputation                 
+-                                                        Microsoft.RpLiteTest2                    
+-                                                        Microsoft.RpLiteTest3                    
+-                                                        Microsoft.RpLiteTest4                    
+-                                                        Microsoft.RpLiteTest6                    
+-                                                        Microsoft.RpLiteTest7                    
+-                                                        Microsoft.RpLiteTest8                    
 -                                                        Microsoft.RPRegistrationTest             
 Microsoft                                                Microsoft.SaaS                           
 Microsoft.SaaSHub                                        Microsoft.SaaSHub                        
@@ -340,14 +439,18 @@ Microsoft.SCVMM                                          Microsoft.SCVMM
 Microsoft Search                                         Microsoft.Search                         
 -                                                        Microsoft.SecretManagementSampleProvider 
 Microsoft.SecretSyncController                           Microsoft.SecretSyncController           
+-                                                        Microsoft.SecureExchange                 
 Microsoft Security                                       Microsoft.Security                       
 -                                                        Microsoft.SecurityAndCompliance          
+-                                                        Microsoft.SecurityContext                
 Microsoft.SecurityCopilot                                Microsoft.SecurityCopilot                
 Microsoft SecurityDetonationChamber                      Microsoft.SecurityDetonation             
 -                                                        Microsoft.SecurityDevOps                 
-Microsoft Monitoring Insights                            Microsoft.SecurityGraph                  
+-                                                        microsoft.securitygraph                  
 Microsoft Security Insights                              Microsoft.SecurityInsights               
 -                                                        Microsoft.SecurityPlatform               
+-                                                        Microsoft.SecurityScanningService        
+Microsoft.SentinelPlatformServices                       Microsoft.SentinelPlatformServices       
 Microsoft.SerialConsole                                  Microsoft.SerialConsole                  
 -                                                        Microsoft.SerialConsole.PPE              
 Microsoft Azure ServiceBus                               Microsoft.ServiceBus                     
@@ -368,9 +471,14 @@ Microsoft SQL Database                                   Microsoft.Sql
 Microsoft.SqlVirtualMachine                              Microsoft.SqlVirtualMachine              
 Microsoft.StandbyPool                                    Microsoft.StandbyPool                    
 Microsoft Storage                                        Microsoft.Storage                        
+-                                                        Microsoft.Storage.ActionsRP              
+-                                                        Microsoft.Storage.ContextCacheRP         
+-                                                        Microsoft.Storage.DataManagementRP       
 Microsoft Storage Actions                                Microsoft.StorageActions                 
 Microsoft Azure HPC Cache                                Microsoft.StorageCache                   
+Microsoft.StorageDiscovery                               Microsoft.StorageDiscovery               
 -                                                        Microsoft.StorageInsights                
+-                                                        Microsoft.StorageInventory               
 Microsoft.StorageMover                                   Microsoft.StorageMover                   
 -                                                        Microsoft.StoragePool                    
 -                                                        microsoft.storagereplication             
@@ -379,6 +487,9 @@ Microsoft.StorageSync                                    Microsoft.StorageSync
 Microsoft Azure Stream Analytics                         Microsoft.StreamAnalytics                
 -                                                        microsoft.streamingforstrimzikafka       
 Microsoft Subscription                                   Microsoft.Subscription                   
+-                                                        Microsoft.SubscriptionProvisioningOrchestrator 
+-                                                        Microsoft.SubstrateInventory             
+Microsoft.SupercomputerInfrastructure                    Microsoft.SupercomputerInfrastructure    
 Microsoft Support                                        Microsoft.Support                        
 Microsoft.SustainabilityServices                         Microsoft.SustainabilityServices         
 -                                                        Microsoft.Swiftlet                       
@@ -386,10 +497,12 @@ Microsoft.SustainabilityServices                         Microsoft.Sustainabilit
 Azure Synapse Analytics (workspaces)                     Microsoft.Synapse                        
 Microsoft.Syntex                                         Microsoft.Syntex                         
 -                                                        Microsoft.SystemIntegrityMonitoring      
+-                                                        Microsoft.TenantGovernance               
 -                                                        Microsoft.TerraformOSS                   
 -                                                        Microsoft.Test                           
 -                                                        Microsoft.Test2                          
--                                                        Microsoft.TestBase                       
+-                                                        microsoft.testbase                       
+-                                                        Microsoft.Throttling                     
 -                                                        Microsoft.TimeSeriesInsights             
 -                                                        Microsoft.Titan                          
 -                                                        Microsoft.Token                          
@@ -397,32 +510,39 @@ Microsoft.ToolchainOrchestrator                          Microsoft.ToolchainOrch
 -                                                        Microsoft.Uic                            
 -                                                        Microsoft.UpdateManager                  
 Microsoft.UsageBilling                                   Microsoft.UsageBilling                   
+Microsoft.Validate                                       Microsoft.Validate                       
 -                                                        Microsoft.VerifiedId                     
 Microsoft.VideoIndexer                                   Microsoft.VideoIndexer                   
 Virtual Machine Image Builder                            Microsoft.VirtualMachineImages           
 Visual Studio                                            Microsoft.VisualStudio                   
 microsoft.vmware                                         microsoft.vmware                         
--                                                        Microsoft.VMWareCloudSimple              
-Microsoft.VoiceServices                                  Microsoft.VoiceServices                  
+-                                                        Microsoft.VMwareCloudSimple              
 Microsoft Web Apps                                       microsoft.web                            
--                                                        Microsoft.WeightsAndBiases               
+-                                                        Microsoft.WebIQ                          
+Microsoft.WeightsAndBiases                               Microsoft.WeightsAndBiases               
 -                                                        Microsoft.WhiteBoxCadlProvider           
--                                                        Microsoft.Windows365                     
+Microsoft.Windows365                                     Microsoft.Windows365                     
+-                                                        Microsoft.WindowsDefenderATP2            
 -                                                        Microsoft.WindowsIoT                     
 -                                                        Microsoft.WindowsPushNotificationServices 
 Microsoft.WorkloadBuilder                                Microsoft.WorkloadBuilder                
 Microsoft.Workloads                                      Microsoft.Workloads                      
 -                                                        Microsoft.Xrm                            
+Microsoft.ZeroTrustSegmentation                          Microsoft.ZeroTrustSegmentation          
+MongoDB.Atlas                                            MongoDB.Atlas                            
+Napster.CompanionAPI                                     Napster.CompanionAPI                     
 -                                                        Neon.Postgres                            
 NewRelic.Observability                                   NewRelic.Observability                   
 NGINX.NGINXPLUS                                          NGINX.NGINXPLUS                          
 Oracle.Database                                          Oracle.Database                          
 PaloAltoNetworks.Cloudngfw                               PaloAltoNetworks.Cloudngfw               
--                                                        Pinecone.VectorDb                        
--                                                        PureStorage.Block                        
+Pinecone.VectorDb                                        Pinecone.VectorDb                        
+-                                                        Providers.Test.Service1                  
+PureStorage.Block                                        PureStorage.Block                        
 -                                                        Qumulo.QaaS                              
 Qumulo.Storage                                           Qumulo.Storage                           
-SolarWinds.Observability                                 SolarWinds.Observability                 
+-                                                        SolarWinds.Observability                 
 -                                                        SplitIO.Experimentation                  
 -                                                        Test.shoebox                             
-Wandisco.Fusion                                          Wandisco.Fusion                          
+-                                                        Vast.Data                                
+-                                                        Wandisco.Fusion                          
