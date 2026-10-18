@@ -23,19 +23,19 @@
 	
 .EXAMPLE
 	LOGIN FIRST:
-		LOgin-AzAccount
+		Login-AzAccount
 	TO SEE A QUICK VIEW:
 		.\Get-AzureServicesWithHistory.ps1  -Update
 	
 	TO CONVERT AzureServiceActions.CSV TO FORMATTED TEXT:
-		"{0,-60} {1,-100} {2,-100} {3}" -f 'ProviderNamespace','Operation','OperationName','IsDataAction' | out-file -FilePath 'AzureServiceActions.txt' -Encoding utf8 -force -width 275 ;
-		Import-Csv -Path 'AzureServiceActions.csv' | foreach { ("{0,-60} {1,-100} {2,-100} {3}" -f $_.ProviderNamespace, $_.Operation, $_.OperationName, $_.IsDataAction) } | out-file -FilePath 'AzureServiceActions.txt' -width 210 -Encoding utf8 -Append
+		"{0,-60} {1,-100} {2,-100} {3}" -f 'ProviderNamespace','Operation','OperationName','IsDataAction' | out-file -FilePath 'docs\AzureServiceActions.txt' -Encoding utf8 -force -width 275 ;
+		Import-Csv -Path 'docs\AzureServiceActions.csv' | foreach { ("{0,-60} {1,-100} {2,-100} {3}" -f $_.ProviderNamespace, $_.Operation, $_.OperationName, $_.IsDataAction) } | out-file -FilePath 'docs\AzureServiceActions.txt' -width 210 -Encoding utf8 -Append
 
 
 .NOTES
 	Author: Lester W.
-	Version: v0.08a
-	Date: 09-May-23
+	Version: v0.08b
+	Date: 18-Oct-26
 	Repository: https://github.com/leswaters/AzureServices
 	License: MIT License
 	
@@ -55,9 +55,9 @@
 [cmdletbinding()]   #  Add -Verbose support; use: [cmdletbinding(SupportsShouldProcess=$True)] to add WhatIf support
 Param
 (
-	[string] $InputFile			= 'AzureServiceActions.csv',
+	[string] $InputFile			= 'docs\AzureServiceActions.csv',
 	[string] $OutputFile		= $InputFile,	
-	[string] $HistoryFile		= 'AzureHistory.txt',
+	[string] $HistoryFile		= 'docs\AzureHistory.txt',
 	[switch] $Update			= $false
 )
 
