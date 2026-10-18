@@ -23,10 +23,9 @@ The catalog is updated periodically and usually includes a DIFF (what is new, di
 
 
 **FUN FACTS:**
-
-* 18-Oct-26 : 24,899 operations were discovered across 550 Azure service providers (252 of which have no operations defined)
-* 22-Nov-24 : 20,996 operations were discovered across 426 Azure service providers (143 of which have no operations defined)
-* 04-May-22 : 13,526 operations were discovered across 280 Azure service providers (66 of which have no operations defined)
+* 18-Oct-26 : 24,899 operations were discovered across 550 Azure service providers (252 have no operations defined)
+* 22-Nov-24 : 20,996 operations were discovered across 426 Azure service providers (143 have no operations defined)
+* 04-May-22 : 13,526 operations were discovered across 280 Azure service providers (66 have no operations defined)
 
 
 ## Example outputs
