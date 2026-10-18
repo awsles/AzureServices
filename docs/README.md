@@ -33,7 +33,8 @@ The catalog is updated periodically and usually includes a DIFF (what is new, di
 ### AzureServices.html
 This is the complete Azure service and operations catalog in HTML format [here](AzureServices.html) with search capability.
 
-TBD - SCREENSHOT HERE
+![Services HTML Example](images\ServicesHTML.png)
+
 
 ### AzureServices.csv
 This is a complete list of Azure Services in CSV format. There is also a formatted text version: [AzureServices.txt](azureservices.txt).
