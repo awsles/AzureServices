@@ -11,7 +11,7 @@ The output includes service names, service prefixes, ARN formats, and individual
 
 This catalog is particularly valuable to **Azure administrators, cloud architects, security engineers, DevOps teams, and IAM governance professionals** responsible for designing, reviewing, or troubleshooting access permissions. Having Azure operations consolidated into a readily searchable reference simplifies the development of roles and permissions. It also supports least-privilege security reviews, permission discovery, auditing, and identifying unfamiliar or newly introduced actions without having to navigate hundreds of individual Azure documentation pages. 
 
-The catalog is updated periodically and usually includes a DIFF (what is new, different, and obsoleted) from the previous time it was run.
+The catalog is updated periodically and usually includes a DIFF (what is new, different, and obsoleted) from the previous time it was run. The provider descriptions are either scraped from documentation or generated with AI assistance.
 
 **LAST CATALOG UDATE:** `18-Oct-26`
 
@@ -21,6 +21,7 @@ The catalog is updated periodically and usually includes a DIFF (what is new, di
 * [AzureServices.csv](azureservices.csv) - List of Azure services only
 * [AzureServices.txt](azureservices.txt) - List of Azure Services as formatted text
 
+See [Azure Permissions](https://learn.microsoft.com/en-us/azure/role-based-access-control/resource-provider-operations) to see Microsoft's list of resource providers with links to associated documentation.
 
 **FUN FACTS:**
 * 18-Oct-26 : 24,899 operations were discovered across 550 Azure service providers (252 have no operations defined)
