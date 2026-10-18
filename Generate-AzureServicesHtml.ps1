@@ -5,8 +5,10 @@
 
 .DESCRIPTION
     Reads AzureServices.csv and AzureServiceActions.csv, joined by ProviderName
-    (case-insensitively). For each service, displays ProviderNamespace (ProviderName),
-    its description, and an expandable table of Operation, OperationName,
+    (case-insensitively). Creates one section for every distinct provider present
+    in either file, including providers that exist only in AzureServiceActions.csv.
+    For each provider, displays ProviderNamespace (ProviderName), its description
+    when available, and an expandable table of Operation, OperationName,
     ResourceName, Description, and IsDataAction.
 
     The HTML is self-contained. A live, case-insensitive search matches provider
@@ -52,11 +54,11 @@ $services = @(Import-Csv -LiteralPath $ServicesCsv -Encoding UTF8 | Where-Object
     -not [string]::IsNullOrWhiteSpace($_.ProviderName) -and
     -not $_.ProviderName.TrimStart().StartsWith('#')
 })
-if ($services.Count -eq 0) { throw 'AzureServices.csv contains no provider records.' }
-
-foreach ($column in @('ProviderNamespace', 'ProviderName', 'Description')) {
-    if ($null -eq $services[0].PSObject.Properties[$column]) {
-        throw "AzureServices.csv is missing the required column '$column'."
+if ($services.Count -gt 0) {
+    foreach ($column in @('ProviderNamespace', 'ProviderName', 'Description')) {
+        if ($null -eq $services[0].PSObject.Properties[$column]) {
+            throw "AzureServices.csv is missing the required column '$column'."
+        }
     }
 }
 
@@ -79,7 +81,6 @@ Import-Csv -LiteralPath $ActionsCsv -Encoding UTF8 | ForEach-Object {
     }
 
     if (-not [string]::IsNullOrWhiteSpace($action.ProviderName) -and
-        -not [string]::IsNullOrWhiteSpace($action.Operation) -and
         -not $action.ProviderName.TrimStart().StartsWith('#')) {
         $name = $action.ProviderName.Trim()
         if (-not $actionsByProvider.ContainsKey($name)) {
@@ -89,17 +90,58 @@ Import-Csv -LiteralPath $ActionsCsv -Encoding UTF8 | ForEach-Object {
         $actionCount++
     }
 }
-if (-not $actionSchemaChecked) {
-    throw 'AzureServiceActions.csv contains no data rows (or is missing its header).'
+# Build the union of providers from BOTH CSVs. ProviderName remains the join key.
+# A provider appearing only in AzureServiceActions.csv gets a section with a
+# namespace from the actions file and no description.
+$providersByName = [System.Collections.Generic.Dictionary[string,object]]::new(
+    [System.StringComparer]::OrdinalIgnoreCase
+)
+foreach ($service in $services) {
+    $name = $service.ProviderName.Trim()
+    if (-not $providersByName.ContainsKey($name)) {
+        $providersByName.Add($name, $service)
+    }
+    else {
+        # If the service file repeats a ProviderName, keep one section and
+        # retain nonempty metadata when available.
+        $existing = $providersByName[$name]
+        if ([string]::IsNullOrWhiteSpace($existing.ProviderNamespace) -and
+            -not [string]::IsNullOrWhiteSpace($service.ProviderNamespace)) {
+            $existing.ProviderNamespace = $service.ProviderNamespace
+        }
+        if ([string]::IsNullOrWhiteSpace($existing.Description) -and
+            -not [string]::IsNullOrWhiteSpace($service.Description)) {
+            $existing.Description = $service.Description
+        }
+    }
 }
 
-$services = @($services | Sort-Object -Property ProviderNamespace, ProviderName)
-$providerNames = [System.Collections.Generic.HashSet[string]]::new([System.StringComparer]::OrdinalIgnoreCase)
-foreach ($service in $services) { [void]$providerNames.Add($service.ProviderName.Trim()) }
+$actionOnlyProviderCount = 0
+foreach ($name in $actionsByProvider.Keys) {
+    # The namespace can be supplied by the first action record with a value.
+    $namespace = ''
+    foreach ($action in $actionsByProvider[$name]) {
+        if (-not [string]::IsNullOrWhiteSpace($action.ProviderNamespace)) {
+            $namespace = $action.ProviderNamespace.Trim()
+            break
+        }
+    }
 
-$unmatchedNames = @($actionsByProvider.Keys | Where-Object { -not $providerNames.Contains($_) } | Sort-Object)
-$unmatchedCount = 0
-foreach ($name in $unmatchedNames) { $unmatchedCount += $actionsByProvider[$name].Count }
+    if (-not $providersByName.ContainsKey($name)) {
+        $providersByName.Add($name, [pscustomobject]@{
+            ProviderNamespace = $namespace
+            ProviderName      = $name
+            Description       = ''
+        })
+        $actionOnlyProviderCount++
+    }
+    elseif ([string]::IsNullOrWhiteSpace($providersByName[$name].ProviderNamespace)) {
+        $providersByName[$name].ProviderNamespace = $namespace
+    }
+}
+
+$services = @($providersByName.Values | Sort-Object -Property ProviderNamespace, ProviderName)
+if ($services.Count -eq 0) { throw 'Neither input CSV contains any provider records.' }
 
 $outputFile = [System.IO.Path]::GetFullPath($OutputHtml)
 $outputDir = [System.IO.Path]::GetDirectoryName($outputFile)
@@ -166,7 +208,7 @@ try {
 '@
     $writer.WriteLine($htmlHeader)
 
-    $writer.WriteLine('  <p class="subtle">' + $services.Count + ' providers · ' + ($actionCount - $unmatchedCount) + ' matched operations · Generated ' + (Get-Date -Format 'yyyy-MM-dd HH:mm') + '<br/>See <a href="https://awsles.github.io/AzureServices/" target="_blank" rel="noopener noreferrer">awsles.github.io/AzureServices/</a> for more information and CSV data.</p>')
+    $writer.WriteLine('  <p class="subtle">' + $services.Count + ' providers · ' + $actionCount + ' operations · Generated ' + (Get-Date -Format 'yyyy-MM-dd HH:mm') + '<br/>See <a href="https://awsles.github.io/AzureServices/" target="_blank" rel="noopener noreferrer">awsles.github.io/AzureServices/</a> for more information and CSV data.</p>')
     $writer.WriteLine('  <label for="serviceFilter">Find a provider or operation</label>')
     $writer.WriteLine('  <input type="search" id="serviceFilter" placeholder="Provider name, namespace, or operation (e.g. Microsoft.Storage/storageAccounts/read)..." autocomplete="off">')
     $writer.WriteLine('</header>')
@@ -260,8 +302,4 @@ finally {
 }
 
 Write-Host "Generated: $outputFile"
-Write-Host "Providers: $($services.Count); matched operations: $($actionCount - $unmatchedCount)"
-if ($unmatchedCount -gt 0) {
-    Write-Warning "$unmatchedCount operation records were not included because their ProviderName did not match any provider in AzureServices.csv."
-    Write-Warning ('Unmatched provider names: ' + ($unmatchedNames -join ', '))
-}
+Write-Host "Providers: $($services.Count); operations: $actionCount; providers found only in AzureServiceActions.csv: $actionOnlyProviderCount"
