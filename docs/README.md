@@ -54,7 +54,7 @@ This is a complete list of Azure Services and Actions in CSV format.
 
 EXAMPLE:
 
-|ProviderNamespace|ProviderName|Operation|OperationName|ResourceName|Description|IsDataAction"|
+|ProviderNamespace|ProviderName|Operation|OperationName|ResourceName|Description|IsDataAction|
 |---|---|---|---|---|---|---|
 |GitHub.Network|GitHub.Network|GitHub.Network/Operations/read|read_Operations|Operations|read Operations|False"
 |Microsoft API Management|Microsoft.ApiManagement|Microsoft.ApiManagement/service/backup/action|Backup API Management Service|Service|Backup API Management Service to the specified container in a user provided storage account|False|
