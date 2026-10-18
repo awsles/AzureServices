@@ -5,14 +5,16 @@
 
 .DESCRIPTION
     Reads AzureServices.csv and AzureServiceActions.csv, joined by ProviderName
-    (case-insensitively). Creates one section for every distinct provider present
-    in either file, including providers that exist only in AzureServiceActions.csv.
-    For each provider, displays ProviderNamespace (ProviderName), its description
-    when available, and an expandable table of Operation, OperationName,
-    ResourceName, Description, and IsDataAction.
+    (case-insensitively). Creates a main section only for providers with one or
+    more operations in AzureServiceActions.csv. Each main section displays
+    ProviderNamespace (ProviderName), its description (when available), and an
+    expandable table of Operation, OperationName, ResourceName, Description,
+    and IsDataAction. Providers in either CSV without operations appear in a
+    separate, expandable "Other Providers" table at the bottom of the page.
 
     The HTML is self-contained. A live, case-insensitive search matches provider
-    namespace/name and operation identifiers/names, including partial matches.
+    namespace/name and operation identifiers/names, including partial matches;
+    it can also find providers listed in "Other Providers".
 
     Input files and the output file default to the current PowerShell working
     directory (Get-Location), not the script directory or System32.
@@ -25,7 +27,7 @@
     .\Generate-AzureServicesHtml.ps1 `
         -ServicesCsv 'docs\AzureServices.csv' `
         -ActionsCsv 'docs\AzureServiceActions.csv' `
-        -OutputHtml 'docs\AzureServiceActions.html'
+        -OutputHtml 'docs\AzureServices.html'
 #>
 [CmdletBinding()]
 param(
@@ -86,13 +88,18 @@ Import-Csv -LiteralPath $ActionsCsv -Encoding UTF8 | ForEach-Object {
         if (-not $actionsByProvider.ContainsKey($name)) {
             $actionsByProvider.Add($name, [System.Collections.Generic.List[object]]::new())
         }
-        $actionsByProvider[$name].Add($action)
-        $actionCount++
+        # A row without an Operation is not a discernable operation. Keep its
+        # ProviderName in the union, but list it under Other Providers unless
+        # another row provides a real operation for that name.
+        if (-not [string]::IsNullOrWhiteSpace($action.Operation)) {
+            $actionsByProvider[$name].Add($action)
+            $actionCount++
+        }
     }
 }
 # Build the union of providers from BOTH CSVs. ProviderName remains the join key.
-# A provider appearing only in AzureServiceActions.csv gets a section with a
-# namespace from the actions file and no description.
+# A provider appearing only in AzureServiceActions.csv gets a namespace from
+# that file and no description. Providers without operations appear at the end.
 $providersByName = [System.Collections.Generic.Dictionary[string,object]]::new(
     [System.StringComparer]::OrdinalIgnoreCase
 )
@@ -140,8 +147,18 @@ foreach ($name in $actionsByProvider.Keys) {
     }
 }
 
-$services = @($providersByName.Values | Sort-Object -Property ProviderNamespace, ProviderName)
-if ($services.Count -eq 0) { throw 'Neither input CSV contains any provider records.' }
+# Split the union into providers with operations and those without. The main
+# catalog contains only providers whose action lists are nonempty.
+$allProviders = @($providersByName.Values | Sort-Object -Property ProviderNamespace, ProviderName)
+if ($allProviders.Count -eq 0) { throw 'Neither input CSV contains any provider records.' }
+$services = @($allProviders | Where-Object {
+    $actionsByProvider.ContainsKey($_.ProviderName.Trim()) -and
+    $actionsByProvider[$_.ProviderName.Trim()].Count -gt 0
+})
+$otherProviders = @($allProviders | Where-Object {
+    -not $actionsByProvider.ContainsKey($_.ProviderName.Trim()) -or
+    $actionsByProvider[$_.ProviderName.Trim()].Count -eq 0
+} | Sort-Object -Property ProviderName, ProviderNamespace)
 
 $outputFile = [System.IO.Path]::GetFullPath($OutputHtml)
 $outputDir = [System.IO.Path]::GetDirectoryName($outputFile)
@@ -190,6 +207,11 @@ try {
   .actions th:nth-child(4) { width: 32%; }
   .actions th:nth-child(5) { width: 9%; }
   .actions td:nth-child(1) { font-family: Consolas, "Liberation Mono", monospace; font-size: .9em; }
+  .section-divider { border: 0; border-top: 2px solid #6a9fb8; margin: 26px 0 20px; }
+  table.other-providers { min-width: 700px; }
+  .other-providers th:nth-child(1) { width: 25%; }
+  .other-providers th:nth-child(2) { width: 28%; }
+  .other-providers th:nth-child(3) { width: 47%; }
   .missing { color: #6c7682; }
   .no-results { margin: 18px 0; }
   [hidden] { display: none !important; }
@@ -208,7 +230,7 @@ try {
 '@
     $writer.WriteLine($htmlHeader)
 
-    $writer.WriteLine('  <p class="subtle">' + $services.Count + ' providers · ' + $actionCount + ' operations · Generated ' + (Get-Date -Format 'yyyy-MM-dd HH:mm') + '<br/>See <a href="https://awsles.github.io/AzureServices/" target="_blank" rel="noopener noreferrer">awsles.github.io/AzureServices/</a> for more information and CSV data.</p>')
+    $writer.WriteLine('  <p class="subtle">' + $services.Count + ' providers with operations · ' + $otherProviders.Count + ' other providers · ' + $actionCount + ' operations · Generated ' + (Get-Date -Format 'yyyy-MM-dd HH:mm') + '<br/>See <a href="https://awsles.github.io/AzureServices/" target="_blank" rel="noopener noreferrer">awsles.github.io/AzureServices/</a> for more information and CSV data.</p>')
     $writer.WriteLine('  <label for="serviceFilter">Find a provider or operation</label>')
     $writer.WriteLine('  <input type="search" id="serviceFilter" placeholder="Provider name, namespace, or operation (e.g. Microsoft.Storage/storageAccounts/read)..." autocomplete="off">')
     $writer.WriteLine('</header>')
@@ -234,23 +256,35 @@ try {
         $writer.WriteLine('    <summary>Operations (' + $providerActions.Count + ')</summary>')
         $writer.WriteLine('    <div class="table-scroll"><table class="actions"><thead><tr><th>Operation</th><th>OperationName</th><th>ResourceName</th><th>Description</th><th>IsDataAction</th></tr></thead><tbody>')
 
-        if ($providerActions.Count -eq 0) {
-            $writer.WriteLine('      <tr><td colspan="5" class="missing">No operations found for this provider in AzureServiceActions.csv.</td></tr>')
-        }
-        else {
-            foreach ($action in $providerActions) {
-                $writer.WriteLine('      <tr><td>' + (Encode-Html $action.Operation) + '</td><td>' +
-                    (Encode-Html $action.OperationName) + '</td><td>' +
-                    (Encode-Html $action.ResourceName) + '</td><td>' +
-                    (Encode-Html $action.Description) + '</td><td>' +
-                    (Encode-Html $action.IsDataAction) + '</td></tr>')
-            }
+        foreach ($action in $providerActions) {
+            $writer.WriteLine('      <tr><td>' + (Encode-Html $action.Operation) + '</td><td>' +
+                (Encode-Html $action.OperationName) + '</td><td>' +
+                (Encode-Html $action.ResourceName) + '</td><td>' +
+                (Encode-Html $action.Description) + '</td><td>' +
+                (Encode-Html $action.IsDataAction) + '</td></tr>')
         }
 
         $writer.WriteLine('    </tbody></table></div>')
         $writer.WriteLine('  </details>')
         $writer.WriteLine('</section>')
     }
+
+    # The remaining providers appear in one expandable table at the end.
+    $writer.WriteLine('<hr id="otherProvidersDivider" class="section-divider">')
+    $writer.WriteLine('<section id="otherProviders" class="service">')
+    $writer.WriteLine('  <h2>Other Providers</h2>')
+    $writer.WriteLine('  <p class="service-description">Below are provider names that were discovered (i.e., via Get-AzProviderFeatures) but which have no discernable operations.</p>')
+    $writer.WriteLine('  <details id="otherProvidersDetails">')
+    $writer.WriteLine('    <summary>Providers (' + $otherProviders.Count + ')</summary>')
+    $writer.WriteLine('    <div class="table-scroll"><table class="other-providers"><thead><tr><th>ProviderName</th><th>ProviderNamespace</th><th>Description</th></tr></thead><tbody>')
+    foreach ($provider in $otherProviders) {
+        $writer.WriteLine('      <tr><td>' + (Encode-Html $provider.ProviderName) + '</td><td>' +
+            (Encode-Html $provider.ProviderNamespace) + '</td><td>' +
+            (Encode-Html $provider.Description) + '</td></tr>')
+    }
+    $writer.WriteLine('    </tbody></table></div>')
+    $writer.WriteLine('  </details>')
+    $writer.WriteLine('</section>')
 
     $htmlFooter = @'
 <p id="noResults" class="no-results" hidden>No matching providers or operations.</p>
@@ -261,9 +295,9 @@ try {
     const filter = document.getElementById('serviceFilter');
     const noResults = document.getElementById('noResults');
 
-    // Build a search index once. Include only provider headings and the two
-    // operation-name columns, not the long description or resource fields.
-    const index = Array.from(document.querySelectorAll('section.service'), function (section) {
+    // Index main sections separately from the single Other Providers table.
+    // Main searches include provider headings and operation identifiers/names.
+    const index = Array.from(document.querySelectorAll('section.service[data-search]'), function (section) {
         const operations = Array.from(
             section.querySelectorAll('table.actions tbody tr'),
             function (row) {
@@ -279,6 +313,13 @@ try {
         };
     });
 
+    const otherSection = document.getElementById('otherProviders');
+    const otherDivider = document.getElementById('otherProvidersDivider');
+    const otherDetails = document.getElementById('otherProvidersDetails');
+    const otherRows = Array.from(otherSection.querySelectorAll('tbody tr'), function (row) {
+        return { row: row, searchable: row.textContent.toLowerCase() };
+    });
+
     filter.addEventListener('input', function () {
         const query = filter.value.trim().toLowerCase();
         let matches = 0;
@@ -288,7 +329,18 @@ try {
             entry.section.hidden = !visible;
             if (visible) matches++;
         });
-        noResults.hidden = (matches !== 0);
+
+        let otherMatches = 0;
+        otherRows.forEach(function (entry) {
+            const visible = !query || entry.searchable.includes(query);
+            entry.row.hidden = !visible;
+            if (visible) otherMatches++;
+        });
+        otherSection.hidden = Boolean(query) && otherMatches === 0;
+        otherDivider.hidden = otherSection.hidden;
+        // Expand the table when a search matches a provider listed only here.
+        if (query && otherMatches > 0) otherDetails.open = true;
+        noResults.hidden = matches > 0 || otherMatches > 0;
     });
 }());
 </script>
@@ -302,4 +354,4 @@ finally {
 }
 
 Write-Host "Generated: $outputFile"
-Write-Host "Providers: $($services.Count); operations: $actionCount; providers found only in AzureServiceActions.csv: $actionOnlyProviderCount"
+Write-Host "Providers with operations: $($services.Count); other providers: $($otherProviders.Count); operations: $actionCount; providers found only in AzureServiceActions.csv: $actionOnlyProviderCount"
