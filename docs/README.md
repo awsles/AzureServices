@@ -13,6 +13,8 @@ This catalog is particularly valuable to **Azure administrators, cloud architect
 
 The catalog is updated periodically and usually includes a DIFF (what is new, different, and obsoleted) from the previous time it was run. The provider descriptions are either scraped from documentation or generated with AI assistance.
 
+For the AWS equivalent, see [https://awsles.github.io/AwsServices/](https://awsles.github.io/AwsServices/).
+
 **LAST CATALOG UDATE:** `18-Oct-26`
 
 * [AzureServices.html](AzureServices.html) - List of Azure services and actions in expandable and searchable HTML format
