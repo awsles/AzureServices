@@ -57,7 +57,7 @@ EXAMPLE:
 
 |ProviderNamespace|ProviderName|Operation|OperationName|ResourceName|Description|IsDataAction|
 |---|---|---|---|---|---|---|
-|GitHub.Network|GitHub.Network|GitHub.Network/Operations/read|read_Operations|Operations|read Operations|False"
+|GitHub.Network|GitHub.Network|GitHub.Network/Operations/read|read_Operations|Operations|read Operations|False|
 |Microsoft API Management|Microsoft.ApiManagement|Microsoft.ApiManagement/service/backup/action|Backup API Management Service|Service|Backup API Management Service to the specified container in a user provided storage account|False|
 |Microsoft Apps|microsoft.app|microsoft.app/connectedenvironments/storages/delete|Delete a Connected Environment Storage|Connected Environment Storage|Delete a storage of Connected Environment.|False|
 |Microsoft Network|Microsoft.Network|Microsoft.Network/virtualNetworks/subnets/joinViaServiceEndpoint/action|Join Service to a Subnet.|Virtual Network Subnet|Joins resource such as storage account or SQL database to a subnet. Not alertable.|False|
@@ -68,7 +68,7 @@ This indicates the Azure service features that have been enabled (registered) wi
 
 EXAMPLE:
 
-"ProviderNameSpace|ProviderName|FeatureName|RegistrationState"
+|ProviderNameSpace|ProviderName|FeatureName|RegistrationStateZ
 |---|---|---|---|
 |Microsoft DB for MariaDB|Microsoft.DBForMariaDB|orcasconfignopdl|NotRegistered|
 |Microsoft DB for MySQL|Microsoft.DBForMySQL|flexibleServerGeoRestore|NotRegistered|
@@ -131,5 +131,6 @@ The code isn't fancy but it is functional.
 
 ### Next Steps
 
-* Put someautomation around my script so that this repository is automatically updated regularly or when any changes are detected.
+* Automate the update of this repository.
+
 
