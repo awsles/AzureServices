@@ -1,4 +1,4 @@
-![](images\AzureServicesBanner.png)
+![Azure Services and Operations Catalog](images\AzureServicesBanner.png)
 
  **Click ➡️[HERE](AzureServices.html)⬅️ to go directly to the Azure catalog!** 
 
