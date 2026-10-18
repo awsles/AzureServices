@@ -5,12 +5,14 @@
 
 .DESCRIPTION
     Reads AzureServices.csv and AzureServiceActions.csv, joined by ProviderName
-    (case-insensitively). Creates a main section only for providers with one or
-    more operations in AzureServiceActions.csv. Each main section displays
-    ProviderNamespace (ProviderName), its description (when available), and an
-    expandable table of Operation, OperationName, ResourceName, Description,
-    and IsDataAction. Providers in either CSV without operations appear in a
-    separate, expandable "Other Providers" table at the bottom of the page.
+    (case-insensitively), plus AzureResourceProviders.csv, joined by
+    ResourceProvider = ProviderNamespace (case-insensitively).
+    The resource-provider description takes precedence when present; otherwise,
+    the AzureServices.csv description is used. Each provider with operations
+    gets a heading, description, a three-row table of Azure service/category/
+    documentation details, and an expandable operations table. Providers from
+    the original two CSVs without operations appear in a separate, expandable
+    "Other Providers" table at the bottom of the page.
 
     The HTML is self-contained. A live, case-insensitive search matches provider
     namespace/name and operation identifiers/names, including partial matches;
@@ -27,14 +29,17 @@
     .\Generate-AzureServicesHtml.ps1 `
         -ServicesCsv 'docs\AzureServices.csv' `
         -ActionsCsv 'docs\AzureServiceActions.csv' `
+        -ResourceProvidersCsv 'docs\AzureResourceProviders.csv' `
         -OutputHtml 'docs\AzureServices.html'
 #>
 [CmdletBinding()]
 param(
-    [string]$ServicesCsv = (Join-Path -Path (Get-Location).Path -ChildPath 'docs\AzureServices.csv'),
-    [string]$ActionsCsv  = (Join-Path -Path (Get-Location).Path -ChildPath 'docs\AzureServiceActions.csv'),
-    [string]$OutputHtml  = (Join-Path -Path (Get-Location).Path -ChildPath 'docs\AzureServiceActions.html')
+    [string]$ServicesCsv          = (Join-Path -Path (Get-Location).Path -ChildPath 'docs\AzureServices.csv'),
+    [string]$ActionsCsv           = (Join-Path -Path (Get-Location).Path -ChildPath 'docs\AzureServiceActions.csv'),
+    [string]$ResourceProvidersCsv = (Join-Path -Path (Get-Location).Path -ChildPath 'docs\AzureResourceProviders.csv'),
+    [string]$OutputHtml           = (Join-Path -Path (Get-Location).Path -ChildPath 'docs\AzureServiceActions.html')
 )
+
 
 Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
@@ -45,7 +50,25 @@ function Encode-Html {
     return [System.Net.WebUtility]::HtmlEncode([string]$Value)
 }
 
-foreach ($file in @($ServicesCsv, $ActionsCsv)) {
+function Format-HtmlLink {
+    param(
+        [AllowNull()][string]$Url,
+        [AllowNull()][string]$Label
+    )
+
+    # Only HTTP(S) links may be emitted as href attributes. All text and URLs
+    # are HTML-encoded because the values originate in CSV input files.
+    $parsed = $null
+    if (-not [string]::IsNullOrWhiteSpace($Url) -and
+        [System.Uri]::TryCreate($Url.Trim(), [System.UriKind]::Absolute, [ref]$parsed) -and
+        ($parsed.Scheme -eq 'https' -or $parsed.Scheme -eq 'http')) {
+        return '<a href="' + (Encode-Html $parsed.AbsoluteUri) +
+            '" target="_blank" rel="noopener noreferrer">' + (Encode-Html $Label) + '</a>'
+    }
+    return Encode-Html $Label
+}
+
+foreach ($file in @($ServicesCsv, $ActionsCsv, $ResourceProvidersCsv)) {
     if (-not (Test-Path -LiteralPath $file -PathType Leaf)) {
         throw "Input CSV not found: $file"
     }
@@ -60,6 +83,43 @@ if ($services.Count -gt 0) {
     foreach ($column in @('ProviderNamespace', 'ProviderName', 'Description')) {
         if ($null -eq $services[0].PSObject.Properties[$column]) {
             throw "AzureServices.csv is missing the required column '$column'."
+        }
+    }
+}
+
+# Index additional resource-provider metadata by namespace. ResourceProvider in
+# AzureResourceProviders.csv is the ProviderNamespace in the existing CSVs.
+$resourceProvidersByNamespace = [System.Collections.Generic.Dictionary[string,object]]::new(
+    [System.StringComparer]::OrdinalIgnoreCase
+)
+$resourceProviderSchemaChecked = $false
+Import-Csv -LiteralPath $ResourceProvidersCsv -Encoding UTF8 | ForEach-Object {
+    $resource = $_
+    if (-not $resourceProviderSchemaChecked) {
+        foreach ($column in @('ResourceProvider', 'Description', 'AzureService', 'Category', 'ResourceProviderLink', 'AzureServiceLink')) {
+            if ($null -eq $resource.PSObject.Properties[$column]) {
+                throw "AzureResourceProviders.csv is missing the required column '$column'."
+            }
+        }
+        $resourceProviderSchemaChecked = $true
+    }
+
+    if (-not [string]::IsNullOrWhiteSpace($resource.ResourceProvider) -and
+        -not $resource.ResourceProvider.TrimStart().StartsWith('#')) {
+        $key = $resource.ResourceProvider.Trim()
+        if (-not $resourceProvidersByNamespace.ContainsKey($key)) {
+            $resourceProvidersByNamespace.Add($key, $resource)
+        }
+        else {
+            # For repeated resource-provider records, retain the first
+            # nonempty value for each metadata field.
+            $existing = $resourceProvidersByNamespace[$key]
+            foreach ($field in @('Description', 'AzureService', 'Category', 'ResourceProviderLink', 'AzureServiceLink')) {
+                if ([string]::IsNullOrWhiteSpace([string]$existing.$field) -and
+                    -not [string]::IsNullOrWhiteSpace([string]$resource.$field)) {
+                    $existing.$field = $resource.$field
+                }
+            }
         }
     }
 }
@@ -147,6 +207,19 @@ foreach ($name in $actionsByProvider.Keys) {
     }
 }
 
+# Prefer the new resource-provider description when available. This also
+# affects the Description column in the "Other Providers" table. Providers
+# absent from the new CSV retain the AzureServices.csv description.
+foreach ($provider in $providersByName.Values) {
+    $namespace = ([string]$provider.ProviderNamespace).Trim()
+    if ($resourceProvidersByNamespace.ContainsKey($namespace)) {
+        $resource = $resourceProvidersByNamespace[$namespace]
+        if (-not [string]::IsNullOrWhiteSpace([string]$resource.Description)) {
+            $provider.Description = $resource.Description
+        }
+    }
+}
+
 # Split the union into providers with operations and those without. The main
 # catalog contains only providers whose action lists are nonempty.
 $allProviders = @($providersByName.Values | Sort-Object -Property ProviderNamespace, ProviderName)
@@ -191,6 +264,8 @@ try {
   .service { background: #fff; border: 1px solid #d7dfe9; border-radius: 8px; margin: 0 0 20px; padding: 16px 20px 18px; }
   h2 { font-size: 1.25rem; margin: 0 0 12px; color: #182c48; overflow-wrap: anywhere; }
   .service-description { margin: -3px 0 14px; color: #344256; white-space: pre-line; overflow-wrap: anywhere; }
+  table.provider-info { min-width: 0; width: 100%; table-layout: auto; margin: 0 0 12px; }
+  .provider-info th { width: 180px; }
   a { color: #075a9e; }
   a:hover { text-decoration: none; }
   details { margin-top: 14px; }
@@ -251,6 +326,25 @@ try {
         if (-not [string]::IsNullOrWhiteSpace($service.Description)) {
             $writer.WriteLine('  <p class="service-description">' + (Encode-Html $service.Description) + '</p>')
         }
+
+        # Show metadata from AzureResourceProviders.csv immediately below the
+        # description. Rows remain present but blank if a provider is absent.
+        $azureService = ''
+        $azureServiceUrl = ''
+        $category = ''
+        $documentationUrl = ''
+        if ($resourceProvidersByNamespace.ContainsKey($namespace.Trim())) {
+            $resource = $resourceProvidersByNamespace[$namespace.Trim()]
+            $azureService = [string]$resource.AzureService
+            $azureServiceUrl = [string]$resource.AzureServiceLink
+            $category = [string]$resource.Category
+            $documentationUrl = [string]$resource.ResourceProviderLink
+        }
+        $writer.WriteLine('  <div class="table-scroll"><table class="provider-info"><tbody>')
+        $writer.WriteLine('    <tr><th scope="row">Azure Service</th><td>' + (Format-HtmlLink -Url $azureServiceUrl -Label $azureService) + '</td></tr>')
+        $writer.WriteLine('    <tr><th scope="row">Service Category</th><td>' + (Encode-Html $category) + '</td></tr>')
+        $writer.WriteLine('    <tr><th scope="row">Documentation</th><td>' + (Format-HtmlLink -Url $documentationUrl -Label $documentationUrl) + '</td></tr>')
+        $writer.WriteLine('  </tbody></table></div>')
 
         $writer.WriteLine('  <details>')
         $writer.WriteLine('    <summary>Operations (' + $providerActions.Count + ')</summary>')
@@ -354,4 +448,4 @@ finally {
 }
 
 Write-Host "Generated: $outputFile"
-Write-Host "Providers with operations: $($services.Count); other providers: $($otherProviders.Count); operations: $actionCount; providers found only in AzureServiceActions.csv: $actionOnlyProviderCount"
+Write-Host "Providers with operations: $($services.Count); other providers: $($otherProviders.Count); operations: $actionCount; providers found only in AzureServiceActions.csv: $actionOnlyProviderCount; resource-provider metadata entries: $($resourceProvidersByNamespace.Count)"
