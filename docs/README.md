@@ -1,6 +1,6 @@
 ![Azure Services and Operations Catalog](images\AzureServicesBanner.png)
 
- **Click ➡️[HERE](AzureServices.html)⬅️ to go directly to the Azure catalog!** 
+ **Click ➡️[HERE](AzureServices.html)⬅️ to go directly to the catalog!** 
 
 # Azure Services and Operations Catalog
 List of Azure service providers, operations (actions), and feature control switches.
