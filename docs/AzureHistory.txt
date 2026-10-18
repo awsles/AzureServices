@@ -10898,3 +10898,71 @@ Returns 409 if there are active jobs using this connection.
   Qumulo.Storage/unregister/action                                                 False          Unregister the subscription for Qumulo.Storage
 
 
+====================================================================================================
+18-Oct-2026 : There are 0 actions across 1 Azure services.
+              52 changes have been detected: 52 new; 0 deprecated.
+There are 1 new provider names and 2 deprecated provider names.
+NEW :
+  Microsoft.NetworkSecurity
+DEPRECATED :
+  Astronomer.Astro
+  Microsoft.HealthModel
+
+
+NEW ACTIONS:
+  Provider Operation (Action)                                                      IsDataAction   Description
+  ---------------------------                                                      ------------   -----------
+  PureStorage.Block/storagePools/avsStorageContainers/read                         False          Get an AVS storage container
+  PureStorage.Block/storagePools/volumeGroups/read                                 False          List volume groups by storage pool
+  PureStorage.Block/storagePools/volumeGroups/volumes/delete                       False          Delete a volume
+  PureStorage.Block/storagePools/volumeGroups/volumes/read                         False          List volumes by volume group
+  PureStorage.Block/storagePools/volumeGroups/volumes/read                         False          Get a volume
+  PureStorage.Block/storagePools/volumeGroups/volumes/write                        False          Create a volume
+  PureStorage.Block/storagePools/volumeGroups/volumes/write                        False          Update a volume
+  PureStorage.Block/storagePools/volumeGroups/write                                False          Create a volume group
+  PureStorage.Block/storagePools/volumeGroups/write                                False          Update a volume group
+  PureStorage.Block/storagePools/write                                             False          Update a storage pool
+  PureStorage.Block/storagePools/write                                             False          Create a storage pool
+  PureStorage.Block/storagePools/volumeGroups/read                                 False          Get a volume group
+  PureStorage.Block/unregister/action                                              False          Unregister the subscription for PureStorage.Block
+  Qumulo.Storage/fileSystems/delete                                                False          Delete a FileSystemResource
+  Qumulo.Storage/fileSystems/read                                                  False          List FileSystemResource resources by subscription ID
+  Qumulo.Storage/fileSystems/read                                                  False          List FileSystemResource resources by resource group
+  Qumulo.Storage/fileSystems/read                                                  False          Get a FileSystemResource
+  Qumulo.Storage/fileSystems/write                                                 False          Update a FileSystemResource
+  Qumulo.Storage/fileSystems/write                                                 False          Create a FileSystemResource
+  Qumulo.Storage/locations/operationStatuses/read                                  False          read operationStatuses
+  Qumulo.Storage/locations/operationStatuses/write                                 False          write operationStatuses
+  Qumulo.Storage/operations/read                                                   False          read operations
+  Qumulo.Storage/register/action                                                   False          Register the subscription for Qumulo.Storage
+  Qumulo.Storage/checkNameAvailability/action                                      False          action checkNameAvailability
+  PureStorage.Block/storagePools/volumeGroups/listConnectionParameters/action      False          Get connection parameters for ISCSI connection to the volume group
+  PureStorage.Block/storagePools/volumeGroups/getStatus/action                     False          Get current status and space information of the volume group
+  PureStorage.Block/storagePools/volumeGroups/delete                               False          Delete a volume group
+  PureStorage.Block/storagePools/avsStorageContainers/volumes/delete               False          Delete a volume in an AVS storage container
+  PureStorage.Block/storagePools/avsStorageContainers/volumes/read                 False          List volumes in an AVS storage container
+  PureStorage.Block/storagePools/avsStorageContainers/volumes/read                 False          Get a volume in an AVS storage container
+  PureStorage.Block/storagePools/avsStorageContainers/volumes/write                False          Update a volume in an AVS storage container
+  PureStorage.Block/storagePools/avsVms/avsVmVolumes/delete                        False          Delete a volume in an AVS VM
+  PureStorage.Block/storagePools/avsVms/avsVmVolumes/read                          False          Get a volume in an AVS VM
+  PureStorage.Block/storagePools/avsVms/avsVmVolumes/read                          False          List volumes in an AVS VM
+  PureStorage.Block/storagePools/avsVms/avsVmVolumes/write                         False          Update a volume in an AVS VM
+  PureStorage.Block/storagePools/avsVms/delete                                     False          Delete an AVS VM
+  PureStorage.Block/storagePools/avsVms/read                                       False          Get an AVS VM
+  PureStorage.Block/storagePools/avsVms/read                                       False          List AVS VMs by storage pool
+  PureStorage.Block/storagePools/avsVms/write                                      False          Update an AVS VM
+  PureStorage.Block/storagePools/delete                                            False          Delete a storage pool
+  PureStorage.Block/storagePools/disableAvsConnection/action                       False          Disable the existing AVS connection
+  PureStorage.Block/storagePools/enableAvsConnection/action                        False          Initiate a connection between the storage pool and a specified AVS SDDC resource
+  PureStorage.Block/storagePools/finalizeAvsConnection/action                      False          Finalize an already started AVS connection to a specific AVS SDDC
+  PureStorage.Block/storagePools/getAvsConnection/action                           False          Returns current information about an on-going connection to an AVS instance
+  PureStorage.Block/storagePools/getAvsStatus/action                               False          Returns the status of the storage pool connection to AVS
+  PureStorage.Block/storagePools/getHealthStatus/action                            False          Retrieve health metrics of a storage pool
+  PureStorage.Block/storagePools/read                                              False          Get a storage pool
+  PureStorage.Block/storagePools/read                                              False          List storage pools by resource group
+  PureStorage.Block/storagePools/read                                              False          List storage pools by Azure subscription ID
+  PureStorage.Block/storagePools/repairAvsConnection/action                        False          Test and repair, if needed, all configuration elements of the storage pool connection to the AVS instance
+  Qumulo.Storage/registeredSubscriptions/read                                      False          read registeredSubscriptions
+  Qumulo.Storage/unregister/action                                                 False          Unregister the subscription for Qumulo.Storage
+
+

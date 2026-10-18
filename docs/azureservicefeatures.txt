@@ -906,7 +906,7 @@ Microsoft Key Vault                                      Microsoft.KeyVault     
 Microsoft.Quantum                                        Microsoft.Quantum                        cmsBeta
 Microsoft Compute                                        Microsoft.Compute                        IsPV2ColocationAllowed
 Microsoft.OpenEnergyPlatform                             Microsoft.OpenEnergyPlatform             sku
-Microsoft.HealthModel                                    Microsoft.HealthModel                    EUAPParticipation
+-                                                        Microsoft.HealthModel                    EUAPParticipation
 Microsoft DB for MySQL                                   Microsoft.DBForMySQL                     enableMySqlCrossRegionReadReplica
 Microsoft Container Service                              microsoft.ContainerService               KataCcIsolationPreview
 Microsoft.Cdn                                            Microsoft.Cdn                            Enable1PPartnerExtendedInformation
@@ -1274,7 +1274,7 @@ Microsoft Container Instance                             Microsoft.ContainerInst
 Microsoft.Workloads                                      Microsoft.Workloads                      AMSInsightPrivatePreview
 Microsoft.Cdn                                            Microsoft.Cdn                            GrpcPreviewFeature
 Microsoft.Cdn                                            Microsoft.Cdn                            BypassFirstPartyMigrationQuotaCheck
-Astronomer.Astro                                         Astronomer.Astro                         PlatformRouting
+-                                                        Astronomer.Astro                         PlatformRouting
 Microsoft Automation                                     Microsoft.Automation                     DynamicEnvironment
 Microsoft                                                Microsoft.SaaS                           RegionalTest
 Microsoft Databricks                                     Microsoft.Databricks                     EnableEnhancedSecurityComplianceUX
@@ -4579,7 +4579,7 @@ Informatica.DataManagement                               Informatica.DataManagem
 Microsoft.AzureTerraform                                 Microsoft.AzureTerraform                 DefaultFeature
                                                          Private.SoftwareInventory                EnableProvider
 -                                                        Microsoft.Print                          DefaultFeature
-Microsoft.HealthModel                                    Microsoft.HealthModel                    DefaultFeature
+-                                                        Microsoft.HealthModel                    DefaultFeature
                                                          Private.E4K                              EnableProvider
                                                          Private.EdgeSite                         EnableProvider
                                                          Private.kubeapps                         EnableProvider
@@ -4610,7 +4610,7 @@ PureStorage.Block                                        PureStorage.Block      
                                                          Private.AzureTerraform                   EnableProvider
 -                                                        Microsoft.DevTunnels                     DefaultFeature
 Microsoft.EdgeMarketplace                                Microsoft.EdgeMarketPlace                DefaultFeature
-Astronomer.Astro                                         Astronomer.Astro                         DefaultFeature
+-                                                        Astronomer.Astro                         DefaultFeature
                                                          Private.Learning                         EnableProvider
                                                          Private.ServiceRP                        EnableProvider
 Microsoft.ConnectedCredentials                           Microsoft.ConnectedCredentials           DefaultFeature
@@ -5400,6 +5400,7 @@ Microsoft Databricks                                     Microsoft.Databricks   
 Microsoft Storage                                        Microsoft.Storage                        SmartTierZonal
 Microsoft Container Service                              microsoft.ContainerService               JWTAuthenticatorPreview
 Microsoft.Cdn                                            Microsoft.Cdn                            EnableOriginCapacityForPrivatePreview
+Microsoft Key Vault                                      Microsoft.KeyVault                       MHSM_EKM
                                                          Private.MPC                              EnableProvider
                                                          Private.MPCPro                           EnableProvider
 Microsoft Container Service                              microsoft.ContainerService               AdvancedNetworkingmTLSPreview
@@ -5782,7 +5783,6 @@ Microsoft Apps                                           Microsoft.App          
 Microsoft API Management                                 Microsoft.ApiManagement                  use3-6ba70dfa-ead9-4cc1-b894-049f8a17c22b
 Microsoft Network                                        Microsoft.Network                        NetworkSecurityPerimeterOnboardingTesting
 Microsoft Storage                                        Microsoft.Storage                        TestContextCacheRPInProduction
-Microsoft.NetworkCloud                                   Microsoft.NetworkCloud                   API-2026-08-01-preview
                                                          Microsoft.HorizonDb                      enableAiModelManagement
 Microsoft Compute                                        Microsoft.Compute                        VmssAutomaticZonePlacementWithInstanceMix
 Microsoft DB for PostgreSQL                              Microsoft.DBForPostgreSQL                enableAiModelManagement
@@ -5954,7 +5954,7 @@ Microsoft.IoTFirmwareDefense                             Microsoft.IoTFirmwareDe
 Microsoft Storage                                        Microsoft.Storage                        AllowNFS4onHDD
 Microsoft Network                                        Microsoft.Network                        AllowCrossSubscriptionMoveIpConfigurations
 Microsoft Apps                                           Microsoft.App                            Memory1To4Ratio
--                                                        Microsoft.NetworkSecurity                PreviewAccess
+Microsoft.NetworkSecurity                                Microsoft.NetworkSecurity                PreviewAccess
 Microsoft.DurableTask                                    Microsoft.DurableTask                    TaskQueuePreview
 Microsoft.SupercomputerInfrastructure                    Microsoft.SupercomputerInfrastructure    PreLiveTopologyAccess
 -                                                        Microsoft.FoundryLocal                   PreviewAccess
@@ -5969,6 +5969,44 @@ Microsoft.Cdn                                            Microsoft.Cdn          
 Microsoft Apps                                           Microsoft.App                            Sandboxes.ElasticSanVolumes
 Microsoft Network                                        Microsoft.Network                        EnableTagsForStandardSkuCloudServiceInAllocateFlow
 Microsoft DB for PostgreSQL                              Microsoft.DBforPostgreSQL                enableUltraSSD_public
+Microsoft Data Factory                                   Microsoft.DataFactory                    use3-f76de4a1-629f-4651-9d76-1d7b56544f3c
+Microsoft Data Factory                                   Microsoft.DataFactory                    sae-f76de4a1-629f-4651-9d76-1d7b56544f3c
+Microsoft Batch                                          Microsoft.Batch                          sae-58aa8ff2-5d53-444a-8026-1610fb23c30f
+Microsoft.NetworkSecurity                                Microsoft.NetworkSecurity                NeuroShieldPreview
+Microsoft Network                                        Microsoft.Network                        SLBEnableIpv4CrossRegionFastpath
+Microsoft Network                                        Microsoft.Network                        EnableHotswapForBareMetalSubnet
+Microsoft.ResourceBuilder                                Microsoft.ResourceBuilder                AllowCrossWorkspaceResourceReferences
+-                                                        Microsoft.CloudLicensing                 DefaultFeature
+Microsoft.AVS                                            Microsoft.AVS                            Vcf9Preview
+Microsoft Databricks                                     Microsoft.Databricks                     ServerlessClassicAddOn
+Microsoft DocumentDB                                     Microsoft.DocumentDB                     EnableMongoManagedEndpointAFECForTest
+Microsoft Web Apps                                       Microsoft.Web                            sg3-df36aee8-c644-400b-a0ab-fd0f1191211d
+Microsoft Apps                                           Microsoft.App                            PrivateLinkHostPreview
+Microsoft.RecoveryServices                               Microsoft.RecoveryServices               OracleDBInstanceSnapshot
+Microsoft DB for PostgreSQL                              Microsoft.DBforPostgreSQL                enableElasticClusterLTR_public
+Microsoft.HealthcareInterop                              Microsoft.HealthcareInterop              DDPInteropInternalEdge
+Microsoft.HealthcareInterop                              Microsoft.HealthcareInterop              DDPInteropInternalCloud
+Microsoft Cognitive Services                             Microsoft.CognitiveServices              OnYourDataRetirementExemption.Ingestion
+Microsoft Cognitive Services                             Microsoft.CognitiveServices              OnYourDataRetirementExemption.Inference
+                                                         Microsoft.HorizonDB                      enableHorizonDBPrivateEndpoints_public
+MicrosoftElasticSan                                      Microsoft.ElasticSan                     VolumeCreationWithSectorSizeInHeader
+Microsoft Cognitive Services                             Microsoft.CognitiveServices              Videogen
+Microsoft Cognitive Services                             Microsoft.CognitiveServices              ContentUnderstanding.V04.AustraliaEast
+Microsoft Cognitive Services                             Microsoft.CognitiveServices              ContentUnderstanding.V04.CanadaCentral
+Microsoft Cognitive Services                             Microsoft.CognitiveServices              ContentUnderstanding.V04.EastUS
+Microsoft Cognitive Services                             Microsoft.CognitiveServices              ContentUnderstanding.V04.EastUS2
+Microsoft Cognitive Services                             Microsoft.CognitiveServices              ContentUnderstanding.V04.JapanEast
+Microsoft Cognitive Services                             Microsoft.CognitiveServices              ContentUnderstanding.V04.SouthCentralUS
+Microsoft Cognitive Services                             Microsoft.CognitiveServices              ContentUnderstanding.V04.SoutheastAsia
+Microsoft Cognitive Services                             Microsoft.CognitiveServices              ContentUnderstanding.V04.UKSouth
+Microsoft Cognitive Services                             Microsoft.CognitiveServices              ContentUnderstanding.V04.WestEurope
+Microsoft Cognitive Services                             Microsoft.CognitiveServices              ContentUnderstanding.V04.WestUS
+Microsoft.RecoveryServices                               Microsoft.RecoveryServices               BackupDataMobilityAccess
+Microsoft Network                                        Microsoft.Network                        AIProtectionPreviewFeature
+Microsoft Network                                        Microsoft.Network                        AllowLogicalSubgroups
+Microsoft.LoadTestService                                Microsoft.LoadTestService                EnableWebBotAuth
+Microsoft Azure Monitor                                  Microsoft.Insights                       nsplogexception
+Microsoft Azure Fleet                                    Microsoft.AzureFleet                     VmssGroupEnabled
                                                          Private.AnyscaleStaging                  EnableProvider
                                                          Private.RegEnvDev3                       EnableProvider
 Microsoft Container Service                              microsoft.ContainerService               AzureVnetScaleDualStackPreview
@@ -6007,6 +6045,8 @@ Microsoft.HybridNetwork                                  Microsoft.HybridNetwork
 -                                                        Microsoft.Asterra                        DefaultFeature
 -                                                        Microsoft.NetworkSecurity.NeuroShield    DefaultFeature
 -                                                        Microsoft.Mission.CM                     DefaultFeature
+Microsoft Storage Actions                                Microsoft.StorageActions                 DefaultFeature
+-                                                        Microsoft.Throttling                     DefaultFeature
 Microsoft.ManagedNetworkFabric                           Microsoft.ManagedNetworkFabric           FabricV2PrivatePreview
 Microsoft Apps                                           Microsoft.App                            Sandboxes.LargeEgressPolicy
                                                          Private.Sponsorship                      EnableProvider
@@ -6068,6 +6108,7 @@ Microsoft.Workloads                                      Microsoft.Workloads    
                                                          Private.RegEnvDev2608                    EnableProvider
 -                                                        Microsoft.BackupSolutions                DefaultFeature
 Microsoft.Datadog                                        Microsoft.Datadog                        DefaultFeature
+Microsoft Security                                       Microsoft.Security                       JitCanaryPilot
                                                          private.SecurityBasePlatform             EnableProvider
                                                          Private.HealthBotDev                     EnableProvider
                                                          Private.RbTest                           EnableProvider
@@ -6077,6 +6118,7 @@ Microsoft Azure Monitor                                  Microsoft.Insights     
 Microsoft Cognitive Services                             Microsoft.CognitiveServices              OpenAI.cyber
 Microsoft Cache                                          Microsoft.Cache                          vnextRP
 Microsoft DB for PostgreSQL                              Microsoft.DBforPostgreSQL                enableGEOCrossTenantCMK_eastus2euap
+                                                         Private.PilotExternal                    EnableProvider
                                                          Private.DatacenterHardware               EnableProvider
                                                          Private.STORM                            EnableProvider
                                                          Private.KubernetesConfiguration          EnableProvider
@@ -6139,6 +6181,7 @@ Microsoft DB for PostgreSQL                              Microsoft.DBforPostgreS
 Microsoft DB for PostgreSQL                              Microsoft.DBforPostgreSQL                enableVnetForSSDv2HA_eastus2
 Microsoft DB for PostgreSQL                              Microsoft.DBforPostgreSQL                enableVnetForSSDv2HA_southcentralus
 Microsoft DB for PostgreSQL                              Microsoft.DBforPostgreSQL                enableVnetForSSDv2HA_centralus
+Microsoft Compute                                        Microsoft.Compute                        FullOSCachingMigrationPreview
 Microsoft Cognitive Services                             Microsoft.CognitiveServices              MAI-Audio-PP
 Microsoft BillingBenefits                                Microsoft.BillingBenefits                TestInProductionAppMgd
 Microsoft Event Grid                                     Microsoft.EventGrid                      insc-9abfce26-7dfa-49fe-9a8d-a3d6cb13afd6-EGStandard
@@ -6323,6 +6366,7 @@ Microsoft Azure Monitor                                  microsoft.insights     
 Microsoft Container Service                              microsoft.ContainerService               PreparedImageSpecificationLegacyBehaviorPreview
 MongoDB.Atlas                                            MongoDB.Atlas                            VNextMigration
 -                                                        Microsoft.WebIQ                          DefaultFeature
+-                                                        Microsoft.WebIQ                          PrivateWebIqOffering
 Microsoft Network                                        Microsoft.Network                        NeuroShieldPreview
 Microsoft DB for PostgreSQL                              Microsoft.DBforPostgreSQL                enableShowPosetteStreamingBanner
 -                                                        Kore.AgentPlatform                       DefaultFeature
@@ -6374,7 +6418,7 @@ Microsoft Cache                                          Microsoft.Cache        
 Microsoft.NetApp Resource Provider                       Microsoft.Netapp                         ANFGeoNamespaces
 Microsoft.NetApp Resource Provider                       Microsoft.Netapp                         ANFParallelNFSAndSessionSlots
 Microsoft.Impact                                         Microsoft.Impact                         FairfaxDryRun
--                                                        Microsoft.NetworkSecurity                DefaultFeature
+Microsoft.NetworkSecurity                                Microsoft.NetworkSecurity                DefaultFeature
 Microsoft Cache                                          Microsoft.Cache                          SG3-59fe8ab9-6707-4b3c-afb0-f5ed4214b531
 Microsoft.ManagedNetworkFabric                           Microsoft.ManagedNetworkFabric           EnableEdgeOrchestrator
                                                          Private.ResourceShield                   EnableProvider
@@ -6449,6 +6493,7 @@ Microsoft ContainerRegistry                              Microsoft.ContainerRegi
 Microsoft Network                                        Microsoft.Network                        DisableDefaultAdminNetworkSecurityGroup
 Microsoft.RecoveryServices                               Microsoft.RecoveryServices               EnableWeeklyBackupInAFS
 Microsoft.RecoveryServices                               Microsoft.RecoveryServices               EnableVaultStandardItemLevelRestoreInAFS
+Microsoft Compute                                        Microsoft.Compute                        LayeredVirtualization
 Microsoft Container Service                              microsoft.ContainerService               GraceBlackwellManagedGPUPreview
 Microsoft Batch                                          Microsoft.Batch                          sg3-58aa8ff2-5d53-444a-8026-1610fb23c30f
 Microsoft Network                                        Microsoft.Network                        AllowPrivateEndpointApprovalByReference
@@ -6460,6 +6505,24 @@ Microsoft Container Service                              microsoft.ContainerServ
 Microsoft Storage                                        Microsoft.Storage                        EnableQuotaManagement
 Microsoft.AzureStackHCI                                  Microsoft.AzureStackHCI                  skipAKSArcDeployment
 NewRelic.Observability                                   NewRelic.Observability                   VNextMigration
+Microsoft Data Factory                                   Microsoft.DataFactory                    cyfre-f76de4a1-629f-4651-9d76-1d7b56544f3c
+Microsoft Compute                                        Microsoft.Compute                        LivePremiumV2SKUMigration
+Microsoft Storage                                        Microsoft.Storage                        AzurePremiumFilesNFSScaleMode
+Microsoft Compute                                        Microsoft.Compute                        GalleryImageVirtualizationTypeSupport
+                                                         Private.RPaaSTME                         EnableProvider
+Microsoft.Cdn                                            microsoft.cdn                            EnableErrorPolicy
+Microsoft Maintenance Service                            Microsoft.Maintenance                    MRPRegionalization
+-                                                        Microsoft.Udi                            DefaultFeature
+-                                                        Microsoft.CloudLicensing                 InDevelopment
+-                                                        Microsoft.AIInfraOptimization            DefaultFeature
+Microsoft Network                                        Microsoft.Network                        AllowLinkIdAllocationInNrp
+Microsoft.HealthcareInterop                              Microsoft.HealthcareInterop              DDPInteropPPE
+Microsoft DB for PostgreSQL                              Microsoft.DBforPostgreSQL                deprecatedEndpoint
+Microsoft Cognitive Services                             Microsoft.CognitiveServices              ContentUnderstanding.V04.SwedenCentral
+Microsoft Cognitive Services                             Microsoft.CognitiveServices              ContentUnderstanding.V04.WestUS3
+Microsoft Cognitive Services                             Microsoft.CognitiveServices              HLS-MIP-Premium.EnableDeploy
+Microsoft.Confluent                                      Microsoft.Confluent                      DefaultFeature
+Microsoft Compute                                        Microsoft.Compute                        CustomerOptInRegionalPv2Colocation
                                                          Private.AIEnvironment                    EnableProvider
                                                          Private.AnsibleProvisioner               EnableProvider
                                                          Private.ManagedGrafana                   EnableProvider
@@ -6474,6 +6537,7 @@ Microsoft.OpenEnergyPlatform                             Microsoft.OpenEnergyPla
 Microsoft.Kubernetes                                     Microsoft.Kubernetes                     DefaultFeature
 Microsoft.DevCenter                                      Microsoft.DevCenter                      DefaultFeature
                                                          Private.ComputeFabric                    EnableProvider
+-                                                        Microsoft.HybridCloud                    AllowRoutingToTestNfvrpInstance1
 Microsoft Compute                                        Microsoft.Compute                        BareMetalExtendedCapabilities
 Microsoft Cache                                          Microsoft.Cache                          cuseuap-09976aa4-e123-47e9-a515-51cac2ffc3af
 Microsoft Network                                        Microsoft.Network                        ATMCPVnextStage

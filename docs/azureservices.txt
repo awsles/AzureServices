@@ -2,8 +2,8 @@ ProviderNamespace                                        ProviderName           
 =================                                        ============                             ===========
 Anyscale Platform                                        Anyscale.Platform                        
 ArizeAi.ObservabilityEval                                ArizeAi.ObservabilityEval                
-Astronomer.Astro                                         Astronomer.Astro                         
--                                                        CloudSimple.PrivateCloudIaaS             
+-                                                        Astronomer.Astro                         
+-                                                        CloudSimple.PrivateCloudIAAS             
 Commvault.ContentStore                                   Commvault.ContentStore                   
 Dell.Storage                                             Dell.Storage                             
 Dynatrace.Observability                                  Dynatrace.Observability                  
@@ -24,6 +24,7 @@ Microsoft Advisor                                        Microsoft.Advisor
 -                                                        Microsoft.AgFoodPlatform                 
 -                                                        Microsoft.AgriculturePlatform            
 -                                                        Microsoft.AI                             
+-                                                        Microsoft.AIInfraOptimization            
 -                                                        Microsoft.AIOps                          
 -                                                        Microsoft.AISupercomputer                
 -                                                        Microsoft.AksHybrid                      
@@ -123,6 +124,7 @@ Microsoft.CleanRoom                                      Microsoft.CleanRoom
 Microsoft.CloudDevicePlatform                            Microsoft.CloudDevicePlatform            
 -                                                        microsoft.cloudes                        
 Microsoft.CloudHealth                                    Microsoft.CloudHealth                    
+-                                                        Microsoft.CloudLicensing                 
 -                                                        Microsoft.CloudpcInternal                
 Microsoft CloudTest                                      Microsoft.CloudTest                      
 Microsoft.CodeSigning                                    Microsoft.CodeSigning                    
@@ -266,13 +268,14 @@ Microsoft.HealthcareInterop                              Microsoft.HealthcareInt
 -                                                        Microsoft.HealthcareInterop.Cloud        
 -                                                        Microsoft.HealthcareInterop.Edge         
 Microsoft.HealthDataAIServices                           Microsoft.HealthDataAIServices           
-Microsoft.HealthModel                                    Microsoft.HealthModel                    
+-                                                        Microsoft.HealthModel                    
 -                                                        Microsoft.HealthPlatform                 
 Microsoft.Help                                           Microsoft.Help                           
                                                          Microsoft.HorizonDb                      
 -                                                        Microsoft.HostedRpa                      
 -                                                        Microsoft.HpcWorkbench                   
 -                                                        Microsoft.HPKTest                        
+-                                                        Microsoft.HybridCloud                    
 Microsoft HybridCompute                                  Microsoft.HybridCompute                  
 Microsoft.HybridConnectivity                             Microsoft.HybridConnectivity             
 Microsoft.HybridContainerService                         Microsoft.HybridContainerService         
@@ -338,7 +341,7 @@ Microsoft.Mission                                        Microsoft.Mission
 -                                                        Microsoft.MixedReality                   
 -                                                        Microsoft.MobileNetwork                  
 -                                                        Microsoft.MobilePacketCore               
--                                                        Microsoft.Modsimworkbench                
+-                                                        Microsoft.ModSimWorkbench                
 Microsoft Monitoring                                     microsoft.monitor                        
 -                                                        Microsoft.Mycroft                        
 Microsoft.MySQLDiscovery                                 Microsoft.MySQLDiscovery                 
@@ -349,7 +352,7 @@ Microsoft.NetworkCloud                                   Microsoft.NetworkCloud
 MicrosoftNetworkFunction                                 Microsoft.NetworkFunction                
 -                                                        Microsoft.NetworkingPubSub               
 -                                                        Microsoft.NetworkResourceProvider        
--                                                        Microsoft.NetworkSecurity                
+Microsoft.NetworkSecurity                                Microsoft.NetworkSecurity                
 -                                                        Microsoft.NetworkSecurity.NeuroShield    
 -                                                        Microsoft.Netwotk                        
 Microsoft.NexusIdentity                                  Microsoft.NexusIdentity                  
@@ -501,12 +504,13 @@ Microsoft.Syntex                                         Microsoft.Syntex
 -                                                        Microsoft.TerraformOSS                   
 -                                                        Microsoft.Test                           
 -                                                        Microsoft.Test2                          
--                                                        microsoft.testbase                       
+-                                                        Microsoft.TestBase                       
 -                                                        Microsoft.Throttling                     
 -                                                        Microsoft.TimeSeriesInsights             
 -                                                        Microsoft.Titan                          
 -                                                        Microsoft.Token                          
 Microsoft.ToolchainOrchestrator                          Microsoft.ToolchainOrchestrator          
+-                                                        Microsoft.Udi                            
 -                                                        Microsoft.Uic                            
 -                                                        Microsoft.UpdateManager                  
 Microsoft.UsageBilling                                   Microsoft.UsageBilling                   
@@ -516,7 +520,7 @@ Microsoft.VideoIndexer                                   Microsoft.VideoIndexer
 Virtual Machine Image Builder                            Microsoft.VirtualMachineImages           
 Visual Studio                                            Microsoft.VisualStudio                   
 microsoft.vmware                                         microsoft.vmware                         
--                                                        Microsoft.VMwareCloudSimple              
+-                                                        Microsoft.VMWareCloudSimple              
 Microsoft Web Apps                                       microsoft.web                            
 -                                                        Microsoft.WebIQ                          
 Microsoft.WeightsAndBiases                               Microsoft.WeightsAndBiases               
